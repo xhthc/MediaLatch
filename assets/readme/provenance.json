@@ -1,0 +1,18 @@
+{
+  "artwork": "Original MediaLatch SVG artwork; existing project-owned mark reused from icons/source.svg.",
+  "layout_references": [
+    "https://github.com/Dushnilin/tachyon",
+    "https://github.com/Dushnilin/tachyon-core"
+  ],
+  "copied_reference_svg_or_code": false,
+  "animation": "CSS transform/opacity, finite at most4.8s, reduced-motion static alternative; no scripts/external fonts/resources.",
+  "sha256": {
+    "divider.svg": "a44f9cd09a690416f70b7c5f40f23f9f858bfa614944f75eea3f17431511c501",
+    "flow-en.svg": "4badd8b3006c4e7f1b58ea15c30a75fa20b44be1caf5e5966209082d401f8fc6",
+    "flow-ru.svg": "342644c0f49d1e3edf11e7da9e841e592da03b79532a14c0a0c100c2af326ca1",
+    "hero-en.svg": "6ee3ca2db84dc7b28c0f7c45727a9b3bc973b9afebc68307810c8d93554860b2",
+    "hero-ru.svg": "775fbcc90b2cc11b37f821a484a9cfe364bd2b3b141bf7a7eff2b35579321a94",
+    "install-en.svg": "b6a65490519ed5920516c9b64231e63cb16f6e8916390f2077f79c4be933bd4e",
+    "install-ru.svg": "083f1d1184cc1e5f1e2b77b4d4fad711edb410134ac863edc84c5fdab54f0ffc"
+  }
+}

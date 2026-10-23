@@ -1,0 +1,6 @@
+*.pem
+*.key
+*.crx
+*.zip
+local-notes/
+node_modules/

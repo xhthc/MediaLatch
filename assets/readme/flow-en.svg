@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="208" viewBox="0 0 1120 208" role="img" aria-labelledby="title desc">
+  <title id="title">From selected media to your files</title>
+  <desc id="desc">The selected item is resolved, validated and exported; retained originals can be previewed locally.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#7c3aed" stop-opacity=".23"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#b0a0de" stroke-opacity=".065"/></pattern>
+  </defs>
+  <style>
+    text { font-family:Arial,Helvetica,sans-serif; fill:#f3efff }
+    .muted { fill:#b7acce } .mono { font-family:Consolas,'Courier New',monospace; letter-spacing:.5px }
+    .packet {animation:flow 1.3s cubic-bezier(.77,0,.175,1) 2 both} .p1 {animation-delay:.7s} .p2 {animation-delay:1.4s}
+    @keyframes flow {0% {transform:translateX(0);opacity:.3} 50% {opacity:1} 100% {transform:translateX(20px);opacity:.3}}
+    @media (prefers-reduced-motion:reduce) { .orbit,.packet,.pulse,.cursor { animation:none; transform:none } }
+  </style>
+  <rect width="1120" height="208" rx="16" fill="url(#surface)"/>
+  <text x="32" y="39" font-size="21" font-weight="700">From selected media to your files</text>
+  <g class="card" transform="translate(32 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
+    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">01</text><text x="43" y="30" font-size="18" font-weight="700">Select</text>
+    <text class="muted" x="16" y="67" font-size="12">One item, its owning page</text></g>
+  <path d="M274 121h23m-7-6 7 6-7 6" fill="none" stroke="#8f76c7" stroke-width="1.5"/>
+  <circle class="packet p0" cx="274" cy="121" r="2.5" fill="#22d3ee"/>
+  <g class="card" transform="translate(306 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
+    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">02</text><text x="43" y="30" font-size="18" font-weight="700">Validate</text>
+    <text class="muted" x="16" y="67" font-size="12">Declared source, type, size</text></g>
+  <path d="M548 121h23m-7-6 7 6-7 6" fill="none" stroke="#8f76c7" stroke-width="1.5"/>
+  <circle class="packet p1" cx="548" cy="121" r="2.5" fill="#22d3ee"/>
+  <g class="card" transform="translate(580 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
+    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">03</text><text x="43" y="30" font-size="18" font-weight="700">Save</text>
+    <text class="muted" x="16" y="67" font-size="12">Downloads or chosen folder</text></g>
+  <path d="M822 121h23m-7-6 7 6-7 6" fill="none" stroke="#8f76c7" stroke-width="1.5"/>
+  <circle class="packet p2" cx="822" cy="121" r="2.5" fill="#22d3ee"/>
+  <g class="card" transform="translate(854 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
+    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">04</text><text x="43" y="30" font-size="18" font-weight="700">Preview</text>
+    <text class="muted" x="16" y="67" font-size="12">Retained original, locally</text></g>
+</svg>

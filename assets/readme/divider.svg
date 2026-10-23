@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="32" viewBox="0 0 1120 32" role="img" aria-labelledby="title desc">
+  <title id="title"></title>
+  <desc id="desc"></desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#7c3aed" stop-opacity=".23"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#b0a0de" stroke-opacity=".065"/></pattern>
+  </defs>
+  <style>
+    text { font-family:Arial,Helvetica,sans-serif; fill:#f3efff }
+    .muted { fill:#b7acce } .mono { font-family:Consolas,'Courier New',monospace; letter-spacing:.5px }
+    .pulse {animation:shine 2s ease 2 both} @keyframes shine {0%,100% {opacity:.4} 50% {opacity:1}}
+    @media (prefers-reduced-motion:reduce) { .orbit,.packet,.pulse,.cursor { animation:none; transform:none } }
+  </style>
+  <path d="M20 16h510m60 0h510" stroke="url(#accent)" stroke-opacity=".25"/>
+  <path class="pulse" d="m560 4 12 12-12 12-12-12z" fill="#1d1531" stroke="#a78bfa"/>
+  <path d="m560 11 5 5-5 5-5-5z" fill="#22d3ee"/>
+</svg>

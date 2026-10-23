@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="416" viewBox="0 0 1120 416" role="img" aria-labelledby="title desc">
+  <title id="title">MediaLatch</title>
+  <desc id="desc">Оригиналы. Локальное превью. Порядок в папках. Изображения, GIF и видео · Chromium · Без отдельной программы</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#7c3aed" stop-opacity=".23"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#b0a0de" stroke-opacity=".065"/></pattern>
+  </defs>
+  <style>
+    text { font-family:Arial,Helvetica,sans-serif; fill:#f3efff }
+    .muted { fill:#b7acce } .mono { font-family:Consolas,'Courier New',monospace; letter-spacing:.5px }
+    .orbit {transform-origin:935px 136px; animation:orbit 4.8s linear 1 both}
+    .packet {animation:packet 2.2s linear 2 both} .pulse {animation:pulse 2.4s ease 2 both}
+    @keyframes orbit {from {transform:rotate(-30deg)} to {transform:rotate(330deg)}}
+    @keyframes packet {0% {transform:translateX(0);opacity:.2} 30% {opacity:1} 100% {transform:translateX(100px);opacity:.2}}
+    @keyframes pulse {0%,100% {opacity:.55} 50% {opacity:1}}
+    @media (prefers-reduced-motion:reduce) { .orbit,.packet,.pulse,.cursor { animation:none; transform:none } }
+  </style>
+  <rect width="1120" height="416" rx="20" fill="url(#surface)"/>
+  <rect width="1120" height="416" rx="20" fill="url(#grid)"/>
+  <ellipse cx="775" cy="158" rx="340" ry="260" fill="url(#light)"/>
+  <path d="M36 242h638c85 0 119-27 150-64" fill="none" stroke="url(#accent)" stroke-opacity=".35"/>
+  <rect x="36" y="30" width="260" height="27" rx="13.5" fill="#151426" stroke="#403561"/>
+  <circle class="pulse" cx="51" cy="43.5" r="3" fill="#34d399"/>
+  <text class="mono" x="63" y="48" font-size="11" fill="#67e8f9">CHROMIUM / MANIFEST V3</text>
+  <text x="36" y="136" font-size="72" font-weight="800" letter-spacing="-2" fill="url(#accent)" style="fill:url(#accent)">MediaLatch</text>
+  <text x="39" y="182" font-size="21" font-weight="600">Оригиналы. Локальное превью. Порядок в папках.</text>
+  <text class="muted" x="39" y="211" font-size="15">Изображения, GIF и видео · Chromium · Без отдельной программы</text>
+  <circle cx="935" cy="136" r="104" fill="none" stroke="#3b3356" stroke-dasharray="5 13"/>
+  <circle cx="935" cy="136" r="82" fill="none" stroke="#22d3ee" stroke-opacity=".3"/>
+  <circle cx="935" cy="136" r="58" fill="#100d21" stroke="#9e7fe9"/>
+  <g class="orbit"><path d="M935 54a82 82 0 0 1 82 82" fill="none" stroke="#a78bfa" stroke-width="2"/><circle cx="935" cy="54" r="4" fill="#22d3ee"/><circle cx="935" cy="218" r="3" fill="#c4b5fd"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" x="895" y="96" width="80" height="80" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9333ea"/><stop offset="0.5" stop-color="#6d28d9"/><stop offset="1" stop-color="#311068"/></linearGradient>
+    <linearGradient id="arrow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
+  </defs>
+  <rect x="6" y="6" width="116" height="116" rx="30" fill="url(#tile)"/>
+<rect x="8" y="8" width="112" height="112" rx="28" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="2"/>
+  <rect x="18" y="18" width="92" height="92" rx="20" fill="#0d0718" fill-opacity="0.35"/>
+  <g fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 78V40L50 60L64 46L78 60L98 40V78" stroke="#fff"/>
+    <path d="M64 60V94M64 94L50 80M64 94L78 80" stroke="url(#arrow)"/>
+  </g>
+</svg>
+
+  <rect class="packet" x="606" y="239" width="12" height="6" rx="3" fill="#22d3ee"/>
+  <text class="mono muted" x="852" y="263" font-size="10">SELECT / VERIFY / SAVE</text>
+  <g class="card" transform="translate(36 278)">
+    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
+    <g transform="translate(18 20)" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="22" height="18" rx="4"/><path d="M3 14l5-5 4 4 4-6 4 7M16-5v8m-3-3 3 3 3-3"/></g>
+    <text x="52" y="33" font-size="16" font-weight="700">Сохранение</text>
+    <text class="muted" x="18" y="65" font-size="13">Выберите нужное медиа.</text>
+    <text class="muted" x="18" y="85" font-size="13">Сохраните доступный оригинал.</text>
+  </g>
+  <g class="card" transform="translate(302 278)">
+    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
+    <g transform="translate(18 20)" fill="none" stroke="#c4b5fd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="22" height="18" rx="4"/><path d="m9 5 7 4-7 4z"/></g>
+    <text x="52" y="33" font-size="16" font-weight="700">Превью медиа</text>
+    <text class="muted" x="18" y="65" font-size="13">Изображения, GIF и MP4.</text>
+    <text class="muted" x="18" y="85" font-size="13">Зум, перемещение, карусель.</text>
+  </g>
+  <g class="card" transform="translate(568 278)">
+    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
+    <g transform="translate(18 20)" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M0 3h8l3 4h11v13H0zM2 3V0h8l3 3h7v4"/></g>
+    <text x="52" y="33" font-size="16" font-weight="700">Умные папки</text>
+    <text class="muted" x="18" y="65" font-size="13">Сайт, тип, аккаунт публикации.</text>
+    <text class="muted" x="18" y="85" font-size="13">Дата публикации по желанию.</text>
+  </g>
+  <g class="card" transform="translate(834 278)">
+    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
+    <g transform="translate(18 20)" fill="none" stroke="#c4b5fd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h18M1 9h10M1 17h10m5-3 3 3 5-6"/></g>
+    <text x="52" y="33" font-size="16" font-weight="700">Очередь и итоги</text>
+    <text class="muted" x="18" y="65" font-size="13">Повтор, отмена и результаты.</text>
+    <text class="muted" x="18" y="85" font-size="13">Локальная статистика по желанию.</text>
+  </g>
+</svg>
