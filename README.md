@@ -31,7 +31,7 @@
 
 ## 🚀 Установка и обновления
 
-<p align="center"><img src="assets/readme/install-ru.svg" width="1120" alt="Готовый CRX: Releases, SHA-256 и правила установки браузера"></p>
+<p align="center"><img src="assets/readme/install-ru.svg?v=crx-1" width="1120" alt="Готовый CRX: Releases, SHA-256 и правила установки браузера"></p>
 
 Пакеты появятся в [Releases](https://github.com/xhthc/MediaLatch/releases). Рядом с CRX будут контрольная сумма SHA-256 и список файлов сборки.
 

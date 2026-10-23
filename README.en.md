@@ -31,7 +31,7 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 ## 🚀 Installation and updates
 
-<p align="center"><img src="assets/readme/install-en.svg" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
+<p align="center"><img src="assets/readme/install-en.svg?v=crx-1" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
 
 Packages will appear in [Releases](https://github.com/xhthc/MediaLatch/releases). Each CRX will include a SHA-256 checksum and a list of build files.
 
