@@ -1,6 +1,6 @@
 <div align="center">
 
-<p align="center"><img src="assets/readme/hero-en.svg?v=violet-1" width="1120" alt="MediaLatch — save media, preview and organize"></p>
+<p align="center"><img src="assets/readme/hero-en.svg?v=violet-loop-2" width="1120" alt="MediaLatch — save media, preview and organize"></p>
 
 ![Chrome Web Store — coming soon](https://img.shields.io/badge/Chrome_Web_Store-Coming_soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
@@ -8,7 +8,7 @@
 [![Release 3.0.0](https://img.shields.io/badge/release-3.0.0-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
-[![Telegram](https://img.shields.io/badge/Telegram-Contact-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/fs0x1337)
+[![Email](https://img.shields.io/badge/Email-Contact-64748B?style=for-the-badge)](mailto:always1337@vk.com)
 [![Boosty](https://img.shields.io/badge/Boosty-Support-FF6A00?style=for-the-badge&logo=boosty&logoColor=white)](https://boosty.to/fs0x1337)
 [![License](https://img.shields.io/badge/license-Proprietary-C084FC?style=for-the-badge)](LICENSE)
 
@@ -16,7 +16,7 @@
 
 </div>
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
 > This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.0](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)** includes a minified CRX, checksum and build file inventory.
@@ -27,11 +27,11 @@
 
 Configure folders, names for new files, notices and optional statistics. No companion app is required. The extension has no backend or telemetry.
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 ## 🚀 Installation and updates
 
-<p align="center"><img src="assets/readme/install-en.svg?v=violet-1" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
+<p align="center"><img src="assets/readme/install-en.svg?v=violet-loop-2" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
 
 Download [MediaLatch 3.0.0.crx](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx), its [SHA-256 checksum](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx.sha256) and [build details and file inventory](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.provenance.json). Earlier releases are listed in [Releases](https://github.com/xhthc/MediaLatch/releases).
 
@@ -83,11 +83,11 @@ When names match, the extension adds a suffix, even after history and statistics
   <img src="assets/screenshots/saving-en.jpg" alt="Folder and filename settings" width="1280">
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 ## 🌐 From selection to file
 
-<p align="center"><img src="assets/readme/flow-en.svg?v=violet-1" width="1120" alt="Select media → verify its source and bytes → save → local preview"></p>
+<p align="center"><img src="assets/readme/flow-en.svg?v=violet-loop-2" width="1120" alt="Select media → verify its source and bytes → save → local preview"></p>
 
 The extension finds the selected media's original, checks the source and file, then saves it to the destination folder. It does not substitute a file from a neighboring post.
 
@@ -126,7 +126,7 @@ These screenshots show the 3.0.0 interface with demonstration data. Compatibilit
 
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 ## 🛡️ Privacy and security
 
@@ -134,11 +134,11 @@ MediaLatch has no backend or telemetry. Downloads contact the selected site, ser
 
 Page notices show a short download result. Original file contents, folder access and local paths stay inside the extension. You can export reports and diagnostics manually; review the contents before sharing. HTTP/HTTPS permissions let the extension find selected media across sites. See the [privacy policy and permission explanations](docs/PRIVACY.md).
 
-Report vulnerabilities to [always1337@vk.com](mailto:always1337@vk.com) or [@fs0x1337 on Telegram](https://t.me/fs0x1337). See the [Security Policy](SECURITY.md) for what to include and how to test.
+Report bugs, problems and vulnerabilities to [always1337@vk.com](mailto:always1337@vk.com) or [Issues](https://github.com/xhthc/MediaLatch/issues). Send vulnerability details and sensitive data by email. See the [Security Policy](SECURITY.md) for what to include and how to test.
 
 ## ☕ Support the project
 
-Support development on [Boosty](https://boosty.to/fs0x1337). Send questions and bug reports through [Issues](https://github.com/xhthc/MediaLatch/issues) or [Telegram @fs0x1337](https://t.me/fs0x1337).
+Support development on [Boosty](https://boosty.to/fs0x1337). Send questions and feedback through [Issues](https://github.com/xhthc/MediaLatch/issues) or [email](mailto:always1337@vk.com).
 
 ## 📜 License
 

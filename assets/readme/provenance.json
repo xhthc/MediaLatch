@@ -13,18 +13,18 @@
   "adaptations": [
     "Escaped invalid XML ampersand in flow-en.",
     "Preserved layout translations outside animated elements.",
-    "Finite transform/opacity explanations with completed reduced-motion state.",
+    "User-requested repeating eight-second transform/opacity explanations with synchronized reset and completed reduced-motion state.",
     "Marked hero as demonstration, corrected checksum filename and removed unsupported per-stage verification claim.",
     "Updated both README image versions to bypass stale GitHub image caches."
   ],
-  "animation": "CSS transform/opacity only, finishes within4seconds, static reduced-motion fallback; no scripts or external resources.",
+  "animation": "Eight-second infinite CSS transform/opacity cycles; synchronized phases and invisible progress reset; static completed reduced-motion fallback. No scripts or external resources.",
   "sha256": {
-    "divider.svg": "675470426a2e1bc468ebd1092e0573a0ab7d8284bf8f3340e92fd5cd1d02c62d",
-    "flow-en.svg": "f9d740426c9b8d0b8270436908156b4d386634a2819cc456804e576bd0da35fc",
-    "flow-ru.svg": "79e35b9cc277b0d2d79815fccf1352ae7cb02628fd4a0942bed6066b1eea09d5",
-    "hero-en.svg": "13cfd686330c5f9b2a17441dc51c615b806f3761208d86d0f4f823e2c29775a7",
-    "hero-ru.svg": "09a604ed2ba3ac6df9e6d3736f7bdacb20341ddef08699156b0ed5cad5907083",
-    "install-en.svg": "5ba4c46c00c14a5f2793f854f11e19c1c052320e7e922e19b96097712593a977",
-    "install-ru.svg": "2df49c9b4c60b570dae9cbeae0e740f60bbb23db585de86ffa6e63b9a27bb8a7"
+    "divider.svg": "416b1c59d1730ca226885d9bb91f787394921f348e4f68320b0a5fbadea35ec9",
+    "flow-en.svg": "c5315292167218fa673913fbe7c0acae4ecb46cba70ecc2a9832bac0e9204ccf",
+    "flow-ru.svg": "895d7cd934c61523e968d67bb31a0aae6cc6313e8842aefa2f7a431a87f9cf4d",
+    "hero-en.svg": "6a5878f135b9a41700af72e55361e682ebff6be07d48099fbd977bf4ad642bd1",
+    "hero-ru.svg": "5993408c2f95daa094ed6217cbd77d40c7f5f032520b580f942a07a9d2ae8808",
+    "install-en.svg": "8476cd2a563052656127ca4984bfd9c6ad4863520d4131ceaf3a597c37c1eb48",
+    "install-ru.svg": "158ddf3a33b0367280433bad91f96b5e6456629a70c7fa0ed8c8d09f6a268093"
   }
 }

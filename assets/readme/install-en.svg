@@ -21,17 +21,21 @@
       <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
     </radialGradient>
     <style>
-      .root {font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
-      .mono {font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
-      @keyframes highlight {0%,100% {opacity:0} 15%,75% {opacity:1}}
-      @keyframes fillBar {from {transform:scaleX(.02);opacity:.35} to {transform:scaleX(1);opacity:1}}
-      @keyframes complete {from {opacity:0} to {opacity:1}}
-      @keyframes fadeAway {from {opacity:1} to {opacity:0}}
-
-      .step-focus {opacity:0;animation:highlight .9s ease both}
-      .step-bar {transform-box:fill-box;transform-origin:left center;animation:fillBar .8s cubic-bezier(.77,0,.175,1) both}
-      .step-check {animation:complete .18s cubic-bezier(.23,1,.32,1) both}
-      @media (prefers-reduced-motion:reduce) {.step-focus,.step-bar,.step-check {animation:none}}
+.root{font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+.mono{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+@keyframes stepFocus1{0%{opacity:0}3.75%{opacity:0}5.438%{opacity:1}12.188%{opacity:1}15%{opacity:0}100%{opacity:0}}
+@keyframes stepBar1{0%{transform:scaleX(.02);opacity:.35}3.75%{transform:scaleX(.02);opacity:.35}13.75%{transform:scaleX(1);opacity:1}87.5%{transform:scaleX(1);opacity:1}90%{transform:scaleX(1);opacity:0}90.012%{transform:scaleX(.02);opacity:0}95%{transform:scaleX(.02);opacity:.35}100%{transform:scaleX(.02);opacity:.35}}
+@keyframes stepCheck1{0%{opacity:0}13.75%{opacity:0}16%{opacity:1}87.5%{opacity:1}90%{opacity:0}100%{opacity:0}}
+@keyframes stepFocus2{0%{opacity:0}18.75%{opacity:0}20.438%{opacity:1}27.187%{opacity:1}30%{opacity:0}100%{opacity:0}}
+@keyframes stepBar2{0%{transform:scaleX(.02);opacity:.35}18.75%{transform:scaleX(.02);opacity:.35}28.75%{transform:scaleX(1);opacity:1}87.5%{transform:scaleX(1);opacity:1}90%{transform:scaleX(1);opacity:0}90.012%{transform:scaleX(.02);opacity:0}95%{transform:scaleX(.02);opacity:.35}100%{transform:scaleX(.02);opacity:.35}}
+@keyframes stepCheck2{0%{opacity:0}28.75%{opacity:0}31%{opacity:1}87.5%{opacity:1}90%{opacity:0}100%{opacity:0}}
+@keyframes stepFocus3{0%{opacity:0}33.75%{opacity:0}35.438%{opacity:1}42.188%{opacity:1}45%{opacity:0}100%{opacity:0}}
+@keyframes stepBar3{0%{transform:scaleX(.02);opacity:.35}33.75%{transform:scaleX(.02);opacity:.35}43.75%{transform:scaleX(1);opacity:1}87.5%{transform:scaleX(1);opacity:1}90%{transform:scaleX(1);opacity:0}90.012%{transform:scaleX(.02);opacity:0}95%{transform:scaleX(.02);opacity:.35}100%{transform:scaleX(.02);opacity:.35}}
+@keyframes stepCheck3{0%{opacity:0}43.75%{opacity:0}46%{opacity:1}87.5%{opacity:1}90%{opacity:0}100%{opacity:0}}
+.step-focus{opacity:0;animation:stepFocus1 8s cubic-bezier(.23,1,.32,1) infinite both}
+.step-bar{transform-box:fill-box;transform-origin:left center;animation:stepBar1 8s cubic-bezier(.77,0,.175,1) infinite both}
+.step-check{animation:stepCheck1 8s cubic-bezier(.23,1,.32,1) infinite both}
+@media(prefers-reduced-motion:reduce){.step-focus,.step-bar,.step-check{animation:none}}
 </style>
   </defs>
 
@@ -87,7 +91,7 @@
 
     <g transform="translate(24 142)" data-card="install" data-panel="surface">
       <rect width="348" height="136" rx="14" fill="url(#instCard)" stroke="#2d2342" stroke-width="1" />
-      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-delay:0.3s" />
+      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-name:stepFocus1" />
       <line x1="16" y1="1" x2="332" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
 
 
@@ -100,7 +104,7 @@
       <g transform="translate(268 18)" data-panel="surface">
         <rect width="62" height="28" rx="14" fill="#171126" stroke="#3b2d56" stroke-width="1" />
         <text x="20" y="18.5" text-anchor="middle" fill="#ab9fc6" font-size="12" font-weight="700" class="mono">01</text>
-        <g class="step-check" style="animation-delay:1.1s" transform="translate(34 4)">
+        <g class="step-check" style="animation-name:stepCheck1" transform="translate(34 4)">
           <circle cx="10" cy="10" r="9" fill="#0f291e" stroke="#34d399" stroke-opacity="0.7" stroke-width="1" />
           <path d="m6.2 10.2 2.4 2.4 5.2-5.2" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
         </g>
@@ -111,11 +115,11 @@
 
 
       <rect x="18" y="118" width="312" height="4" rx="2" fill="#1f1733" />
-      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-delay:0.3s" />
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-name:stepBar1" />
     </g>
     <g transform="translate(386 142)" data-card="install" data-panel="surface">
       <rect width="348" height="136" rx="14" fill="url(#instCard)" stroke="#2d2342" stroke-width="1" />
-      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-delay:1.5s" />
+      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-name:stepFocus2" />
       <line x1="16" y1="1" x2="332" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
 
 
@@ -128,7 +132,7 @@
       <g transform="translate(268 18)" data-panel="surface">
         <rect width="62" height="28" rx="14" fill="#171126" stroke="#3b2d56" stroke-width="1" />
         <text x="20" y="18.5" text-anchor="middle" fill="#ab9fc6" font-size="12" font-weight="700" class="mono">02</text>
-        <g class="step-check" style="animation-delay:2.3s" transform="translate(34 4)">
+        <g class="step-check" style="animation-name:stepCheck2" transform="translate(34 4)">
           <circle cx="10" cy="10" r="9" fill="#0f291e" stroke="#34d399" stroke-opacity="0.7" stroke-width="1" />
           <path d="m6.2 10.2 2.4 2.4 5.2-5.2" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
         </g>
@@ -139,11 +143,11 @@
 
 
       <rect x="18" y="118" width="312" height="4" rx="2" fill="#1f1733" />
-      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-delay:1.5s" />
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-name:stepBar2" />
     </g>
     <g transform="translate(748 142)" data-card="install" data-panel="surface">
       <rect width="348" height="136" rx="14" fill="url(#instCard)" stroke="#2d2342" stroke-width="1" />
-      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-delay:2.7s" />
+      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-name:stepFocus3" />
       <line x1="16" y1="1" x2="332" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
 
 
@@ -156,7 +160,7 @@
       <g transform="translate(268 18)" data-panel="surface">
         <rect width="62" height="28" rx="14" fill="#171126" stroke="#3b2d56" stroke-width="1" />
         <text x="20" y="18.5" text-anchor="middle" fill="#ab9fc6" font-size="12" font-weight="700" class="mono">03</text>
-        <g class="step-check" style="animation-delay:3.5s" transform="translate(34 4)">
+        <g class="step-check" style="animation-name:stepCheck3" transform="translate(34 4)">
           <circle cx="10" cy="10" r="9" fill="#0f291e" stroke="#34d399" stroke-opacity="0.7" stroke-width="1" />
           <path d="m6.2 10.2 2.4 2.4 5.2-5.2" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
         </g>
@@ -167,7 +171,7 @@
 
 
       <rect x="18" y="118" width="312" height="4" rx="2" fill="#1f1733" />
-      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-delay:2.7s" />
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-name:stepBar3" />
     </g>
   </g>
 </svg>

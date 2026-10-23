@@ -1,6 +1,6 @@
 <div align="center">
 
-<p align="center"><img src="assets/readme/hero-ru.svg?v=violet-1" width="1120" alt="MediaLatch — сохранение медиа, превью и папки"></p>
+<p align="center"><img src="assets/readme/hero-ru.svg?v=violet-loop-2" width="1120" alt="MediaLatch — сохранение медиа, превью и папки"></p>
 
 ![Chrome Web Store — скоро](https://img.shields.io/badge/Chrome_Web_Store-%D0%A1%D0%BA%D0%BE%D1%80%D0%BE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
@@ -8,7 +8,7 @@
 [![Release 3.0.0](https://img.shields.io/badge/release-3.0.0-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
-[![Telegram](https://img.shields.io/badge/Telegram-%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/fs0x1337)
+[![Email](https://img.shields.io/badge/Email-%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-64748B?style=for-the-badge)](mailto:always1337@vk.com)
 [![Boosty](https://img.shields.io/badge/Boosty-%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C-FF6A00?style=for-the-badge&logo=boosty&logoColor=white)](https://boosty.to/fs0x1337)
 [![License](https://img.shields.io/badge/license-Proprietary-C084FC?style=for-the-badge)](LICENSE)
 
@@ -16,7 +16,7 @@
 
 </div>
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
 > Здесь находятся документация и готовые сборки MediaLatch. Исходники разработки закрыты. **[Стабильная версия 3.0.0](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)** содержит минифицированный CRX, контрольную сумму и сведения о составе сборки.
@@ -27,11 +27,11 @@
 
 Папки, имена новых файлов, уведомления и статистика настраиваются. Дополнительная программа не нужна; собственного сервера и телеметрии у расширения нет.
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 ## 🚀 Установка и обновления
 
-<p align="center"><img src="assets/readme/install-ru.svg?v=violet-1" width="1120" alt="Готовый CRX: Releases, SHA-256 и правила установки браузера"></p>
+<p align="center"><img src="assets/readme/install-ru.svg?v=violet-loop-2" width="1120" alt="Готовый CRX: Releases, SHA-256 и правила установки браузера"></p>
 
 Скачайте [MediaLatch 3.0.0.crx](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx), [контрольную сумму SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx.sha256) и [сведения о сборке и её файлах](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.provenance.json). История выпусков — в [Releases](https://github.com/xhthc/MediaLatch/releases).
 
@@ -83,11 +83,11 @@ Downloads/
   <img src="assets/screenshots/saving-ru.jpg" alt="Настройки папок и имён файлов" width="1280">
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 ## 🌐 Как проходит сохранение
 
-<p align="center"><img src="assets/readme/flow-ru.svg?v=violet-1" width="1120" alt="Выбор медиа → проверка источника и файла → сохранение → локальное превью"></p>
+<p align="center"><img src="assets/readme/flow-ru.svg?v=violet-loop-2" width="1120" alt="Выбор медиа → проверка источника и файла → сохранение → локальное превью"></p>
 
 Расширение ищет оригинал выбранного медиа, проверяет источник и файл, затем сохраняет его в папку. Файл из соседнего поста не используется как замена.
 
@@ -126,7 +126,7 @@ DRM, эфиры, универсальная загрузка HLS/DASH, прои�
 
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 ## 🛡️ Приватность и безопасность
 
@@ -134,11 +134,11 @@ DRM, эфиры, универсальная загрузка HLS/DASH, прои�
 
 Уведомления на странице показывают краткий результат загрузки. Содержимое оригиналов, права на папки и локальные пути остаются внутри расширения. Отчёт или диагностику можно экспортировать вручную; перед отправкой проверьте содержимое. Доступ HTTP/HTTPS нужен для поиска выбранного медиа на разных сайтах. Подробнее: [политика приватности и разрешения](docs/PRIVACY.md).
 
-О найденной уязвимости сообщайте: [always1337@vk.com](mailto:always1337@vk.com) или [Telegram @fs0x1337](https://t.me/fs0x1337). Что приложить к сообщению и как проводить проверку, описано в [Security Policy](SECURITY.md).
+О багах, проблемах и уязвимостях сообщайте на [always1337@vk.com](mailto:always1337@vk.com) или в [Issues](https://github.com/xhthc/MediaLatch/issues). Подробности уязвимостей и чувствительные данные отправляйте на почту. Что приложить к сообщению и как проводить проверку, описано в [Security Policy](SECURITY.md).
 
 ## ☕ Поддержать проект
 
-Поддержать разработку можно на [Boosty](https://boosty.to/fs0x1337). Вопросы и сообщения об ошибках оставляйте в [Issues](https://github.com/xhthc/MediaLatch/issues) или [Telegram @fs0x1337](https://t.me/fs0x1337).
+Поддержать разработку можно на [Boosty](https://boosty.to/fs0x1337). Для вопросов и обратной связи используйте [Issues](https://github.com/xhthc/MediaLatch/issues) или [почту](mailto:always1337@vk.com).
 
 ## 📜 Лицензия
 

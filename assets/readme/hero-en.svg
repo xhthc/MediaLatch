@@ -43,26 +43,30 @@
       <stop offset="100%" stop-color="#9333ea" stop-opacity="0" />
     </radialGradient>
     <style>
-      .root {font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
-      .mono {font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
-      @keyframes highlight {0%,100% {opacity:0} 15%,75% {opacity:1}}
-      @keyframes fillBar {from {transform:scaleX(.02);opacity:.35} to {transform:scaleX(1);opacity:1}}
-      @keyframes complete {from {opacity:0} to {opacity:1}}
-      @keyframes fadeAway {from {opacity:1} to {opacity:0}}
-
-      .save-pill {animation:buttonPulse .6s ease .1s both}
-      @keyframes buttonPulse {0%,100% {opacity:1} 50% {opacity:.7}}
-      .crumb-step-1,.crumb-step-2,.crumb-step-3,.crumb-step-4 {animation:crumb 1s ease both}
-      .crumb-step-1 {animation-delay:.15s}.crumb-step-2 {animation-delay:.45s}
-      .crumb-step-3 {animation-delay:.75s}.crumb-step-4 {animation-delay:1.05s}
-      @keyframes crumb {0%,100% {opacity:.65} 40%,65% {opacity:1}}
-      .progress-fill {transform-box:fill-box;transform-origin:left center;animation:fillBar .8s cubic-bezier(.77,0,.175,1) 1.3s both}
-      .status-ok,.hero-done {animation:complete .18s cubic-bezier(.23,1,.32,1) 2.1s both}
-      .hero-pending {opacity:0;animation:fadeAway .18s ease 2.1s both}
-      .card-focus {opacity:0;animation:highlight .7s ease both}
-      @media (prefers-reduced-motion:reduce) {
-        .save-pill,.crumb-step-1,.crumb-step-2,.crumb-step-3,.crumb-step-4,.progress-fill,.status-ok,.hero-done,.hero-pending,.card-focus {animation:none}
-      }
+.root{font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+.mono{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+@keyframes savePulse{0%{opacity:1}1.25%{opacity:1}2.375%{opacity:0.7}6.875%{opacity:0.7}8.75%{opacity:1}100%{opacity:1}}
+.save-pill{animation:savePulse 8s cubic-bezier(.23,1,.32,1) infinite both}
+@keyframes crumb1{0%{opacity:0.65}1.875%{opacity:0.65}3.75%{opacity:1}11.25%{opacity:1}14.375%{opacity:0.65}100%{opacity:0.65}}
+.crumb-step-1{animation:crumb1 8s cubic-bezier(.77,0,.175,1) infinite both}
+@keyframes crumb2{0%{opacity:0.65}5.625%{opacity:0.65}7.5%{opacity:1}15%{opacity:1}18.125%{opacity:0.65}100%{opacity:0.65}}
+.crumb-step-2{animation:crumb2 8s cubic-bezier(.77,0,.175,1) infinite both}
+@keyframes crumb3{0%{opacity:0.65}9.375%{opacity:0.65}11.25%{opacity:1}18.75%{opacity:1}21.875%{opacity:0.65}100%{opacity:0.65}}
+.crumb-step-3{animation:crumb3 8s cubic-bezier(.77,0,.175,1) infinite both}
+@keyframes crumb4{0%{opacity:0.65}13.125%{opacity:0.65}15%{opacity:1}22.5%{opacity:1}25.625%{opacity:0.65}100%{opacity:0.65}}
+.crumb-step-4{animation:crumb4 8s cubic-bezier(.77,0,.175,1) infinite both}
+@keyframes heroProgress{0%{transform:scaleX(.02);opacity:.35}16.25%{transform:scaleX(.02);opacity:.35}26.25%{transform:scaleX(1);opacity:1}87.5%{transform:scaleX(1);opacity:1}90%{transform:scaleX(1);opacity:0}90.012%{transform:scaleX(.02);opacity:0}95%{transform:scaleX(.02);opacity:.35}100%{transform:scaleX(.02);opacity:.35}}
+@keyframes heroComplete{0%{opacity:0}26.25%{opacity:0}28.5%{opacity:1}87.5%{opacity:1}90%{opacity:0}100%{opacity:0}}
+@keyframes heroPending{0%{opacity:1}26.25%{opacity:1}28.5%{opacity:0}87.5%{opacity:0}90%{opacity:1}100%{opacity:1}}
+.progress-fill{transform-box:fill-box;transform-origin:left center;animation:heroProgress 8s cubic-bezier(.77,0,.175,1) infinite both}
+.status-ok,.hero-done{animation:heroComplete 8s cubic-bezier(.23,1,.32,1) infinite both}
+.hero-pending{opacity:0;animation:heroPending 8s cubic-bezier(.23,1,.32,1) infinite both}
+@keyframes cardFocus1{0%{opacity:0}1.25%{opacity:0}2.562%{opacity:1}7.812%{opacity:1}10%{opacity:0}100%{opacity:0}}
+@keyframes cardFocus2{0%{opacity:0}8.75%{opacity:0}10.062%{opacity:1}15.312%{opacity:1}17.5%{opacity:0}100%{opacity:0}}
+@keyframes cardFocus3{0%{opacity:0}16.25%{opacity:0}17.562%{opacity:1}22.812%{opacity:1}25%{opacity:0}100%{opacity:0}}
+@keyframes cardFocus4{0%{opacity:0}23.75%{opacity:0}25.062%{opacity:1}30.312%{opacity:1}32.5%{opacity:0}100%{opacity:0}}
+.card-focus{opacity:0;animation:cardFocus1 8s cubic-bezier(.23,1,.32,1) infinite both}
+@media(prefers-reduced-motion:reduce){.save-pill,.crumb-step-1,.crumb-step-2,.crumb-step-3,.crumb-step-4,.progress-fill,.status-ok,.hero-done,.hero-pending,.card-focus{animation:none}}
 </style>
   </defs>
 
@@ -187,7 +191,7 @@
 
     <g transform="translate(36 274)" data-panel="surface">
       <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
-      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:0.0s" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-name:cardFocus1" />
       <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
       <g transform="translate(16 16)">
         <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
@@ -199,7 +203,7 @@
     </g>
     <g transform="translate(302 274)" data-panel="surface">
       <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
-      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:0.6s" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-name:cardFocus2" />
       <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
       <g transform="translate(16 16)">
         <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
@@ -211,7 +215,7 @@
     </g>
     <g transform="translate(568 274)" data-panel="surface">
       <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
-      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:1.2s" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-name:cardFocus3" />
       <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
       <g transform="translate(16 16)">
         <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
@@ -223,7 +227,7 @@
     </g>
     <g transform="translate(834 274)" data-panel="surface">
       <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
-      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:1.8s" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-name:cardFocus4" />
       <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
       <g transform="translate(16 16)">
         <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />

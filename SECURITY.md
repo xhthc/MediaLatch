@@ -10,10 +10,12 @@
 
 ### Сообщить об уязвимости
 
-Не публикуйте действующий эксплойт или приватные данные в Issues. Напишите владельцу:
+О багах, проблемах и уязвимостях сообщайте одним из способов:
 
 - Email: [always1337@vk.com](mailto:always1337@vk.com), тема `MediaLatch security`.
-- Telegram: [@fs0x1337](https://t.me/fs0x1337).
+- Issues: [xhthc/MediaLatch](https://github.com/xhthc/MediaLatch/issues).
+
+Не публикуйте действующий эксплойт или чувствительные данные в Issues. Подробности уязвимости отправляйте на почту.
 
 Укажите версию расширения, браузер/ОС, минимальные шаги воспроизведения, ожидаемый и фактический результат, возможное влияние. Прикладывайте обезличенный пример или короткий PoC. Не отправляйте cookies, токены, закрытые ключи, подписанные ссылки, приватные файлы или полный необработанный Debug-отчёт; при необходимости сначала согласуйте способ передачи чувствительных данных.
 
@@ -35,10 +37,12 @@ Fixes target the latest stable release, 3.0.0. Separate maintenance of older bra
 
 ### Report a vulnerability
 
-Do not post a working exploit or private data in public Issues. Contact the maintainer:
+Report bugs, problems and vulnerabilities through either channel:
 
 - Email: [always1337@vk.com](mailto:always1337@vk.com), subject `MediaLatch security`.
-- Telegram: [@fs0x1337](https://t.me/fs0x1337).
+- Issues: [xhthc/MediaLatch](https://github.com/xhthc/MediaLatch/issues).
+
+Do not post a working exploit or sensitive data in public Issues. Send vulnerability details by email.
 
 Include the extension version, browser/OS, minimal reproduction steps, expected and actual behavior, and potential impact. Use a redacted fixture or small proof of concept. Do not send cookies, tokens, private keys, signed URLs, private files or an unreviewed raw Debug export. Agree on a suitable transfer method first if sensitive evidence is necessary.
 

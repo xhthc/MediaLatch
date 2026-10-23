@@ -12,16 +12,11 @@
       <stop offset="100%" stop-color="#9333ea" stop-opacity="0" />
     </radialGradient>
     <style>
-      .root {font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
-      .mono {font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
-      @keyframes highlight {0%,100% {opacity:0} 15%,75% {opacity:1}}
-      @keyframes fillBar {from {transform:scaleX(.02);opacity:.35} to {transform:scaleX(1);opacity:1}}
-      @keyframes complete {from {opacity:0} to {opacity:1}}
-      @keyframes fadeAway {from {opacity:1} to {opacity:0}}
-
-      .div-node {animation:breathe 2s ease 2 both}
-      @keyframes breathe {0%,100% {opacity:.7} 50% {opacity:1}}
-      @media (prefers-reduced-motion:reduce) {.div-node {animation:none}}
+.root{font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+.mono{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+@keyframes breathe{0%{opacity:.7}50%{opacity:1}100%{opacity:.7}}
+.div-node{animation:breathe 8s cubic-bezier(.77,0,.175,1) infinite both}
+@media(prefers-reduced-motion:reduce){.div-node{animation:none}}
 </style>
   </defs>
   <line x1="0" y1="12" x2="1120" y2="12" stroke="url(#divLine)" stroke-width="1" />
