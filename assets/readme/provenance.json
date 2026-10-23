@@ -12,7 +12,8 @@
     "flow-ru.svg": "342644c0f49d1e3edf11e7da9e841e592da03b79532a14c0a0c100c2af326ca1",
     "hero-en.svg": "6ee3ca2db84dc7b28c0f7c45727a9b3bc973b9afebc68307810c8d93554860b2",
     "hero-ru.svg": "775fbcc90b2cc11b37f821a484a9cfe364bd2b3b141bf7a7eff2b35579321a94",
-    "install-en.svg": "b6a65490519ed5920516c9b64231e63cb16f6e8916390f2077f79c4be933bd4e",
-    "install-ru.svg": "083f1d1184cc1e5f1e2b77b4d4fad711edb410134ac863edc84c5fdab54f0ffc"
-  }
+    "install-en.svg": "6e53acab075c521fe14aca82223306216cc34a773e33e3a496617002a49080dc",
+    "install-ru.svg": "4f88a9f24b9cc7824355e2c9517d7b053ff0c21d452ff215c932bc8e150760e0"
+  },
+  "installation_animation": "Address typing, sequential step highlights/progress and completion marks; finite4.1s explanation, static complete reduced-motion fallback; no actual installation actions."
 }

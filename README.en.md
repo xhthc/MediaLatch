@@ -17,7 +17,7 @@
 <p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> This is the public home for MediaLatch documentation and future packaged releases. Development source is private. **3.0.0 is in preparation:** a new CRX will follow minification, repacking and verification.
+> This repository contains MediaLatch documentation and future builds. Development source is private. **Version 3.0.0 is in preparation.** A CRX will follow minification, repacking and verification.
 
 ## ⚡ About
 
@@ -31,11 +31,11 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 <p align="center"><img src="assets/readme/install-en.svg" width="1120" alt="Local check: chrome://extensions, Developer mode and a verified runtime folder"></p>
 
-New packages will appear in [Releases](https://github.com/xhthc/MediaLatch/releases), with a SHA-256 checksum and file provenance alongside the CRX. **The public 3.0.0 release is not published yet.**
+Packages will appear in [Releases](https://github.com/xhthc/MediaLatch/releases). Each CRX will include a SHA-256 checksum and a list of build files.
 
-Chrome on Windows/macOS normally uses Chrome Web Store distribution. A self-signed GitHub CRX is not a general installer: browser and managed-installation policies apply. The current store link will be added when that publication is updated.
+Chrome on Windows and macOS normally installs extensions through the Chrome Web Store. Browser and enterprise policies restrict self-signed CRX installation. The store link will be added after the listing is updated.
 
-Loading an unpacked folder, illustrated above, is for local verification of a prepared build. It is a separate Developer mode route and requires the verified runtime folder itself.
+The diagram above shows how to check a build locally: open `chrome://extensions`, enable Developer mode, load the unpacked folder, then reload your source tabs. This requires the verified runtime folder.
 
 > [!TIP]
 > Keep the checksum with the CRX. Switching installation channels can change the extension ID and local data. The private `.pem` signing key is not part of the package and is not needed by users.
@@ -45,18 +45,18 @@ Loading an unpacked folder, illustrated above, is for local verification of a pr
 | Task | Available behavior |
 | --- | --- |
 | Save selected media | Original-image discovery, progressive MP4/WebM and supported GIFs. Exact signed URLs stay intact. |
-| Save a post | Proven batches on X, Reddit, Pixiv, Pawchive and supported VK surfaces, with per-file results and Cancel remaining. |
+| Save a post | Multiple files from posts on X, Reddit, Pixiv, Pawchive and supported VK pages. See each file's result and cancel the remaining downloads. |
 | Choose a destination | Browser Downloads or an explicitly selected folder. Flat, site and media-type layouts. |
 | Name new files | Original basename, optional site/account and UTC publication date/time. Unknown dates are omitted. |
 | Preview saved media | Images, animated GIFs and MP4 with playback controls; fit/100%, zoom, pan, carousel buttons, arrow keys and swipe. |
-| Track results | Compact popup, full manager, source-page notices, optional local statistics, retry and cancellation. Image/GIF and video filters remain available. |
+| Track results | Popup, manager, page notices, optional statistics, retry and cancellation. Filters for images/GIFs and videos. |
 | Copy preview links | Configurable X, Instagram, TikTok, YouTube video and Shorts links. This does not add YouTube downloading. |
 | Adjust the interface | Violet, blue, dark and light themes; English/Russian; keyboard focus and reduced motion. |
-| Read release history | Page through bundled versions offline, with an Installed label on the matching version. |
+| Read release history | Browse release notes offline, with an Installed label on the matching version. |
 
-Click a thumbnail in the manager to open the themed viewer. Popup and page-notice thumbnails open it over the active/source page through an isolated extension frame; restricted pages fall back to the manager. Hover previews remain available.
+Click a thumbnail in the manager to open the viewer. From the popup, it opens over the active tab; from a page notice, it opens over the source page. The viewer runs in an isolated extension frame. On restricted browser pages, it opens in the manager. Small previews appear on hover.
 
-Original previews are local and bounded: 64 MiB per file, 128 MiB total, 16 entries, 24 hours. Older, oversized or evicted files can be chosen from disk. Cache failure never changes a saved file. Codec support follows the browser.
+Preview originals are stored locally: 64 MiB per file, 128 MiB total, 16 entries, 24 hours. If a file is too large or no longer cached, choose it from disk. This does not change the saved file. Codec support depends on the browser.
 
 ### Folders and filenames
 
@@ -68,9 +68,9 @@ Downloads/
     └── pixiv/pic/artwork.png
 ```
 
-The layout is configurable. Account folders name the posting account, which may differ from the artist. Publication dates currently use proven X post data; download time and filenames never stand in for an unknown publication date. Naming choices apply to new saves. Existing files are not renamed.
+The layout is configurable. Account folders use the posting account, which may differ from the artist. Publication dates currently come from verified X post data. If the date is unknown, it is omitted; the download time and filename are not used instead. Naming settings apply to new saves. Existing files are not renamed.
 
-Collisions receive a suffix, including after history/statistics are cleared. Clearing records does not authorize overwriting files. Long Unicode names may be shortened to satisfy path limits; very deep Windows destinations can still be refused.
+When names match, the extension adds a suffix, even after history and statistics are cleared. Existing files are not overwritten. Long filenames may be shortened to fit path limits. The browser or filesystem may still reject an excessively long Windows path.
 
 <details>
   <summary>Saving settings</summary>
@@ -83,7 +83,7 @@ Collisions receive a suffix, including after history/statistics are cleared. Cle
 
 <p align="center"><img src="assets/readme/flow-en.svg" width="1120" alt="Select media → verify its source and bytes → save → local preview"></p>
 
-The extension binds the action to the selected item and source page, checks the admitted source and file, then exports it. An unproven original from a neighboring post is not a substitute.
+The extension finds the selected media's original, checks the source and file, then saves it to the destination folder. It does not substitute a file from a neighboring post.
 
 ## 🌍 Site coverage
 
@@ -91,21 +91,21 @@ Support depends on the selected media, page layout and your access to the source
 
 | Site or family | Scope |
 | --- | --- |
-| X / Twitter | Selected images/video, supported MP4 animations to GIF and proven post batches. |
+| X / Twitter | Images and video, conversion of supported MP4 animations to GIF, and multiple files from a post. |
 | Reddit | Images, native GIFs, declared progressive video and bounded unencrypted H.264/AAC HLS VOD. |
-| Pixiv | Original selected artwork page or its proven page list; account folders. |
+| Pixiv | The original of the selected artwork page or its verified page list; account folders. |
 | RedGIFs | Selected player media, including supported separate-audio recovery. |
-| VK / VK Video | Photos, supported carousels/collages/feed video, preview cards/opened players and native clip downloads. Experimental; wider layout/audio checks remain. |
+| VK / VK Video | Photos, supported carousels, collages and feed videos, preview cards, opened players and native clip downloads. Experimental; other layouts and audio need further testing. |
 | TikTok / Instagram | Supported selected-video/Reel controls and posting usernames; separate-track-only feed sources can be unavailable. |
-| Pawchive / Sankaku | Declared originals tied to the selected post; partial archive imports remain explicit. |
+| Pawchive / Sankaku | Originals linked to the selected post. Incomplete archive imports are marked. |
 | Booru families | Selected originals on supported engines, subject to authentication and site limits. |
-| Other HTTP(S) pages | Image attributes, source sets, linked metadata and related original links with ownership checks. No universal video resolver. |
+| Other HTTP(S) pages | Image attributes, srcset, metadata and links to the selected image's original. There is no universal video search. |
 
-DRM, live streams, universal HLS/DASH, arbitrary gallery selection and YouTube downloads are outside the current scope. A 403, expired URL, missing original or unsupported stream is reported as a failure. A neighboring post is not a fallback.
+DRM, live streams, universal HLS/DASH, arbitrary gallery selection and YouTube downloads are not supported. A 403, expired URL, missing original or unsupported stream is reported as a failure. Files from neighboring posts are not used as a fallback.
 
 ## 🖼️ Interface
 
-These captures show the prepared 3.0.0 UI with locally generated demonstration records and media. They do not establish compatibility with every live site.
+These screenshots show the 3.0.0 interface with demonstration data. Compatibility with real sites depends on their layout and access to the media.
 
 <details open><summary>Download manager</summary>
 
@@ -124,20 +124,20 @@ These captures show the prepared 3.0.0 UI with locally generated demonstration r
 
 ## 🛡️ Privacy and security
 
-MediaLatch has no extension backend or telemetry. Saving contacts the requested source/provider/CDN. Preferences, queue state, optional statistics, diagnostics and preview caches stay in extension storage. A manual release check contacts GitHub and never installs code.
+MediaLatch has no backend or telemetry. Downloads contact the selected site, service or CDN. Settings, the queue, optional statistics, diagnostics and preview caches stay in extension storage. A manual version check contacts GitHub and does not install code.
 
-Source-page notices show bounded result text. Original bytes, directory handles and local paths stay in extension contexts. Reports and diagnostic exports require a user action; review them before sharing. Broad HTTP/HTTPS permissions support selected-media discovery across sites. See the [privacy policy and permission explanations](docs/PRIVACY.md).
+Page notices show a short download result. Original file contents, folder access and local paths stay inside the extension. You can export reports and diagnostics manually; review the contents before sharing. HTTP/HTTPS permissions let the extension find selected media across sites. See the [privacy policy and permission explanations](docs/PRIVACY.md).
 
-Report vulnerabilities privately to [always1337@vk.com](mailto:always1337@vk.com) or [@fs0x1337 on Telegram](https://t.me/fs0x1337). See the [Security Policy](SECURITY.md) for reporting details and testing scope.
+Report vulnerabilities to [always1337@vk.com](mailto:always1337@vk.com) or [@fs0x1337 on Telegram](https://t.me/fs0x1337). See the [Security Policy](SECURITY.md) for what to include and how to test.
 
 ## ☕ Support the project
 
-If MediaLatch helps you collect and organize media, you can support development on [Boosty](https://boosty.to/fs0x1337). For questions and ordinary bugs, use [Issues](https://github.com/xhthc/MediaLatch/issues) or [Telegram @fs0x1337](https://t.me/fs0x1337).
+Support development on [Boosty](https://boosty.to/fs0x1337). Send questions and bug reports through [Issues](https://github.com/xhthc/MediaLatch/issues) or [Telegram @fs0x1337](https://t.me/fs0x1337).
 
 ## 📜 License
 
 Starting with 3.0.0, project-owned code and artwork use the [proprietary license](LICENSE). Earlier GPL recipients keep their existing rights. Third-party components retain their [licenses and notices](THIRD_PARTY_NOTICES.txt).
 
-This repository contains no extension development source or its Git history. CRX packages contain executable JavaScript; packaging and minification do not make it inaccessible to inspection.
+Development source and its Git history are kept separately. The JavaScript inside a CRX can still be inspected after minification.
 
 [Changelog](CHANGELOG.md) · [Privacy](docs/PRIVACY.md) · [Security Policy](SECURITY.md) · [Boosty](https://boosty.to/fs0x1337)
