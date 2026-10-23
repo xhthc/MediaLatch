@@ -5,7 +5,9 @@ Bundled component: offscreen/gifenc.js
 Upstream: https://github.com/mattdesl/gifenc
 License source: https://github.com/mattdesl/gifenc/blob/master/LICENSE.md
 The bundled file uses a browser/global wrapper. Its version is not independently identified.
-Bundled file SHA-256: ba189de04ce368303af8cf11a9a94317f2d881b7760a9d5b575a34222261bc37
+Pre-minification source SHA-256 (LF line endings): ba189de04ce368303af8cf11a9a94317f2d881b7760a9d5b575a34222261bc37
+The same hash in the CRX's bundled notice identifies this source wrapper.
+For shipped file hashes, see the release's MediaLatch-3.0.0.provenance.json.
 
 The MIT License (MIT)
 Copyright (c) 2017 Matt DesLauriers

@@ -1,19 +1,27 @@
 # Changelog
 
-## 3.0.0 — License and distribution
+## 3.0.0 — Stable release, GIF encoding and minified builds
+
+Released 2026-10-24: [v3.0.0](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0).
 
 ### Русский
 
 - Собственный код и графика с версии 3.0.0 распространяются по закрытой лицензии. Ранее полученные GPL-версии сохраняют прежние права; лицензии сторонних компонентов не меняются.
-- Чистая сборка подготовлена для ручной упаковки в CRX. Закрытый ключ подписи хранится у владельца и не публикуется. CRX не скрывает JavaScript и не гарантирует установку вне магазина в Chrome для Windows/macOS.
-- Сохранены возможности 2.6.5, включая превью изображений/GIF/MP4, карусель, имена файлов, фильтры типов и офлайн-историю изменений. Новых разрешений, зависимостей или изменений формата локальных данных нет. UI собирается текущим Vite с минификацией и без sourcemaps.
+- Опубликован подписанный минифицированный CRX с SHA-256 и сведениями о сборке: состав файлов, их размеры и хеши, инструмент минификации и результаты проверок. Подпись CRX3 проверена, все 98 файлов совпадают с принятой сборкой. Закрытый ключ не публикуется.
+- JavaScript минифицирован Vite 8.3.5 / Oxc без sourcemaps. Общие глобальные имена и имена свойств сохранены; код остаётся доступным для изучения. CRX не гарантирует установку вне магазина в Chrome для Windows/macOS.
+- Кодирование GIF выполняется в отдельном Worker с отменой, тайм-аутом и освобождением ресурсов. Подготовка больше не блокирует поток скрытого документа на кодировании; большие GIF всё ещё требуют времени и ресурсов. На проверенных стендах результат совпадает по байтам.
+- ID нового CRX — `iahebdomfekhiofmdocjmdjpjlclnngd`; он отличается от прежней ручной сборки `kmebfblhgfacdonaomlggpkndcjjpkgd`. Установки с другим ID не обновятся этим пакетом; настройки и история автоматически не переносятся.
+- Сохранены возможности 2.6.5, включая превью изображений/GIF/MP4, карусель, имена файлов, фильтры типов и офлайн-историю изменений. Новых разрешений, зависимостей или изменений формата локальных данных нет.
 - Публикация в Chrome Web Store выполняется отдельно. При включённых Verified CRX Uploads магазин принимает CRX, подписанный зарегистрированным ключом; обычный режим использует ZIP.
 
 ### English
 
 - Project-owned code and artwork use a proprietary license starting with 3.0.0. Earlier GPL recipients retain their existing rights; third-party licenses are unchanged.
-- A clean runtime is prepared for manual CRX packaging. The owner keeps the private signing key outside published artifacts. A CRX does not conceal JavaScript or guarantee installation outside the store in Chrome for Windows/macOS.
-- Retains 2.6.5 behavior, including image/GIF/MP4 previews, carousel, filename settings, file-type filters and offline release history. No new permissions, dependencies or local-data format changes. The UI uses the current Vite build with minification and no sourcemaps.
+- Publish a signed minified CRX with SHA-256 and build details: file inventory, sizes and hashes, minifier and validation results. Its CRX3 signature is verified and all 98 files match the accepted build. The private signing key is not published.
+- Minify JavaScript with Vite 8.3.5 / Oxc without source maps. Shared globals and property names are preserved; code remains inspectable. A CRX does not guarantee installation outside the store in Chrome for Windows/macOS.
+- Move GIF encoding to a dedicated Worker with cancellation, timeout and resource cleanup. Encoding no longer blocks the hidden document's thread; large GIFs still take time and resources. Output is byte-identical on tested fixtures.
+- The new CRX ID is `iahebdomfekhiofmdocjmdjpjlclnngd`, different from the earlier manually signed `kmebfblhgfacdonaomlggpkndcjjpkgd` build. It cannot update installations with another ID or automatically transfer their settings and history.
+- Retain 2.6.5 behavior, including image/GIF/MP4 previews, carousel, filename settings, file-type filters and offline release history. No new permissions, dependencies or local-data format changes.
 - Chrome Web Store publication is separate. Verified CRX Uploads accept a CRX signed with the registered key; the ordinary upload path uses ZIP.
 
 ## 2.6.5 — Viewer, naming and lifecycle fixes

@@ -5,7 +5,7 @@
 ![Chrome Web Store — coming soon](https://img.shields.io/badge/Chrome_Web_Store-Coming_soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
-[![Next 3.0.0](https://img.shields.io/badge/next-3.0.0-A78BFA?style=for-the-badge)](CHANGELOG.md)
+[![Release 3.0.0](https://img.shields.io/badge/release-3.0.0-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
 [![Telegram](https://img.shields.io/badge/Telegram-Contact-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/fs0x1337)
@@ -19,7 +19,7 @@
 <p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> This repository contains MediaLatch documentation and future builds. Development source is private. **Version 3.0.0 is in preparation.** A CRX will follow minification, repacking and verification.
+> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.0](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)** includes a minified CRX, checksum and build file inventory.
 
 ## ⚡ About
 
@@ -33,7 +33,7 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 <p align="center"><img src="assets/readme/install-en.svg?v=violet-1" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
 
-Packages will appear in [Releases](https://github.com/xhthc/MediaLatch/releases). Each CRX will include a SHA-256 checksum and a list of build files.
+Download [MediaLatch 3.0.0.crx](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx), its [SHA-256 checksum](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx.sha256) and [build details and file inventory](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.provenance.json). Earlier releases are listed in [Releases](https://github.com/xhthc/MediaLatch/releases).
 
 Chrome on Windows and macOS normally installs extensions through the Chrome Web Store. Browser and enterprise policies restrict self-signed CRX installation. The store link will be added after the listing is updated.
 
@@ -41,6 +41,10 @@ If your browser permits manual CRX installation, download the package and checks
 
 > [!TIP]
 > Keep the checksum with the CRX. Switching installation channels can change the extension ID and local data. The private `.pem` signing key is not part of the package and is not needed by users.
+
+This CRX has ID `iahebdomfekhiofmdocjmdjpjlclnngd`. It differs from the earlier manually signed build with ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: this package will not update that installation or automatically transfer its settings and history. Export needed data through the extension's available actions before switching installations.
+
+Version 3.0.0 moves GIF encoding to a dedicated Worker so animation preparation does not block the hidden document's thread. Large GIFs still take time and resources. JavaScript is minified without source maps and remains inspectable in DevTools. See the [Changelog](CHANGELOG.md) for the full list of changes.
 
 ## 🧩 Features
 

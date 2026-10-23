@@ -6,14 +6,14 @@
 
 ### Поддерживаемые версии
 
-Исправления ориентированы на последний опубликованный выпуск. Версия 3.0.0 пока готовится; сообщения о проблемах кандидата также принимаются. Отдельное сопровождение старых веток не обещается.
+Исправления ориентированы на последний стабильный выпуск — 3.0.0. Отдельное сопровождение старых веток не обещается.
 
 ### Сообщить об уязвимости
 
 Не публикуйте действующий эксплойт или приватные данные в Issues. Напишите владельцу:
 
 - Email: [always1337@vk.com](mailto:always1337@vk.com), тема `MediaLatch security`.
-- Приватный контакт: [Telegram @fs0x1337](https://t.me/fs0x1337).
+- Telegram: [@fs0x1337](https://t.me/fs0x1337).
 
 Укажите версию расширения, браузер/ОС, минимальные шаги воспроизведения, ожидаемый и фактический результат, возможное влияние. Прикладывайте обезличенный пример или короткий PoC. Не отправляйте cookies, токены, закрытые ключи, подписанные ссылки, приватные файлы или полный необработанный Debug-отчёт; при необходимости сначала согласуйте способ передачи чувствительных данных.
 
@@ -31,14 +31,14 @@
 
 ### Supported versions
 
-Fixes target the latest published release. Version 3.0.0 is still in preparation; candidate issues are welcome too. Separate maintenance of older branches is not promised.
+Fixes target the latest stable release, 3.0.0. Separate maintenance of older branches is not promised.
 
 ### Report a vulnerability
 
 Do not post a working exploit or private data in public Issues. Contact the maintainer:
 
 - Email: [always1337@vk.com](mailto:always1337@vk.com), subject `MediaLatch security`.
-- Private contact: [Telegram @fs0x1337](https://t.me/fs0x1337).
+- Telegram: [@fs0x1337](https://t.me/fs0x1337).
 
 Include the extension version, browser/OS, minimal reproduction steps, expected and actual behavior, and potential impact. Use a redacted fixture or small proof of concept. Do not send cookies, tokens, private keys, signed URLs, private files or an unreviewed raw Debug export. Agree on a suitable transfer method first if sensitive evidence is necessary.
 
