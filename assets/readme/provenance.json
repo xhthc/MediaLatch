@@ -1,19 +1,30 @@
 {
-  "artwork": "Original MediaLatch SVG artwork; existing project-owned mark reused from icons/source.svg.",
-  "layout_references": [
-    "https://github.com/Dushnilin/tachyon",
-    "https://github.com/Dushnilin/tachyon-core"
-  ],
-  "copied_reference_svg_or_code": false,
-  "animation": "CSS transform/opacity, finite at most4.8s, reduced-motion static alternative; no scripts/external fonts/resources.",
-  "sha256": {
-    "divider.svg": "a44f9cd09a690416f70b7c5f40f23f9f858bfa614944f75eea3f17431511c501",
-    "flow-en.svg": "4badd8b3006c4e7f1b58ea15c30a75fa20b44be1caf5e5966209082d401f8fc6",
-    "flow-ru.svg": "342644c0f49d1e3edf11e7da9e841e592da03b79532a14c0a0c100c2af326ca1",
-    "hero-en.svg": "6ee3ca2db84dc7b28c0f7c45727a9b3bc973b9afebc68307810c8d93554860b2",
-    "hero-ru.svg": "775fbcc90b2cc11b37f821a484a9cfe364bd2b3b141bf7a7eff2b35579321a94",
-    "install-en.svg": "e6d384f9a95b086042c98e7ed89cffdd040e8c613ae5abe45568fa2e28b6490e",
-    "install-ru.svg": "e1f48a9f53acc1f1b47adfb0fad52c9e81040e7b6109519384d93db9246462b8"
+  "artwork": "Adapted from the seven SVGs supplied by the owner in medialatch-readme-svgs.zip; private extension sources are not included.",
+  "archive_sha256": "6152872648843c2f206ea0e81de2e00cdef5c8656a4c06d31edac929f973350b",
+  "owner_asset_sha256": {
+    "hero-ru.svg": "b3f8900392556d5a0d7fb6bc59bbd2f307a47ba465322bea15d7bce0977c85f9",
+    "hero-en.svg": "1151707cb1675bb69fec8b840e3376080b55c723c990e93400bfcf370ef5ea92",
+    "flow-ru.svg": "02d89eccf70900a5f2787d3c7afb3559e0b8cd6e7fd06c85cbe3eaaf2e1b564e",
+    "flow-en.svg": "f66fd5a0e8a6d764eebd1f927d806eb46490fad2af628978d4611911c1ce6b43",
+    "install-ru.svg": "b2fac65b02e5b4e8aa4e4f3ab497e2df1dee89c3e6024bf87178694b0c2cfb04",
+    "install-en.svg": "f77e3966aed368626e75896030eabfee94e6b06ee4c58d9c3fbd7d2212f6b011",
+    "divider.svg": "e7a64ebd13e340507bee23c14f9d9b159a3c7b0ebb7392d38fcc70c59965de9f"
   },
-  "installation_animation": "Packaged CRX filename, download/checksum/install sequence, aligned24px icons inside32px containers; finite4.1s explanation, static reduced-motion fallback. Chrome Windows/macOS uses Web Store; manual CRX installation depends on browser policy. No unpacked/source folder is offered."
+  "adaptations": [
+    "Escaped invalid XML ampersand in flow-en.",
+    "Preserved layout translations outside animated elements.",
+    "Finite transform/opacity explanations with completed reduced-motion state.",
+    "Marked hero as demonstration, corrected checksum filename and removed unsupported per-stage verification claim.",
+    "Updated both README image versions to bypass stale GitHub image caches."
+  ],
+  "animation": "CSS transform/opacity only, finishes within4seconds, static reduced-motion fallback; no scripts or external resources.",
+  "sha256": {
+    "divider.svg": "675470426a2e1bc468ebd1092e0573a0ab7d8284bf8f3340e92fd5cd1d02c62d",
+    "flow-en.svg": "f9d740426c9b8d0b8270436908156b4d386634a2819cc456804e576bd0da35fc",
+    "flow-ru.svg": "79e35b9cc277b0d2d79815fccf1352ae7cb02628fd4a0942bed6066b1eea09d5",
+    "hero-en.svg": "13cfd686330c5f9b2a17441dc51c615b806f3761208d86d0f4f823e2c29775a7",
+    "hero-ru.svg": "09a604ed2ba3ac6df9e6d3736f7bdacb20341ddef08699156b0ed5cad5907083",
+    "install-en.svg": "5ba4c46c00c14a5f2793f854f11e19c1c052320e7e922e19b96097712593a977",
+    "install-ru.svg": "2df49c9b4c60b570dae9cbeae0e740f60bbb23db585de86ffa6e63b9a27bb8a7"
+  }
 }

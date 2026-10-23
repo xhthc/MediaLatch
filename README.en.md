@@ -1,6 +1,6 @@
 <div align="center">
 
-<p align="center"><img src="assets/readme/hero-en.svg" width="1120" alt="MediaLatch — save media, preview and organize"></p>
+<p align="center"><img src="assets/readme/hero-en.svg?v=violet-1" width="1120" alt="MediaLatch — save media, preview and organize"></p>
 
 ![Chrome Web Store — coming soon](https://img.shields.io/badge/Chrome_Web_Store-Coming_soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
@@ -16,7 +16,7 @@
 
 </div>
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 > [!IMPORTANT]
 > This repository contains MediaLatch documentation and future builds. Development source is private. **Version 3.0.0 is in preparation.** A CRX will follow minification, repacking and verification.
@@ -27,11 +27,11 @@
 
 Configure folders, names for new files, notices and optional statistics. No companion app is required. The extension has no backend or telemetry.
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 ## 🚀 Installation and updates
 
-<p align="center"><img src="assets/readme/install-en.svg?v=crx-1" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
+<p align="center"><img src="assets/readme/install-en.svg?v=violet-1" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
 
 Packages will appear in [Releases](https://github.com/xhthc/MediaLatch/releases). Each CRX will include a SHA-256 checksum and a list of build files.
 
@@ -79,11 +79,11 @@ When names match, the extension adds a suffix, even after history and statistics
   <img src="assets/screenshots/saving-en.jpg" alt="Folder and filename settings" width="1280">
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 ## 🌐 From selection to file
 
-<p align="center"><img src="assets/readme/flow-en.svg" width="1120" alt="Select media → verify its source and bytes → save → local preview"></p>
+<p align="center"><img src="assets/readme/flow-en.svg?v=violet-1" width="1120" alt="Select media → verify its source and bytes → save → local preview"></p>
 
 The extension finds the selected media's original, checks the source and file, then saves it to the destination folder. It does not substitute a file from a neighboring post.
 
@@ -122,7 +122,7 @@ These screenshots show the 3.0.0 interface with demonstration data. Compatibilit
 
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 ## 🛡️ Privacy and security
 

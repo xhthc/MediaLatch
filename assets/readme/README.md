@@ -1,7 +1,7 @@
 # MediaLatch README artwork
 
-Original SVG artwork for the public documentation. The MediaLatch mark is reused from the project-owned icon source. Composition references: [Tachyon](https://github.com/Dushnilin/tachyon) and [tachyon-core](https://github.com/Dushnilin/tachyon-core). Their SVG source and artwork were not copied.
+Seven SVG illustrations adapted from the archive supplied by the project owner. The layout follows MediaLatch's Violet Pro surfaces, type and colours. Archive and resulting file hashes are recorded in provenance.json.
 
-Hero, flow and package-installation illustrations have English and Russian variants. CSS animations affect only transform/opacity, finish within4.8seconds and use a static reduced-motion alternative. They contain no scripts, external fonts or external image requests. Diagram labels explain behavior; they are not live telemetry.
+Russian and English variants show an illustrative save preview, the selection-to-file flow and packaged CRX installation. The preview uses sample data. It is not a screenshot or live download status. Chrome Web Store installation limits remain in the README.
 
-Product screenshots use locally generated demonstration records and media. Capture limits and hashes are recorded alongside them.
+Animations use transform/opacity, finish within4seconds and show completed static content under reduced motion. No scripts, external fonts or image resources are embedded. Product screenshots remain separate and retain their own provenance.

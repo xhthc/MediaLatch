@@ -1,37 +1,150 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="208" viewBox="0 0 1120 208" role="img" aria-labelledby="title desc">
-  <title id="title">От выбранного медиа до файла</title>
-  <desc id="desc">Выбранное медиа проходит поиск источника, проверку и экспорт; сохранённый оригинал можно открыть локально.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="240" viewBox="0 0 1120 240" role="img" aria-label="От выбранного медиа до файла: 4 этапа работы MediaLatch">
   <defs>
-    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
-    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
-    <radialGradient id="light"><stop stop-color="#7c3aed" stop-opacity=".23"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#b0a0de" stroke-opacity=".065"/></pattern>
+    <linearGradient id="flowBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#140f21" />
+      <stop offset="100%" stop-color="#090610" />
+    </linearGradient>
+    <linearGradient id="flowCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b142c" />
+      <stop offset="100%" stop-color="#110c1c" />
+    </linearGradient>
+    <linearGradient id="flowBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <radialGradient id="flowGlow" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+    <style>
+      .root {font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+      .mono {font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+      @keyframes highlight {0%,100% {opacity:0} 15%,75% {opacity:1}}
+      @keyframes fillBar {from {transform:scaleX(.02);opacity:.35} to {transform:scaleX(1);opacity:1}}
+      @keyframes complete {from {opacity:0} to {opacity:1}}
+      @keyframes fadeAway {from {opacity:1} to {opacity:0}}
+
+      .flow-card-active,.flow-arrow-pulse {opacity:0;animation:highlight .8s ease both}
+      .flow-bar-fill {transform-box:fill-box;transform-origin:left center;animation:fillBar .65s cubic-bezier(.77,0,.175,1) both}
+      @media (prefers-reduced-motion:reduce) {.flow-card-active,.flow-arrow-pulse,.flow-bar-fill {animation:none}}
+</style>
   </defs>
-  <style>
-    text { font-family:Arial,Helvetica,sans-serif; fill:#f3efff }
-    .muted { fill:#b7acce } .mono { font-family:Consolas,'Courier New',monospace; letter-spacing:.5px }
-    .packet {animation:flow 1.3s cubic-bezier(.77,0,.175,1) 2 both} .p1 {animation-delay:.7s} .p2 {animation-delay:1.4s}
-    @keyframes flow {0% {transform:translateX(0);opacity:.3} 50% {opacity:1} 100% {transform:translateX(20px);opacity:.3}}
-    @media (prefers-reduced-motion:reduce) { .orbit,.packet,.pulse,.cursor { animation:none; transform:none } }
-  </style>
-  <rect width="1120" height="208" rx="16" fill="url(#surface)"/>
-  <text x="32" y="39" font-size="21" font-weight="700">От выбранного медиа до файла</text>
-  <g class="card" transform="translate(32 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
-    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">01</text><text x="43" y="30" font-size="18" font-weight="700">Выбор</text>
-    <text class="muted" x="16" y="67" font-size="12">Медиа и его исходная страница</text></g>
-  <path d="M274 121h23m-7-6 7 6-7 6" fill="none" stroke="#8f76c7" stroke-width="1.5"/>
-  <circle class="packet p0" cx="274" cy="121" r="2.5" fill="#22d3ee"/>
-  <g class="card" transform="translate(306 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
-    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">02</text><text x="43" y="30" font-size="18" font-weight="700">Проверка</text>
-    <text class="muted" x="16" y="67" font-size="12">Источник, формат и размер</text></g>
-  <path d="M548 121h23m-7-6 7 6-7 6" fill="none" stroke="#8f76c7" stroke-width="1.5"/>
-  <circle class="packet p1" cx="548" cy="121" r="2.5" fill="#22d3ee"/>
-  <g class="card" transform="translate(580 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
-    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">03</text><text x="43" y="30" font-size="18" font-weight="700">Сохранение</text>
-    <text class="muted" x="16" y="67" font-size="12">Загрузки или выбранная папка</text></g>
-  <path d="M822 121h23m-7-6 7 6-7 6" fill="none" stroke="#8f76c7" stroke-width="1.5"/>
-  <circle class="packet p2" cx="822" cy="121" r="2.5" fill="#22d3ee"/>
-  <g class="card" transform="translate(854 72)"><rect width="234" height="101" rx="12" fill="#151323" stroke="#40335e"/>
-    <text class="mono" x="16" y="29" font-size="12" style="fill:#67e8f9">04</text><text x="43" y="30" font-size="18" font-weight="700">Превью</text>
-    <text class="muted" x="16" y="67" font-size="12">Сохранённый оригинал локально</text></g>
+
+  <g class="root" data-panel="surface">
+    <rect x="0.5" y="0.5" width="1119" height="239" rx="18" fill="url(#flowBg)" stroke="#2d2342" stroke-width="1" />
+    <rect x="1" y="1" width="1118" height="238" rx="17.5" fill="url(#flowGlow)" />
+    <line x1="24" y1="1.5" x2="1096" y2="1.5" stroke="#a855f7" stroke-opacity="0.28" stroke-width="1" />
+
+    <text x="32" y="38" fill="#f4effc" font-size="19" font-weight="600" letter-spacing="-0.3">От выбранного медиа до файла</text>
+    <text x="32" y="60" fill="#ab9fc6" font-size="13">Выбор медиа, проверка источника, сохранение и локальное превью</text>
+
+
+    <g transform="translate(32 84)" data-card="flow" data-panel="surface">
+      <rect width="252" height="126" rx="14" fill="url(#flowCard)" stroke="#2d2342" stroke-width="1" />
+      <rect width="252" height="126" rx="14" fill="none" stroke="#b693ff" stroke-width="1.4" class="flow-card-active" style="animation-delay:0.2s" />
+      <line x1="16" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+
+      <g transform="translate(16 16)">
+        <rect width="38" height="26" rx="8" fill="#251842" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1" />
+        <text x="19" y="17.5" text-anchor="middle" fill="#d8b4fe" font-size="12" font-weight="700" class="mono">01</text>
+      </g>
+      <text x="64" y="34.5" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">Выбор</text>
+
+      <g transform="translate(206 15)">
+        <rect width="30" height="30" rx="8" fill="#171126" stroke="#3b2d56" stroke-width="1" />
+        <g transform="translate(3 3)"><path d="m6 4 11 6.5-4.8 1.4-2.4 4.6L6 4Zm7.5 9.2 4 4" fill="none" stroke="#d8b4fe" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+
+      <text x="16" y="74" fill="#ece5f8" font-size="13.5" font-weight="500">Медиа и его исходная страница</text>
+      <text x="16" y="96" fill="#8b7fa8" font-size="12">Контекстное меню или inline-кнопка</text>
+
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="#1f1733" />
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="url(#flowBar)" class="flow-bar-fill" style="animation-delay:0.2s" />
+    </g>
+    <g transform="translate(300 84)" data-card="flow" data-panel="surface">
+      <rect width="252" height="126" rx="14" fill="url(#flowCard)" stroke="#2d2342" stroke-width="1" />
+      <rect width="252" height="126" rx="14" fill="none" stroke="#b693ff" stroke-width="1.4" class="flow-card-active" style="animation-delay:1.1s" />
+      <line x1="16" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+
+      <g transform="translate(16 16)">
+        <rect width="38" height="26" rx="8" fill="#251842" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1" />
+        <text x="19" y="17.5" text-anchor="middle" fill="#d8b4fe" font-size="12" font-weight="700" class="mono">02</text>
+      </g>
+      <text x="64" y="34.5" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">Проверка</text>
+
+      <g transform="translate(206 15)">
+        <rect width="30" height="30" rx="8" fill="#171126" stroke="#3b2d56" stroke-width="1" />
+        <g transform="translate(3 3)"><path d="M12 3.5 19 6.5v5.2c0 4.5-3 7.9-7 9.3-4-1.4-7-4.8-7-9.3V6.5l7-3Z" fill="none" stroke="#d8b4fe" stroke-width="1.8" stroke-linejoin="round" /><path d="m9.2 12.2 2 2 3.8-3.8" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+
+      <text x="16" y="74" fill="#ece5f8" font-size="13.5" font-weight="500">Источник, формат и размер</text>
+      <text x="16" y="96" fill="#8b7fa8" font-size="12">Связь с выбранным медиа и тип файла</text>
+
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="#1f1733" />
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="url(#flowBar)" class="flow-bar-fill" style="animation-delay:1.1s" />
+    </g>
+    <g transform="translate(568 84)" data-card="flow" data-panel="surface">
+      <rect width="252" height="126" rx="14" fill="url(#flowCard)" stroke="#2d2342" stroke-width="1" />
+      <rect width="252" height="126" rx="14" fill="none" stroke="#b693ff" stroke-width="1.4" class="flow-card-active" style="animation-delay:2.0s" />
+      <line x1="16" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+
+      <g transform="translate(16 16)">
+        <rect width="38" height="26" rx="8" fill="#251842" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1" />
+        <text x="19" y="17.5" text-anchor="middle" fill="#d8b4fe" font-size="12" font-weight="700" class="mono">03</text>
+      </g>
+      <text x="64" y="34.5" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">Сохранение</text>
+
+      <g transform="translate(206 15)">
+        <rect width="30" height="30" rx="8" fill="#171126" stroke="#3b2d56" stroke-width="1" />
+        <g transform="translate(3 3)"><path d="M3.5 7.5a2 2 0 0 1 2-2h4l2 2h7a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2V7.5Z" fill="none" stroke="#d8b4fe" stroke-width="1.8" stroke-linejoin="round" /><path d="M12 10.5v5m0 0-2.2-2.2M12 15.5l2.2-2.2" fill="none" stroke="#b693ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+
+      <text x="16" y="74" fill="#ece5f8" font-size="13.5" font-weight="500">Загрузки или выбранная папка</text>
+      <text x="16" y="96" fill="#8b7fa8" font-size="12">Умные подпапки и шаблоны имён</text>
+
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="#1f1733" />
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="url(#flowBar)" class="flow-bar-fill" style="animation-delay:2.0s" />
+    </g>
+    <g transform="translate(836 84)" data-card="flow" data-panel="surface">
+      <rect width="252" height="126" rx="14" fill="url(#flowCard)" stroke="#2d2342" stroke-width="1" />
+      <rect width="252" height="126" rx="14" fill="none" stroke="#34d399" stroke-width="1.4" class="flow-card-active" style="animation-delay:2.9s" />
+      <line x1="16" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+
+      <g transform="translate(16 16)">
+        <rect width="38" height="26" rx="8" fill="#251842" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1" />
+        <text x="19" y="17.5" text-anchor="middle" fill="#d8b4fe" font-size="12" font-weight="700" class="mono">04</text>
+      </g>
+      <text x="64" y="34.5" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">Превью</text>
+
+      <g transform="translate(206 15)">
+        <rect width="30" height="30" rx="8" fill="#171126" stroke="#3b2d56" stroke-width="1" />
+        <g transform="translate(3 3)"><rect x="4" y="5" width="16" height="14" rx="3" fill="none" stroke="#d8b4fe" stroke-width="1.8" /><circle cx="9" cy="10" r="1.5" fill="#34d399" /><path d="m5 16 4.5-4 3.2 2.8 2.8-2.3L19 16" fill="none" stroke="#b693ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+
+      <text x="16" y="74" fill="#ece5f8" font-size="13.5" font-weight="500">Сохранённый оригинал локально</text>
+      <text x="16" y="96" fill="#8b7fa8" font-size="12">Просмотрщик фото, GIF и MP4</text>
+
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="#1f1733" />
+      <rect x="16" y="110" width="220" height="3" rx="1.5" fill="url(#flowBar)" class="flow-bar-fill" style="animation-delay:2.9s" />
+    </g>
+
+    <g transform="translate(284 147)">
+      <line x1="2" y1="0" x2="14" y2="0" stroke="#3b2d56" stroke-width="1.8" stroke-linecap="round" />
+      <path d="m10 -4 4 4-4 4" fill="none" stroke="#3b2d56" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      <line x1="2" y1="0" x2="14" y2="0" stroke="#c084fc" stroke-width="2" stroke-linecap="round" class="flow-arrow-pulse" style="animation-delay:0.65s" />
+      <path d="m10 -4 4 4-4 4" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flow-arrow-pulse" style="animation-delay:0.65s" />
+    </g>
+    <g transform="translate(552 147)">
+      <line x1="2" y1="0" x2="14" y2="0" stroke="#3b2d56" stroke-width="1.8" stroke-linecap="round" />
+      <path d="m10 -4 4 4-4 4" fill="none" stroke="#3b2d56" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      <line x1="2" y1="0" x2="14" y2="0" stroke="#c084fc" stroke-width="2" stroke-linecap="round" class="flow-arrow-pulse" style="animation-delay:1.55s" />
+      <path d="m10 -4 4 4-4 4" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flow-arrow-pulse" style="animation-delay:1.55s" />
+    </g>
+    <g transform="translate(820 147)">
+      <line x1="2" y1="0" x2="14" y2="0" stroke="#3b2d56" stroke-width="1.8" stroke-linecap="round" />
+      <path d="m10 -4 4 4-4 4" fill="none" stroke="#3b2d56" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      <line x1="2" y1="0" x2="14" y2="0" stroke="#c084fc" stroke-width="2" stroke-linecap="round" class="flow-arrow-pulse" style="animation-delay:2.45s" />
+      <path d="m10 -4 4 4-4 4" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flow-arrow-pulse" style="animation-delay:2.45s" />
+    </g>
+  </g>
 </svg>

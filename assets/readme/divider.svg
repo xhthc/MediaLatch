@@ -1,19 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="32" viewBox="0 0 1120 32" role="img" aria-labelledby="title desc">
-  <title id="title"></title>
-  <desc id="desc"></desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="24" viewBox="0 0 1120 24" role="presentation" aria-hidden="true">
   <defs>
-    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
-    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
-    <radialGradient id="light"><stop stop-color="#7c3aed" stop-opacity=".23"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#b0a0de" stroke-opacity=".065"/></pattern>
+    <linearGradient id="divLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2d2342" stop-opacity="0" />
+      <stop offset="20%" stop-color="#2d2342" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.65" />
+      <stop offset="80%" stop-color="#2d2342" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#2d2342" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="divGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0" />
+    </radialGradient>
+    <style>
+      .root {font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+      .mono {font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+      @keyframes highlight {0%,100% {opacity:0} 15%,75% {opacity:1}}
+      @keyframes fillBar {from {transform:scaleX(.02);opacity:.35} to {transform:scaleX(1);opacity:1}}
+      @keyframes complete {from {opacity:0} to {opacity:1}}
+      @keyframes fadeAway {from {opacity:1} to {opacity:0}}
+
+      .div-node {animation:breathe 2s ease 2 both}
+      @keyframes breathe {0%,100% {opacity:.7} 50% {opacity:1}}
+      @media (prefers-reduced-motion:reduce) {.div-node {animation:none}}
+</style>
   </defs>
-  <style>
-    text { font-family:Arial,Helvetica,sans-serif; fill:#f3efff }
-    .muted { fill:#b7acce } .mono { font-family:Consolas,'Courier New',monospace; letter-spacing:.5px }
-    .pulse {animation:shine 2s ease 2 both} @keyframes shine {0%,100% {opacity:.4} 50% {opacity:1}}
-    @media (prefers-reduced-motion:reduce) { .orbit,.packet,.pulse,.cursor { animation:none; transform:none } }
-  </style>
-  <path d="M20 16h510m60 0h510" stroke="url(#accent)" stroke-opacity=".25"/>
-  <path class="pulse" d="m560 4 12 12-12 12-12-12z" fill="#1d1531" stroke="#a78bfa"/>
-  <path d="m560 11 5 5-5 5-5-5z" fill="#22d3ee"/>
+  <line x1="0" y1="12" x2="1120" y2="12" stroke="url(#divLine)" stroke-width="1" />
+  <ellipse cx="560" cy="12" rx="64" ry="8" fill="url(#divGlow)" />
+  <g class="div-node">
+    <rect x="553" y="5" width="14" height="14" rx="4" transform="rotate(45 560 12)" fill="#191329" stroke="#a855f7" stroke-width="1.2" />
+    <circle cx="560" cy="12" r="2.2" fill="#d8b4fe" />
+  </g>
 </svg>

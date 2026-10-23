@@ -1,74 +1,173 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="304" viewBox="0 0 1120 304" role="img" aria-labelledby="title desc">
-  <title id="title">MediaLatch installation and packages</title>
-  <desc id="desc">Open Releases, download the CRX and SHA-256 checksum, then verify the file. Use the Web Store for Chrome on Windows and macOS; manual CRX installation depends on browser policies.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="304" viewBox="0 0 1120 304" role="img" aria-label="MediaLatch installation and packages: MediaLatch.crx and 3 verification steps">
   <defs>
-    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
-    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
-    <radialGradient id="light"><stop stop-color="#7c3aed" stop-opacity=".23"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#b0a0de" stroke-opacity=".065"/></pattern>
+    <linearGradient id="instBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#140f21" />
+      <stop offset="100%" stop-color="#090610" />
+    </linearGradient>
+    <linearGradient id="instCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b142c" />
+      <stop offset="100%" stop-color="#110c1c" />
+    </linearGradient>
+    <linearGradient id="instProgress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="pkgBadgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#4c1d95" />
+    </linearGradient>
+    <radialGradient id="instGlow" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+    <style>
+      .root {font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+      .mono {font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+      @keyframes highlight {0%,100% {opacity:0} 15%,75% {opacity:1}}
+      @keyframes fillBar {from {transform:scaleX(.02);opacity:.35} to {transform:scaleX(1);opacity:1}}
+      @keyframes complete {from {opacity:0} to {opacity:1}}
+      @keyframes fadeAway {from {opacity:1} to {opacity:0}}
+
+      .step-focus {opacity:0;animation:highlight .9s ease both}
+      .step-bar {transform-box:fill-box;transform-origin:left center;animation:fillBar .8s cubic-bezier(.77,0,.175,1) both}
+      .step-check {animation:complete .18s cubic-bezier(.23,1,.32,1) both}
+      @media (prefers-reduced-motion:reduce) {.step-focus,.step-bar,.step-check {animation:none}}
+</style>
   </defs>
-  <style>
-    text {font-family:Arial,Helvetica,sans-serif;fill:#f3efff}
-    .muted {fill:#b7acce}.mono {font-family:Consolas,'Courier New',monospace}
-    .letter {animation:reveal .03s linear both}
-    .cursor {opacity:0;animation:type-cursor .7s steps(14,end) .18s both,cursor-off .18s linear 1.02s both}
-    .step-active {opacity:0;animation:focus .9s ease both;animation-delay:var(--start)}
-    .step-check {animation:reveal .18s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--start) + .75s)}
-    .step-progress {transform-box:fill-box;transform-origin:left center;animation:progress .8s cubic-bezier(.77,0,.175,1) both;animation-delay:var(--start)}
-    .install-icon {animation:settle .2s cubic-bezier(.23,1,.32,1) both;animation-delay:var(--start)}
-    @keyframes reveal {from {opacity:0} to {opacity:1}}
-    @keyframes type-cursor {from {transform:translateX(0);opacity:1} to {transform:translateX(252px);opacity:1}}
-    @keyframes cursor-off {from {opacity:1} to {opacity:0}}
-    @keyframes focus {0%,100% {opacity:0} 15%,80% {opacity:1}}
-    @keyframes progress {from {transform:scaleX(.01);opacity:.2} to {transform:scaleX(1);opacity:1}}
-    @keyframes settle {from {transform:translateY(4px);opacity:.3} to {transform:translateY(0);opacity:1}}
-    @media (prefers-reduced-motion:reduce) {
-      .letter,.cursor,.step-active,.step-check,.step-progress,.install-icon {animation:none}
-    }
-  </style>
-  <rect x=".5" y=".5" width="1119" height="303" rx="12" fill="#0b0b18" stroke="#3a3157"/>
-  <path d="M1 38h1118" stroke="#29223d"/>
-  <circle cx="22" cy="20" r="4" fill="#fb7185"/><circle cx="38" cy="20" r="4" fill="#fbbf24"/><circle cx="54" cy="20" r="4" fill="#34d399"/>
-  <text class="mono muted" x="74" y="24" font-size="12">MediaLatch installation and packages</text>
-  <rect x="24" y="58" width="1072" height="64" rx="9" fill="#111222" stroke="#292a43"/>
-  <path d="M40 77h10l6 6v20H40zM50 77v7h6" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <text class="mono" y="99" font-size="28" style="fill:#67e8f9"><tspan class="letter" x="64" style="animation-delay:0.18s">M</tspan><tspan class="letter" x="82" style="animation-delay:0.23s">e</tspan><tspan class="letter" x="100" style="animation-delay:0.28s">d</tspan><tspan class="letter" x="118" style="animation-delay:0.33s">i</tspan><tspan class="letter" x="136" style="animation-delay:0.38s">a</tspan><tspan class="letter" x="154" style="animation-delay:0.43s">L</tspan><tspan class="letter" x="172" style="animation-delay:0.48s">a</tspan><tspan class="letter" x="190" style="animation-delay:0.53s">t</tspan><tspan class="letter" x="208" style="animation-delay:0.58s">c</tspan><tspan class="letter" x="226" style="animation-delay:0.63s">h</tspan><tspan class="letter" x="244" style="animation-delay:0.68s">.</tspan><tspan class="letter" x="262" style="animation-delay:0.73s">c</tspan><tspan class="letter" x="280" style="animation-delay:0.78s">r</tspan><tspan class="letter" x="298" style="animation-delay:0.83s">x</tspan></text>
-  <rect class="cursor" x="64" y="76" width="3" height="27" rx="1" fill="#a78bfa"/>
-  <text class="mono muted" x="1076" y="94" font-size="11" text-anchor="end">PACKAGED BUILD · SHA-256</text>
-  <g class="card step" transform="translate(24 146)" style="--start:1.2s">
-    <rect width="348" height="132" rx="10" fill="#121020" stroke="#332b49"/>
-    <rect class="step-active" x=".5" y=".5" width="347" height="131" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
-    <g class="install-icon"><rect x="16" y="14" width="32" height="32" rx="8" fill="#242039"/><svg x="20" y="18" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></g>
-    <circle cx="317" cy="30" r="12" fill="#262039"/>
-    <text class="mono muted" x="317" y="34" font-size="12" text-anchor="middle">1</text>
-    <g class="step-check"><circle cx="317" cy="30" r="12" fill="#155347"/><path d="m312 30 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <text x="16" y="76" font-size="17" font-weight="700">Open Releases</text>
-    <text class="muted" x="16" y="98" font-size="13">Download the CRX and its checksum</text>
-    <rect x="16" y="116" width="316" height="2" rx="1" fill="#30263f"/>
-    <rect class="step-progress" x="16" y="116" width="316" height="2" rx="1" fill="url(#accent)"/>
-  </g>
-  <g class="card step" transform="translate(386 146)" style="--start:2.2s">
-    <rect width="348" height="132" rx="10" fill="#121020" stroke="#332b49"/>
-    <rect class="step-active" x=".5" y=".5" width="347" height="131" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
-    <g class="install-icon"><rect x="16" y="14" width="32" height="32" rx="8" fill="#242039"/><svg x="20" y="18" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m8 12 3 3 5-6"/></svg></g>
-    <circle cx="317" cy="30" r="12" fill="#262039"/>
-    <text class="mono muted" x="317" y="34" font-size="12" text-anchor="middle">2</text>
-    <g class="step-check"><circle cx="317" cy="30" r="12" fill="#155347"/><path d="m312 30 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <text x="16" y="76" font-size="17" font-weight="700">Verify SHA-256</text>
-    <text class="muted" x="16" y="98" font-size="13">Compare the downloaded file checksum</text>
-    <rect x="16" y="116" width="316" height="2" rx="1" fill="#30263f"/>
-    <rect class="step-progress" x="16" y="116" width="316" height="2" rx="1" fill="url(#accent)"/>
-  </g>
-  <g class="card step" transform="translate(748 146)" style="--start:3.2s">
-    <rect width="348" height="132" rx="10" fill="#121020" stroke="#332b49"/>
-    <rect class="step-active" x=".5" y=".5" width="347" height="131" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
-    <g class="install-icon"><rect x="16" y="14" width="32" height="32" rx="8" fill="#242039"/><svg x="20" y="18" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M2 8h20m-14 7 3 3 5-6"/></svg></g>
-    <circle cx="317" cy="30" r="12" fill="#262039"/>
-    <text class="mono muted" x="317" y="34" font-size="12" text-anchor="middle">3</text>
-    <g class="step-check"><circle cx="317" cy="30" r="12" fill="#155347"/><path d="m312 30 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <text x="16" y="76" font-size="17" font-weight="700">Install in your browser</text>
-    <text class="muted" x="16" y="98" font-size="13">Chrome: Web Store; CRX where permitted</text>
-    <rect x="16" y="116" width="316" height="2" rx="1" fill="#30263f"/>
-    <rect class="step-progress" x="16" y="116" width="316" height="2" rx="1" fill="url(#accent)"/>
+
+  <g class="root" data-panel="surface">
+    <rect x="0.5" y="0.5" width="1119" height="303" rx="18" fill="url(#instBg)" stroke="#2d2342" stroke-width="1" />
+    <rect x="1" y="1" width="1118" height="302" rx="17.5" fill="url(#instGlow)" />
+    <line x1="24" y1="1.5" x2="1096" y2="1.5" stroke="#a855f7" stroke-opacity="0.28" stroke-width="1" />
+
+
+    <g transform="translate(24 18)">
+      <circle cx="8" cy="14" r="4" fill="#7c3aed" />
+      <text x="22" y="19" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">MediaLatch installation and packages</text>
+    </g>
+
+    <g transform="translate(866 16)" data-panel="surface">
+      <rect width="230" height="28" rx="14" fill="#191329" stroke="#3b2d56" stroke-width="1" />
+      <circle cx="15" cy="14" r="3.5" fill="#34d399" />
+      <text x="27" y="18" fill="#d8b4fe" font-size="10.5" font-weight="600" letter-spacing="0.7" class="mono">PACKAGED BUILD · SHA-256</text>
+    </g>
+
+
+    <g transform="translate(24 58)" data-panel="surface">
+      <rect width="1072" height="66" rx="14" fill="#120d1d" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" class="pkg-card" />
+      <line x1="16" y1="1" x2="1056" y2="1" stroke="#b693ff" stroke-opacity="0.24" stroke-width="1" />
+
+
+      <g transform="translate(14 12)">
+        <rect width="42" height="42" rx="11" fill="url(#pkgBadgeGrad)" stroke="#d8b4fe" stroke-opacity="0.4" stroke-width="1" />
+        <path d="M15 11h8l6 6v14a2 2 0 0 1-2 2H15a2 2 0 0 1-2-2V13a2 2 0 0 1 2-2Z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round" />
+        <path d="M23 11v6h6" fill="none" stroke="#d8b4fe" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+
+
+      <text x="70" y="31" fill="#f4effc" font-size="18" font-weight="700" letter-spacing="-0.2" class="mono">MediaLatch.crx</text>
+      <text x="70" y="50" fill="#ab9fc6" font-size="12.5">Extension package · SHA-256 and build file list</text>
+
+
+      <g transform="translate(652 18)" data-panel="surface">
+        <rect width="234" height="30" rx="9" fill="#191329" stroke="#2d2342" stroke-width="1" />
+        <path d="M14 15h12M20 9v12" stroke="#b693ff" stroke-width="1.6" stroke-linecap="round" opacity="0" />
+        <circle cx="16" cy="15" r="3.5" fill="#b693ff" />
+        <text x="27" y="19" fill="#ece5f8" font-size="11.5" font-weight="500" class="mono">SHA-256</text>
+      </g>
+
+      <g transform="translate(896 18)" data-panel="surface">
+        <rect width="160" height="30" rx="9" fill="#0f291e" stroke="#34d399" stroke-opacity="0.5" stroke-width="1" />
+        <path d="m14 15.2 2.5 2.5 5-5" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="28" y="19" fill="#34d399" font-size="11.5" font-weight="600" class="mono">.crx.sha256</text>
+      </g>
+    </g>
+
+
+
+    <g transform="translate(24 142)" data-card="install" data-panel="surface">
+      <rect width="348" height="136" rx="14" fill="url(#instCard)" stroke="#2d2342" stroke-width="1" />
+      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-delay:0.3s" />
+      <line x1="16" y1="1" x2="332" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+
+
+      <g transform="translate(18 16)">
+        <rect width="38" height="38" rx="10" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
+        <g transform="translate(7 7)"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14" fill="none" stroke="#b693ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+
+
+      <g transform="translate(268 18)" data-panel="surface">
+        <rect width="62" height="28" rx="14" fill="#171126" stroke="#3b2d56" stroke-width="1" />
+        <text x="20" y="18.5" text-anchor="middle" fill="#ab9fc6" font-size="12" font-weight="700" class="mono">01</text>
+        <g class="step-check" style="animation-delay:1.1s" transform="translate(34 4)">
+          <circle cx="10" cy="10" r="9" fill="#0f291e" stroke="#34d399" stroke-opacity="0.7" stroke-width="1" />
+          <path d="m6.2 10.2 2.4 2.4 5.2-5.2" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </g>
+
+      <text x="18" y="80" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">Open Releases</text>
+      <text x="18" y="102" fill="#ab9fc6" font-size="13">Download the CRX and its checksum</text>
+
+
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="#1f1733" />
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-delay:0.3s" />
+    </g>
+    <g transform="translate(386 142)" data-card="install" data-panel="surface">
+      <rect width="348" height="136" rx="14" fill="url(#instCard)" stroke="#2d2342" stroke-width="1" />
+      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-delay:1.5s" />
+      <line x1="16" y1="1" x2="332" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+
+
+      <g transform="translate(18 16)">
+        <rect width="38" height="38" rx="10" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
+        <g transform="translate(7 7)"><path d="M12 3.5 19 6.5v5.2c0 4.5-3 7.9-7 9.3-4-1.4-7-4.8-7-9.3V6.5l7-3Z" fill="none" stroke="#b693ff" stroke-width="1.8" stroke-linejoin="round" /><path d="m9.2 12.2 2 2 3.8-3.8" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+
+
+      <g transform="translate(268 18)" data-panel="surface">
+        <rect width="62" height="28" rx="14" fill="#171126" stroke="#3b2d56" stroke-width="1" />
+        <text x="20" y="18.5" text-anchor="middle" fill="#ab9fc6" font-size="12" font-weight="700" class="mono">02</text>
+        <g class="step-check" style="animation-delay:2.3s" transform="translate(34 4)">
+          <circle cx="10" cy="10" r="9" fill="#0f291e" stroke="#34d399" stroke-opacity="0.7" stroke-width="1" />
+          <path d="m6.2 10.2 2.4 2.4 5.2-5.2" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </g>
+
+      <text x="18" y="80" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">Verify SHA-256</text>
+      <text x="18" y="102" fill="#ab9fc6" font-size="13">Compare the downloaded file checksum</text>
+
+
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="#1f1733" />
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-delay:1.5s" />
+    </g>
+    <g transform="translate(748 142)" data-card="install" data-panel="surface">
+      <rect width="348" height="136" rx="14" fill="url(#instCard)" stroke="#2d2342" stroke-width="1" />
+      <rect width="348" height="136" rx="14" fill="none" stroke="#a855f7" stroke-width="1.3" class="step-focus" style="animation-delay:2.7s" />
+      <line x1="16" y1="1" x2="332" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+
+
+      <g transform="translate(18 16)">
+        <rect width="38" height="38" rx="10" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
+        <g transform="translate(7 7)"><rect x="3" y="4.5" width="18" height="15" rx="3" fill="none" stroke="#b693ff" stroke-width="1.8" /><path d="M3 9.5h18" fill="none" stroke="#b693ff" stroke-width="1.6" /><path d="m9.5 14.2 1.8 1.8 3.5-3.5" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+
+
+      <g transform="translate(268 18)" data-panel="surface">
+        <rect width="62" height="28" rx="14" fill="#171126" stroke="#3b2d56" stroke-width="1" />
+        <text x="20" y="18.5" text-anchor="middle" fill="#ab9fc6" font-size="12" font-weight="700" class="mono">03</text>
+        <g class="step-check" style="animation-delay:3.5s" transform="translate(34 4)">
+          <circle cx="10" cy="10" r="9" fill="#0f291e" stroke="#34d399" stroke-opacity="0.7" stroke-width="1" />
+          <path d="m6.2 10.2 2.4 2.4 5.2-5.2" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </g>
+
+      <text x="18" y="80" fill="#f4effc" font-size="16" font-weight="600" letter-spacing="-0.2">Install in your browser</text>
+      <text x="18" y="102" fill="#ab9fc6" font-size="13">Chrome: Web Store; CRX where permitted</text>
+
+
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="#1f1733" />
+      <rect x="18" y="118" width="312" height="4" rx="2" fill="url(#instProgress)" class="step-bar" style="animation-delay:2.7s" />
+    </g>
   </g>
 </svg>

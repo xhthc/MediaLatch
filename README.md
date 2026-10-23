@@ -1,6 +1,6 @@
 <div align="center">
 
-<p align="center"><img src="assets/readme/hero-ru.svg" width="1120" alt="MediaLatch — сохранение медиа, превью и папки"></p>
+<p align="center"><img src="assets/readme/hero-ru.svg?v=violet-1" width="1120" alt="MediaLatch — сохранение медиа, превью и папки"></p>
 
 ![Chrome Web Store — скоро](https://img.shields.io/badge/Chrome_Web_Store-%D0%A1%D0%BA%D0%BE%D1%80%D0%BE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
@@ -16,7 +16,7 @@
 
 </div>
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 > [!IMPORTANT]
 > Здесь находятся документация и будущие сборки MediaLatch. Исходники разработки закрыты. **Версия 3.0.0 готовится к выпуску.** CRX появится после минификации, повторной упаковки и проверки.
@@ -27,11 +27,11 @@
 
 Папки, имена новых файлов, уведомления и статистика настраиваются. Дополнительная программа не нужна; собственного сервера и телеметрии у расширения нет.
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 ## 🚀 Установка и обновления
 
-<p align="center"><img src="assets/readme/install-ru.svg?v=crx-1" width="1120" alt="Готовый CRX: Releases, SHA-256 и правила установки браузера"></p>
+<p align="center"><img src="assets/readme/install-ru.svg?v=violet-1" width="1120" alt="Готовый CRX: Releases, SHA-256 и правила установки браузера"></p>
 
 Пакеты появятся в [Releases](https://github.com/xhthc/MediaLatch/releases). Рядом с CRX будут контрольная сумма SHA-256 и список файлов сборки.
 
@@ -79,11 +79,11 @@ Downloads/
   <img src="assets/screenshots/saving-ru.jpg" alt="Настройки папок и имён файлов" width="1280">
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 ## 🌐 Как проходит сохранение
 
-<p align="center"><img src="assets/readme/flow-ru.svg" width="1120" alt="Выбор медиа → проверка источника и файла → сохранение → локальное превью"></p>
+<p align="center"><img src="assets/readme/flow-ru.svg?v=violet-1" width="1120" alt="Выбор медиа → проверка источника и файла → сохранение → локальное превью"></p>
 
 Расширение ищет оригинал выбранного медиа, проверяет источник и файл, затем сохраняет его в папку. Файл из соседнего поста не используется как замена.
 
@@ -122,7 +122,7 @@ DRM, эфиры, универсальная загрузка HLS/DASH, прои�
 
 </details>
 
-<p align="center"><img src="assets/readme/divider.svg" width="1120" alt=""></p>
+<p align="center"><img src="assets/readme/divider.svg?v=violet-1" width="1120" alt=""></p>
 
 ## 🛡️ Приватность и безопасность
 

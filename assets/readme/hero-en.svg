@@ -1,78 +1,237 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="416" viewBox="0 0 1120 416" role="img" aria-labelledby="title desc">
-  <title id="title">MediaLatch</title>
-  <desc id="desc">Original media. Local previews. Folders in order. Images, GIFs and video · Chromium · No companion app</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="416" viewBox="0 0 1120 416" role="img" aria-label="MediaLatch: original media, local previews, and organized folders">
   <defs>
-    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
-    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
-    <radialGradient id="light"><stop stop-color="#7c3aed" stop-opacity=".23"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#b0a0de" stroke-opacity=".065"/></pattern>
-  </defs>
-  <style>
-    text { font-family:Arial,Helvetica,sans-serif; fill:#f3efff }
-    .muted { fill:#b7acce } .mono { font-family:Consolas,'Courier New',monospace; letter-spacing:.5px }
-    .orbit {transform-origin:935px 136px; animation:orbit 4.8s linear 1 both}
-    .packet {animation:packet 2.2s linear 2 both} .pulse {animation:pulse 2.4s ease 2 both}
-    @keyframes orbit {from {transform:rotate(-30deg)} to {transform:rotate(330deg)}}
-    @keyframes packet {0% {transform:translateX(0);opacity:.2} 30% {opacity:1} 100% {transform:translateX(100px);opacity:.2}}
-    @keyframes pulse {0%,100% {opacity:.55} 50% {opacity:1}}
-    @media (prefers-reduced-motion:reduce) { .orbit,.packet,.pulse,.cursor { animation:none; transform:none } }
-  </style>
-  <rect width="1120" height="416" rx="20" fill="url(#surface)"/>
-  <rect width="1120" height="416" rx="20" fill="url(#grid)"/>
-  <ellipse cx="775" cy="158" rx="340" ry="260" fill="url(#light)"/>
-  <path d="M36 242h638c85 0 119-27 150-64" fill="none" stroke="url(#accent)" stroke-opacity=".35"/>
-  <rect x="36" y="30" width="260" height="27" rx="13.5" fill="#151426" stroke="#403561"/>
-  <circle class="pulse" cx="51" cy="43.5" r="3" fill="#34d399"/>
-  <text class="mono" x="63" y="48" font-size="11" fill="#67e8f9">CHROMIUM / MANIFEST V3</text>
-  <text x="36" y="136" font-size="72" font-weight="800" letter-spacing="-2" fill="url(#accent)" style="fill:url(#accent)">MediaLatch</text>
-  <text x="39" y="182" font-size="21" font-weight="600">Original media. Local previews. Folders in order.</text>
-  <text class="muted" x="39" y="211" font-size="15">Images, GIFs and video · Chromium · No companion app</text>
-  <circle cx="935" cy="136" r="104" fill="none" stroke="#3b3356" stroke-dasharray="5 13"/>
-  <circle cx="935" cy="136" r="82" fill="none" stroke="#22d3ee" stroke-opacity=".3"/>
-  <circle cx="935" cy="136" r="58" fill="#100d21" stroke="#9e7fe9"/>
-  <g class="orbit"><path d="M935 54a82 82 0 0 1 82 82" fill="none" stroke="#a78bfa" stroke-width="2"/><circle cx="935" cy="54" r="4" fill="#22d3ee"/><circle cx="935" cy="218" r="3" fill="#c4b5fd"/></g>
-<svg xmlns="http://www.w3.org/2000/svg" x="895" y="96" width="80" height="80" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9333ea"/><stop offset="0.5" stop-color="#6d28d9"/><stop offset="1" stop-color="#311068"/></linearGradient>
-    <linearGradient id="arrow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
-  </defs>
-  <rect x="6" y="6" width="116" height="116" rx="30" fill="url(#tile)"/>
-<rect x="8" y="8" width="112" height="112" rx="28" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="2"/>
-  <rect x="18" y="18" width="92" height="92" rx="20" fill="#0d0718" fill-opacity="0.35"/>
-  <g fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M30 78V40L50 60L64 46L78 60L98 40V78" stroke="#fff"/>
-    <path d="M64 60V94M64 94L50 80M64 94L78 80" stroke="url(#arrow)"/>
-  </g>
-</svg>
+    <linearGradient id="bgSurface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#140f21" />
+      <stop offset="100%" stop-color="#090610" />
+    </linearGradient>
+    <linearGradient id="subSurface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b142c" />
+      <stop offset="100%" stop-color="#110c1c" />
+    </linearGradient>
+    <linearGradient id="cardPreviewBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1533" />
+      <stop offset="100%" stop-color="#110c1d" />
+    </linearGradient>
+    <linearGradient id="brandTile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9333ea" />
+      <stop offset="50%" stop-color="#6d28d9" />
+      <stop offset="100%" stop-color="#311068" />
+    </linearGradient>
+    <linearGradient id="brandArrow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#d8b4fe" />
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="65%" stop-color="#f4effc" />
+      <stop offset="100%" stop-color="#c4b5fd" />
+    </linearGradient>
+    <linearGradient id="primaryPill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b46ff" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <linearGradient id="progressBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <radialGradient id="topGlow" cx="50%" cy="0%" r="65%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="previewGlow" cx="78%" cy="32%" r="38%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0" />
+    </radialGradient>
+    <style>
+      .root {font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+      .mono {font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+      @keyframes highlight {0%,100% {opacity:0} 15%,75% {opacity:1}}
+      @keyframes fillBar {from {transform:scaleX(.02);opacity:.35} to {transform:scaleX(1);opacity:1}}
+      @keyframes complete {from {opacity:0} to {opacity:1}}
+      @keyframes fadeAway {from {opacity:1} to {opacity:0}}
 
-  <rect class="packet" x="606" y="239" width="12" height="6" rx="3" fill="#22d3ee"/>
-  <text class="mono muted" x="852" y="263" font-size="10">SELECT / VERIFY / SAVE</text>
-  <g class="card" transform="translate(36 278)">
-    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
-    <g transform="translate(18 20)" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="22" height="18" rx="4"/><path d="M3 14l5-5 4 4 4-6 4 7M16-5v8m-3-3 3 3 3-3"/></g>
-    <text x="52" y="33" font-size="16" font-weight="700">Save originals</text>
-    <text class="muted" x="18" y="65" font-size="13">Select the media you want.</text>
-    <text class="muted" x="18" y="85" font-size="13">Keep the available original.</text>
-  </g>
-  <g class="card" transform="translate(302 278)">
-    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
-    <g transform="translate(18 20)" fill="none" stroke="#c4b5fd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="22" height="18" rx="4"/><path d="m9 5 7 4-7 4z"/></g>
-    <text x="52" y="33" font-size="16" font-weight="700">Media viewer</text>
-    <text class="muted" x="18" y="65" font-size="13">Images, GIFs and MP4.</text>
-    <text class="muted" x="18" y="85" font-size="13">Zoom, pan and carousel.</text>
-  </g>
-  <g class="card" transform="translate(568 278)">
-    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
-    <g transform="translate(18 20)" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M0 3h8l3 4h11v13H0zM2 3V0h8l3 3h7v4"/></g>
-    <text x="52" y="33" font-size="16" font-weight="700">Your folders</text>
-    <text class="muted" x="18" y="65" font-size="13">Site, type and posting account.</text>
-    <text class="muted" x="18" y="85" font-size="13">Optional publication dates.</text>
-  </g>
-  <g class="card" transform="translate(834 278)">
-    <rect width="250" height="104" rx="11" fill="#151323" stroke="#3c305a"/>
-    <g transform="translate(18 20)" fill="none" stroke="#c4b5fd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1h18M1 9h10M1 17h10m5-3 3 3 5-6"/></g>
-    <text x="52" y="33" font-size="16" font-weight="700">Queue and results</text>
-    <text class="muted" x="18" y="65" font-size="13">Retry, cancel and inspect.</text>
-    <text class="muted" x="18" y="85" font-size="13">Optional local statistics.</text>
+      .save-pill {animation:buttonPulse .6s ease .1s both}
+      @keyframes buttonPulse {0%,100% {opacity:1} 50% {opacity:.7}}
+      .crumb-step-1,.crumb-step-2,.crumb-step-3,.crumb-step-4 {animation:crumb 1s ease both}
+      .crumb-step-1 {animation-delay:.15s}.crumb-step-2 {animation-delay:.45s}
+      .crumb-step-3 {animation-delay:.75s}.crumb-step-4 {animation-delay:1.05s}
+      @keyframes crumb {0%,100% {opacity:.65} 40%,65% {opacity:1}}
+      .progress-fill {transform-box:fill-box;transform-origin:left center;animation:fillBar .8s cubic-bezier(.77,0,.175,1) 1.3s both}
+      .status-ok,.hero-done {animation:complete .18s cubic-bezier(.23,1,.32,1) 2.1s both}
+      .hero-pending {opacity:0;animation:fadeAway .18s ease 2.1s both}
+      .card-focus {opacity:0;animation:highlight .7s ease both}
+      @media (prefers-reduced-motion:reduce) {
+        .save-pill,.crumb-step-1,.crumb-step-2,.crumb-step-3,.crumb-step-4,.progress-fill,.status-ok,.hero-done,.hero-pending,.card-focus {animation:none}
+      }
+</style>
+  </defs>
+
+  <g class="root" data-panel="surface">
+
+    <rect x="0.5" y="0.5" width="1119" height="415" rx="20" fill="url(#bgSurface)" stroke="#2d2342" stroke-width="1" />
+    <rect x="1" y="1" width="1118" height="414" rx="19.5" fill="url(#topGlow)" />
+    <rect x="1" y="1" width="1118" height="414" rx="19.5" fill="url(#previewGlow)" />
+    <line x1="24" y1="1.5" x2="1096" y2="1.5" stroke="#a855f7" stroke-opacity="0.32" stroke-width="1" />
+
+
+    <g transform="translate(36 32)">
+      <svg x="0" y="0" width="54" height="54" viewBox="6 6 116 116">
+        <rect x="6" y="6" width="116" height="116" rx="30" fill="url(#brandTile)" />
+        <rect x="8" y="8" width="112" height="112" rx="28" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2" />
+        <rect x="18" y="18" width="92" height="92" rx="20" fill="#0d0718" fill-opacity="0.35" />
+        <g fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 78V40L50 60L64 46L78 60L98 40V78" stroke="#ffffff" />
+          <path class="brand-arrow" d="M64 60V94M64 94L50 80M64 94L78 80" stroke="url(#brandArrow)" />
+        </g>
+      </svg>
+
+      <g transform="translate(70 12)" data-panel="surface">
+        <rect width="206" height="30" rx="15" fill="#191329" stroke="#3b2d56" stroke-width="1" />
+        <circle cx="16" cy="15" r="4" fill="#34d399" class="status-dot" />
+        <text x="28" y="19" fill="#d8b4fe" font-size="11" font-weight="600" letter-spacing="0.8" class="mono">CHROMIUM / MANIFEST V3</text>
+      </g>
+    </g>
+
+
+    <text x="36" y="142" fill="url(#titleGrad)" font-size="44" font-weight="700" letter-spacing="-1.1">MediaLatch</text>
+    <text x="36" y="182" fill="#f4effc" font-size="19.5" font-weight="600" letter-spacing="-0.25">Original media. Local previews. Folders in order.</text>
+    <text x="36" y="214" fill="#ab9fc6" font-size="14">Images, GIFs and video · Chromium · No companion app</text>
+
+
+    <g transform="translate(596 28)" data-panel="save-preview">
+      <rect width="488" height="222" rx="16" fill="url(#cardPreviewBg)" stroke="#3b2d56" stroke-width="1" />
+      <line x1="16" y1="1" x2="472" y2="1" stroke="#b693ff" stroke-opacity="0.3" stroke-width="1" />
+
+      <circle cx="20" cy="20" r="4" fill="#3b2d56" />
+      <circle cx="34" cy="20" r="4" fill="#3b2d56" />
+      <circle cx="48" cy="20" r="4" fill="#3b2d56" />
+      <text x="66" y="24" fill="#ab9fc6" font-size="11.5" font-weight="600">Save preview · demo</text>
+
+
+      <g transform="translate(262 8)" data-panel="surface">
+        <rect x="0" y="0" width="96" height="24" rx="12" fill="#18111f" stroke="#4d3d6e" stroke-width="1" />
+        <path d="M16 7v8m0 0-3-3m3 3 3-3M11 18h10" fill="none" stroke="#f4effc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="28" y="16" fill="#ece5f8" font-size="11" font-weight="600">Save this</text>
+
+        <g transform="translate(104 0)"><g class="save-pill" data-panel="surface">
+          <rect width="106" height="24" rx="12" fill="url(#primaryPill)" stroke="#d8b4fe" stroke-opacity="0.65" stroke-width="1" />
+          <path d="M16 7v8m0 0-3-3m3 3 3-3M11 18h10" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          <text x="30" y="16" fill="#ffffff" font-size="11" font-weight="600">Save all (4)</text>
+        </g>
+      </g></g>
+
+      <line x1="1" y1="40" x2="487" y2="40" stroke="#2d2342" stroke-width="1" />
+
+
+      <g transform="translate(18 54)">
+        <g data-panel="surface">
+          <rect width="104" height="28" rx="8" fill="#171126" stroke="#a855f7" stroke-opacity="0.35" stroke-width="1" class="crumb-step-1" />
+          <path d="M11 10.5a1.5 1.5 0 0 1 1.5-1.5h3l1.5 1.6h5a1.5 1.5 0 0 1 1.5 1.5v5.4a1.5 1.5 0 0 1-1.5 1.5h-9.5a1.5 1.5 0 0 1-1.5-1.5v-7Z" fill="none" stroke="#fbbf24" stroke-width="1.4" />
+          <text x="29" y="18.5" fill="#f4effc" font-size="11.5" font-weight="500">SavedImages</text>
+        </g>
+        <path d="m111 11 3.5 3.5-3.5 3.5" fill="none" stroke="#6e628a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+        <g transform="translate(121 0)" data-panel="surface">
+          <rect width="66" height="28" rx="8" fill="#171126" stroke="#a855f7" stroke-opacity="0.35" stroke-width="1" class="crumb-step-2" />
+          <text x="12" y="18.5" fill="#d8b4fe" font-size="11.5" font-weight="700">𝕏</text>
+          <text x="26" y="18.5" fill="#f4effc" font-size="11.5" font-weight="600">x.com</text>
+        </g>
+        <path d="m194 11 3.5 3.5-3.5 3.5" fill="none" stroke="#6e628a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+        <g transform="translate(204 0)" data-panel="surface">
+          <rect width="88" height="28" rx="8" fill="#171126" stroke="#a855f7" stroke-opacity="0.35" stroke-width="1" class="crumb-step-3" />
+          <circle cx="15" cy="14" r="4.5" fill="none" stroke="#b693ff" stroke-width="1.4" />
+          <text x="25" y="18.5" fill="#f4effc" font-size="11.5" font-weight="600">@artist</text>
+        </g>
+        <path d="m299 11 3.5 3.5-3.5 3.5" fill="none" stroke="#6e628a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+        <g transform="translate(309 0)" data-panel="surface">
+          <rect width="143" height="28" rx="8" fill="#11221c" stroke="#34d399" stroke-opacity="0.55" stroke-width="1" class="crumb-step-4" />
+          <rect x="9" y="8" width="12" height="12" rx="2.5" fill="none" stroke="#34d399" stroke-width="1.4" />
+          <text x="26" y="18.5" fill="#34d399" font-size="11" font-weight="600" class="mono">x_user_photo.jpg</text>
+        </g>
+      </g>
+
+
+      <g transform="translate(18 98)" data-panel="surface">
+        <rect width="452" height="106" rx="12" fill="#140e22" stroke="#2d2342" stroke-width="1" />
+
+        <g transform="translate(14 16)">
+          <rect width="54" height="54" rx="10" fill="#251842" stroke="#4d3d6e" stroke-width="1" />
+          <path d="M12 40 23 27l9 10 6-6 8 9H12Z" fill="#7c3aed" fill-opacity="0.55" />
+          <circle cx="21" cy="20" r="4" fill="#c084fc" />
+          <rect x="5" y="37" width="26" height="12" rx="3.5" fill="#090610" fill-opacity="0.85" />
+          <text x="9" y="46" fill="#ffffff" font-size="8.5" font-weight="700" letter-spacing="0.4">JPG</text>
+        </g>
+
+        <text x="82" y="34" fill="#f4effc" font-size="14" font-weight="600" class="mono">x_user_photo.jpg</text>
+        <g transform="translate(82 44)" class="hero-pending">
+          <circle cx="5" cy="7" r="3.5" fill="#b693ff" />
+          <text x="14" y="11" fill="#ab9fc6" font-size="12">Saving · 2.4 MB · <tspan fill="#d8b4fe">@artist</tspan> · 3840×2160</text>
+        </g><g transform="translate(82 44)" class="hero-done">
+          <circle cx="5" cy="7" r="3.5" fill="#34d399" />
+          <text x="14" y="11" fill="#ab9fc6" font-size="12">Saved · 2.4 MB · <tspan fill="#d8b4fe">@artist</tspan> · 3840×2160</text>
+        </g>
+
+        <g transform="translate(408 22)"><g class="status-ok">
+          <rect width="28" height="28" rx="14" fill="#0f291e" stroke="#34d399" stroke-opacity="0.6" stroke-width="1" />
+          <path d="m9 14.5 3.2 3.2L19.5 10" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+
+        </g><rect x="14" y="82" width="424" height="6" rx="3" fill="#1f1733" />
+        <rect x="14" y="82" width="424" height="6" rx="3" fill="url(#progressBar)" class="progress-fill" />
+      </g>
+    </g>
+
+
+
+    <g transform="translate(36 274)" data-panel="surface">
+      <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:0.0s" />
+      <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+      <g transform="translate(16 16)">
+        <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
+        <g transform="translate(5 5)"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14" fill="none" stroke="#b693ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+      <text x="62" y="39" fill="#f4effc" font-size="15.5" font-weight="600" letter-spacing="-0.15">Save originals</text>
+      <text x="16" y="71" fill="#ab9fc6" font-size="13">Select the media you want.</text>
+      <text x="16" y="91" fill="#8b7fa8" font-size="12.5">Keep the available original.</text>
+    </g>
+    <g transform="translate(302 274)" data-panel="surface">
+      <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:0.6s" />
+      <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+      <g transform="translate(16 16)">
+        <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
+        <g transform="translate(5 5)"><rect x="3.5" y="4.5" width="17" height="15" rx="3" fill="none" stroke="#b693ff" stroke-width="1.8" /><circle cx="9" cy="10" r="1.6" fill="#b693ff" /><path d="m4.5 16.5 4.8-4.2a1.5 1.5 0 0 1 2.1.1l2.6 2.6 2.2-1.9a1.4 1.4 0 0 1 1.9.1l1.9 1.8" fill="none" stroke="#b693ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+      <text x="62" y="39" fill="#f4effc" font-size="15.5" font-weight="600" letter-spacing="-0.15">Media viewer</text>
+      <text x="16" y="71" fill="#ab9fc6" font-size="13">Images, GIFs and MP4.</text>
+      <text x="16" y="91" fill="#8b7fa8" font-size="12.5">Zoom, pan and carousel.</text>
+    </g>
+    <g transform="translate(568 274)" data-panel="surface">
+      <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:1.2s" />
+      <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+      <g transform="translate(16 16)">
+        <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
+        <g transform="translate(5 5)"><path d="M3.5 7.5a2 2 0 0 1 2-2h4.2l2 2.2h6.8a2 2 0 0 1 2 2v7.8a2 2 0 0 1-2 2H5.5a2 2 0 0 1-2-2V7.5Z" fill="none" stroke="#b693ff" stroke-width="1.8" stroke-linejoin="round" /></g>
+      </g>
+      <text x="62" y="39" fill="#f4effc" font-size="15.5" font-weight="600" letter-spacing="-0.15">Your folders</text>
+      <text x="16" y="71" fill="#ab9fc6" font-size="13">Site, type and posting account.</text>
+      <text x="16" y="91" fill="#8b7fa8" font-size="12.5">Optional publication dates.</text>
+    </g>
+    <g transform="translate(834 274)" data-panel="surface">
+      <rect width="250" height="110" rx="14" fill="url(#subSurface)" stroke="#2d2342" stroke-width="1" />
+      <rect width="250" height="110" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2" class="card-focus" style="animation-delay:1.8s" />
+      <line x1="14" y1="1" x2="236" y2="1" stroke="#a855f7" stroke-opacity="0.22" stroke-width="1" />
+      <g transform="translate(16 16)">
+        <rect width="34" height="34" rx="9" fill="#251842" stroke="#a855f7" stroke-opacity="0.45" stroke-width="1" />
+        <g transform="translate(5 5)"><path d="M12 3.5 3.5 8l8.5 4.5L20.5 8 12 3.5ZM3.5 12.5 12 17l8.5-4.5M3.5 16.5 12 21l8.5-4.5" fill="none" stroke="#b693ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+      </g>
+      <text x="62" y="39" fill="#f4effc" font-size="15.5" font-weight="600" letter-spacing="-0.15">Queue and results</text>
+      <text x="16" y="71" fill="#ab9fc6" font-size="13">Retry, cancel and inspect.</text>
+      <text x="16" y="91" fill="#8b7fa8" font-size="12.5">Optional local statistics.</text>
+    </g>
   </g>
 </svg>
