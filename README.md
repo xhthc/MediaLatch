@@ -2,6 +2,8 @@
 
 <p align="center"><img src="assets/readme/hero-ru.svg" width="1120" alt="MediaLatch — сохранение медиа, превью и папки"></p>
 
+![Chrome Web Store — скоро](https://img.shields.io/badge/Chrome_Web_Store-%D0%A1%D0%BA%D0%BE%D1%80%D0%BE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
 [![Next 3.0.0](https://img.shields.io/badge/next-3.0.0-A78BFA?style=for-the-badge)](CHANGELOG.md)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
@@ -29,13 +31,13 @@
 
 ## 🚀 Установка и обновления
 
-<p align="center"><img src="assets/readme/install-ru.svg" width="1120" alt="Локальная проверка: chrome://extensions, режим разработчика, проверенная папка сборки"></p>
+<p align="center"><img src="assets/readme/install-ru.svg" width="1120" alt="Готовый CRX: Releases, SHA-256 и правила установки браузера"></p>
 
 Пакеты появятся в [Releases](https://github.com/xhthc/MediaLatch/releases). Рядом с CRX будут контрольная сумма SHA-256 и список файлов сборки.
 
 В Chrome на Windows и macOS расширение обычно устанавливают через Chrome Web Store. Установку самостоятельно подписанного CRX ограничивают правила браузера и корпоративные политики. Ссылка на версию в магазине появится после обновления публикации.
 
-Схема выше показывает локальную проверку сборки: откройте `chrome://extensions`, включите режим разработчика, загрузите распакованную папку и обновите вкладки сайтов. Для этого нужна проверенная папка сборки.
+Если браузер разрешает ручную установку CRX, скачайте пакет и контрольную сумму из одного релиза. Перед установкой сравните SHA-256 файла с опубликованной суммой.
 
 > [!TIP]
 > Сохраняйте контрольную сумму рядом с CRX. При ручной смене канала установки могут отличаться ID расширения и локальные данные. Закрытый ключ `.pem` не входит в пакет и не нужен пользователям.

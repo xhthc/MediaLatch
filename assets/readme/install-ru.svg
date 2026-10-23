@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="288" viewBox="0 0 1120 288" role="img" aria-labelledby="title desc">
-  <title id="title">Локальная проверка в режиме разработчика</title>
-  <desc id="desc">Откройте страницу расширений, включите режим разработчика, загрузите проверенную папку сборки и обновите исходные вкладки.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="304" viewBox="0 0 1120 304" role="img" aria-labelledby="title desc">
+  <title id="title">Установка и пакеты MediaLatch</title>
+  <desc id="desc">Откройте Releases, скачайте CRX и контрольную сумму SHA-256, проверьте файл. В Chrome на Windows и macOS используйте Web Store; ручная установка CRX зависит от правил браузера.</desc>
   <defs>
     <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#100b1d"/><stop offset="1" stop-color="#090d16"/></linearGradient>
     <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#a78bfa"/><stop offset="1" stop-color="#d8b4fe"/></linearGradient>
@@ -11,68 +11,64 @@
     text {font-family:Arial,Helvetica,sans-serif;fill:#f3efff}
     .muted {fill:#b7acce}.mono {font-family:Consolas,'Courier New',monospace}
     .letter {animation:reveal .03s linear both}
-    .cursor {opacity:0;animation:type-cursor .95s steps(19,end) .18s both,cursor-off .18s linear 1.26s both}
+    .cursor {opacity:0;animation:type-cursor .7s steps(14,end) .18s both,cursor-off .18s linear 1.02s both}
     .step-active {opacity:0;animation:focus .9s ease both;animation-delay:var(--start)}
     .step-check {animation:reveal .18s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--start) + .75s)}
     .step-progress {transform-box:fill-box;transform-origin:left center;animation:progress .8s cubic-bezier(.77,0,.175,1) both;animation-delay:var(--start)}
-    .toggle-on {animation:reveal .18s linear 1.3s both}
-    .toggle-knob {transform:translateX(14px);animation:toggle .18s cubic-bezier(.23,1,.32,1) 1.3s both}
-    .folder-sheet {animation:settle .2s cubic-bezier(.23,1,.32,1) 2.3s both}
-    .reload-mark {animation:settle .2s cubic-bezier(.23,1,.32,1) 3.3s both}
+    .install-icon {animation:settle .2s cubic-bezier(.23,1,.32,1) both;animation-delay:var(--start)}
     @keyframes reveal {from {opacity:0} to {opacity:1}}
-    @keyframes type-cursor {from {transform:translateX(0);opacity:1} to {transform:translateX(342px);opacity:1}}
+    @keyframes type-cursor {from {transform:translateX(0);opacity:1} to {transform:translateX(252px);opacity:1}}
     @keyframes cursor-off {from {opacity:1} to {opacity:0}}
     @keyframes focus {0%,100% {opacity:0} 15%,80% {opacity:1}}
     @keyframes progress {from {transform:scaleX(.01);opacity:.2} to {transform:scaleX(1);opacity:1}}
-    @keyframes toggle {from {transform:translateX(0)} to {transform:translateX(14px)}}
     @keyframes settle {from {transform:translateY(4px);opacity:.3} to {transform:translateY(0);opacity:1}}
     @media (prefers-reduced-motion:reduce) {
-      .letter,.cursor,.step-active,.step-check,.step-progress,.toggle-on,.toggle-knob,.folder-sheet,.reload-mark {animation:none}
+      .letter,.cursor,.step-active,.step-check,.step-progress,.install-icon {animation:none}
     }
   </style>
-  <rect x=".5" y=".5" width="1119" height="287" rx="12" fill="#0b0b18" stroke="#3a3157"/>
+  <rect x=".5" y=".5" width="1119" height="303" rx="12" fill="#0b0b18" stroke="#3a3157"/>
   <path d="M1 38h1118" stroke="#29223d"/>
   <circle cx="22" cy="20" r="4" fill="#fb7185"/><circle cx="38" cy="20" r="4" fill="#fbbf24"/><circle cx="54" cy="20" r="4" fill="#34d399"/>
-  <text class="mono muted" x="74" y="24" font-size="12">Локальная проверка в режиме разработчика</text>
+  <text class="mono muted" x="74" y="24" font-size="12">Установка и пакеты MediaLatch</text>
   <rect x="24" y="58" width="1072" height="64" rx="9" fill="#111222" stroke="#292a43"/>
-  <path d="m42 82 6 6-6 6" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <text class="mono" y="99" font-size="28" style="fill:#67e8f9"><tspan class="letter" x="64" style="animation-delay:0.18s">c</tspan><tspan class="letter" x="82" style="animation-delay:0.23s">h</tspan><tspan class="letter" x="100" style="animation-delay:0.28s">r</tspan><tspan class="letter" x="118" style="animation-delay:0.33s">o</tspan><tspan class="letter" x="136" style="animation-delay:0.38s">m</tspan><tspan class="letter" x="154" style="animation-delay:0.43s">e</tspan><tspan class="letter" x="172" style="animation-delay:0.48s">:</tspan><tspan class="letter" x="190" style="animation-delay:0.53s">/</tspan><tspan class="letter" x="208" style="animation-delay:0.58s">/</tspan><tspan class="letter" x="226" style="animation-delay:0.63s">e</tspan><tspan class="letter" x="244" style="animation-delay:0.68s">x</tspan><tspan class="letter" x="262" style="animation-delay:0.73s">t</tspan><tspan class="letter" x="280" style="animation-delay:0.78s">e</tspan><tspan class="letter" x="298" style="animation-delay:0.83s">n</tspan><tspan class="letter" x="316" style="animation-delay:0.88s">s</tspan><tspan class="letter" x="334" style="animation-delay:0.93s">i</tspan><tspan class="letter" x="352" style="animation-delay:0.98s">o</tspan><tspan class="letter" x="370" style="animation-delay:1.03s">n</tspan><tspan class="letter" x="388" style="animation-delay:1.08s">s</tspan></text>
+  <path d="M40 77h10l6 6v20H40zM50 77v7h6" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="mono" y="99" font-size="28" style="fill:#67e8f9"><tspan class="letter" x="64" style="animation-delay:0.18s">M</tspan><tspan class="letter" x="82" style="animation-delay:0.23s">e</tspan><tspan class="letter" x="100" style="animation-delay:0.28s">d</tspan><tspan class="letter" x="118" style="animation-delay:0.33s">i</tspan><tspan class="letter" x="136" style="animation-delay:0.38s">a</tspan><tspan class="letter" x="154" style="animation-delay:0.43s">L</tspan><tspan class="letter" x="172" style="animation-delay:0.48s">a</tspan><tspan class="letter" x="190" style="animation-delay:0.53s">t</tspan><tspan class="letter" x="208" style="animation-delay:0.58s">c</tspan><tspan class="letter" x="226" style="animation-delay:0.63s">h</tspan><tspan class="letter" x="244" style="animation-delay:0.68s">.</tspan><tspan class="letter" x="262" style="animation-delay:0.73s">c</tspan><tspan class="letter" x="280" style="animation-delay:0.78s">r</tspan><tspan class="letter" x="298" style="animation-delay:0.83s">x</tspan></text>
   <rect class="cursor" x="64" y="76" width="3" height="27" rx="1" fill="#a78bfa"/>
-  <text class="mono muted" x="1076" y="94" font-size="11" text-anchor="end">ПОРЯДОК ДЕЙСТВИЙ</text>
+  <text class="mono muted" x="1076" y="94" font-size="11" text-anchor="end">ГОТОВЫЙ ПАКЕТ · SHA-256</text>
   <g class="card step" transform="translate(24 146)" style="--start:1.2s">
-    <rect width="348" height="116" rx="10" fill="#121020" stroke="#332b49"/>
-    <rect class="step-active" x=".5" y=".5" width="347" height="115" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
-    <g transform="translate(16 16)"><rect x="0" y="2" width="36" height="21" rx="10.5" fill="#243149"/><rect class="toggle-on" x="0" y="2" width="36" height="21" rx="10.5" fill="#126e69"/><circle class="toggle-knob" cx="11" cy="12.5" r="7" fill="#b2faf2"/></g>
-    <circle cx="317" cy="28" r="12" fill="#262039"/>
-    <text class="mono muted" x="317" y="32" font-size="12" text-anchor="middle">1</text>
-    <g class="step-check"><circle cx="317" cy="28" r="12" fill="#155347"/><path d="m312 28 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <text x="16" y="64" font-size="17" font-weight="700">Режим разработчика</text>
-    <text class="muted" x="16" y="86" font-size="13">Включите на странице расширений</text>
-    <rect x="16" y="101" width="316" height="2" rx="1" fill="#30263f"/>
-    <rect class="step-progress" x="16" y="101" width="316" height="2" rx="1" fill="url(#accent)"/>
+    <rect width="348" height="132" rx="10" fill="#121020" stroke="#332b49"/>
+    <rect class="step-active" x=".5" y=".5" width="347" height="131" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
+    <g class="install-icon"><rect x="16" y="14" width="32" height="32" rx="8" fill="#242039"/><svg x="20" y="18" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></g>
+    <circle cx="317" cy="30" r="12" fill="#262039"/>
+    <text class="mono muted" x="317" y="34" font-size="12" text-anchor="middle">1</text>
+    <g class="step-check"><circle cx="317" cy="30" r="12" fill="#155347"/><path d="m312 30 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="16" y="76" font-size="17" font-weight="700">Откройте Releases</text>
+    <text class="muted" x="16" y="98" font-size="13">Скачайте CRX и контрольную сумму</text>
+    <rect x="16" y="116" width="316" height="2" rx="1" fill="#30263f"/>
+    <rect class="step-progress" x="16" y="116" width="316" height="2" rx="1" fill="url(#accent)"/>
   </g>
   <g class="card step" transform="translate(386 146)" style="--start:2.2s">
-    <rect width="348" height="116" rx="10" fill="#121020" stroke="#332b49"/>
-    <rect class="step-active" x=".5" y=".5" width="347" height="115" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
-    <g transform="translate(16 16)"><path d="M1 7V2h12l5 5h17v22H1z" fill="#201936" stroke="#a78bfa" stroke-width="1.6"/><path class="folder-sheet" d="M9 24V11h16v13m-12-8h8m-8 4h8" fill="none" stroke="#c4b5fd" stroke-width="1.7" stroke-linecap="round"/></g>
-    <circle cx="317" cy="28" r="12" fill="#262039"/>
-    <text class="mono muted" x="317" y="32" font-size="12" text-anchor="middle">2</text>
-    <g class="step-check"><circle cx="317" cy="28" r="12" fill="#155347"/><path d="m312 28 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <text x="16" y="64" font-size="17" font-weight="700">Загрузить распакованное</text>
-    <text class="muted" x="16" y="86" font-size="13">Выберите проверенную папку сборки</text>
-    <rect x="16" y="101" width="316" height="2" rx="1" fill="#30263f"/>
-    <rect class="step-progress" x="16" y="101" width="316" height="2" rx="1" fill="url(#accent)"/>
+    <rect width="348" height="132" rx="10" fill="#121020" stroke="#332b49"/>
+    <rect class="step-active" x=".5" y=".5" width="347" height="131" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
+    <g class="install-icon"><rect x="16" y="14" width="32" height="32" rx="8" fill="#242039"/><svg x="20" y="18" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m8 12 3 3 5-6"/></svg></g>
+    <circle cx="317" cy="30" r="12" fill="#262039"/>
+    <text class="mono muted" x="317" y="34" font-size="12" text-anchor="middle">2</text>
+    <g class="step-check"><circle cx="317" cy="30" r="12" fill="#155347"/><path d="m312 30 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="16" y="76" font-size="17" font-weight="700">Проверьте SHA-256</text>
+    <text class="muted" x="16" y="98" font-size="13">Сравните сумму скачанного файла</text>
+    <rect x="16" y="116" width="316" height="2" rx="1" fill="#30263f"/>
+    <rect class="step-progress" x="16" y="116" width="316" height="2" rx="1" fill="url(#accent)"/>
   </g>
   <g class="card step" transform="translate(748 146)" style="--start:3.2s">
-    <rect width="348" height="116" rx="10" fill="#121020" stroke="#332b49"/>
-    <rect class="step-active" x=".5" y=".5" width="347" height="115" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
-    <g transform="translate(16 16)"><path class="reload-mark" d="M29 10a13 13 0 1 0 1 12M29 3v9H20" fill="none" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <circle cx="317" cy="28" r="12" fill="#262039"/>
-    <text class="mono muted" x="317" y="32" font-size="12" text-anchor="middle">3</text>
-    <g class="step-check"><circle cx="317" cy="28" r="12" fill="#155347"/><path d="m312 28 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <text x="16" y="64" font-size="17" font-weight="700">Обновить вкладки</text>
-    <text class="muted" x="16" y="86" font-size="13">Перезагрузите открытые сайты</text>
-    <rect x="16" y="101" width="316" height="2" rx="1" fill="#30263f"/>
-    <rect class="step-progress" x="16" y="101" width="316" height="2" rx="1" fill="url(#accent)"/>
+    <rect width="348" height="132" rx="10" fill="#121020" stroke="#332b49"/>
+    <rect class="step-active" x=".5" y=".5" width="347" height="131" rx="10" fill="#1e2339" stroke="#67e8f9" stroke-opacity=".75"/>
+    <g class="install-icon"><rect x="16" y="14" width="32" height="32" rx="8" fill="#242039"/><svg x="20" y="18" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M2 8h20m-14 7 3 3 5-6"/></svg></g>
+    <circle cx="317" cy="30" r="12" fill="#262039"/>
+    <text class="mono muted" x="317" y="34" font-size="12" text-anchor="middle">3</text>
+    <g class="step-check"><circle cx="317" cy="30" r="12" fill="#155347"/><path d="m312 30 3.5 3.5 7-7" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="16" y="76" font-size="17" font-weight="700">Установите в браузере</text>
+    <text class="muted" x="16" y="98" font-size="13">Chrome: магазин; CRX — где разрешено</text>
+    <rect x="16" y="116" width="316" height="2" rx="1" fill="#30263f"/>
+    <rect class="step-progress" x="16" y="116" width="316" height="2" rx="1" fill="url(#accent)"/>
   </g>
 </svg>

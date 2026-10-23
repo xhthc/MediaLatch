@@ -2,6 +2,8 @@
 
 <p align="center"><img src="assets/readme/hero-en.svg" width="1120" alt="MediaLatch — save media, preview and organize"></p>
 
+![Chrome Web Store — coming soon](https://img.shields.io/badge/Chrome_Web_Store-Coming_soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
 [![Next 3.0.0](https://img.shields.io/badge/next-3.0.0-A78BFA?style=for-the-badge)](CHANGELOG.md)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
@@ -29,13 +31,13 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 ## 🚀 Installation and updates
 
-<p align="center"><img src="assets/readme/install-en.svg" width="1120" alt="Local check: chrome://extensions, Developer mode and a verified runtime folder"></p>
+<p align="center"><img src="assets/readme/install-en.svg" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
 
 Packages will appear in [Releases](https://github.com/xhthc/MediaLatch/releases). Each CRX will include a SHA-256 checksum and a list of build files.
 
 Chrome on Windows and macOS normally installs extensions through the Chrome Web Store. Browser and enterprise policies restrict self-signed CRX installation. The store link will be added after the listing is updated.
 
-The diagram above shows how to check a build locally: open `chrome://extensions`, enable Developer mode, load the unpacked folder, then reload your source tabs. This requires the verified runtime folder.
+If your browser permits manual CRX installation, download the package and checksum from the same release. Compare the file's SHA-256 with the published checksum before installing.
 
 > [!TIP]
 > Keep the checksum with the CRX. Switching installation channels can change the extension ID and local data. The private `.pem` signing key is not part of the package and is not needed by users.
