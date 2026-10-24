@@ -15,7 +15,8 @@
     "Preserved layout translations outside animated elements.",
     "User-requested repeating eight-second transform/opacity explanations with synchronized reset and completed reduced-motion state.",
     "Marked hero as demonstration, corrected checksum filename and removed unsupported per-stage verification claim.",
-    "Updated both README image versions to bypass stale GitHub image caches."
+    "Updated both README image versions to bypass stale GitHub image caches.",
+    "Added ZIP alongside CRX in both installation cards; retained gradients, geometry, eight-second loops and reduced-motion fallback. README install image cache key updated."
   ],
   "animation": "Eight-second infinite CSS transform/opacity cycles; synchronized phases and invisible progress reset; static completed reduced-motion fallback. No scripts or external resources.",
   "sha256": {
@@ -24,7 +25,7 @@
     "flow-ru.svg": "895d7cd934c61523e968d67bb31a0aae6cc6313e8842aefa2f7a431a87f9cf4d",
     "hero-en.svg": "6a5878f135b9a41700af72e55361e682ebff6be07d48099fbd977bf4ad642bd1",
     "hero-ru.svg": "5993408c2f95daa094ed6217cbd77d40c7f5f032520b580f942a07a9d2ae8808",
-    "install-en.svg": "8476cd2a563052656127ca4984bfd9c6ad4863520d4131ceaf3a597c37c1eb48",
-    "install-ru.svg": "158ddf3a33b0367280433bad91f96b5e6456629a70c7fa0ed8c8d09f6a268093"
+    "install-en.svg": "51720bb8c458b21c3364dc834d075d0f2f4e09f828e89329bc54ddeac4a814df",
+    "install-ru.svg": "fc2d9dff07de120305a74d6c37f734a464399975ba1b41dc8cef17d6e118b22c"
   }
 }

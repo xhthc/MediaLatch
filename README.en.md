@@ -19,7 +19,10 @@
 <p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.1](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1)** includes a minified CRX, checksum and build file inventory.
+> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.1](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1)** includes minified CRX and ZIP packages, separate checksums and a build file inventory.
+
+> [!NOTE]
+> **In development, not in 3.0.1:** JSON statistics/history backups, a larger cache and history windowing. [Project status](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
 
 ## ⚡ About
 
@@ -31,13 +34,22 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 ## 🚀 Installation and updates
 
-<p align="center"><img src="assets/readme/install-en.svg?v=violet-loop-2" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
+<p align="center"><img src="assets/readme/install-en.svg?v=violet-loop-zip-3" width="1120" alt="Packaged ZIP and CRX: Releases, SHA-256 and browser installation policies"></p>
 
-Download [MediaLatch 3.0.1.crx](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx), its [SHA-256 checksum](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx.sha256) and [build details and file inventory](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.provenance.json). Earlier releases are listed in [Releases](https://github.com/xhthc/MediaLatch/releases).
+Download **[ZIP 3.0.1](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.zip)** for loading the unpacked extension, or [CRX 3.0.1](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx) where browser policies permit. Each format has its own checksum: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx.sha256). [Build provenance](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.provenance.json) describes the same 98 files in both packages. [All releases](https://github.com/xhthc/MediaLatch/releases).
 
 Chrome on Windows and macOS normally installs extensions through the Chrome Web Store. Browser and enterprise policies restrict self-signed CRX installation. The store link will be added after the listing is updated.
 
 If your browser permits manual CRX installation, download the package and checksum from the same release. Compare the file's SHA-256 with the published checksum before installing.
+
+### ZIP and CRX_REQUIRED_PROOF_MISSING
+
+1. Download the runtime ZIP above and verify its own SHA-256.
+2. Extract it to a permanent folder.
+3. Open `chrome://extensions`, enable Developer mode and click Load unpacked.
+4. Select the folder containing `manifest.json`, not the ZIP file.
+
+`CRX_REQUIRED_PROOF_MISSING` concerns required CRX proof: signing a package yourself does not guarantee installation in ordinary Chrome. A new private key does not replace that distribution policy. Google supports [loading unpacked extensions](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) for local development; normal Chrome users install from the Web Store. The automatic **Source code** archive here is documentation, not the runtime. Keep the unpacked folder in place; automatic updates or data transfer between different IDs are not promised.
 
 > [!TIP]
 > Keep the checksum with the CRX. Switching installation channels can change the extension ID and local data. The private `.pem` signing key is not part of the package and is not needed by users.
@@ -62,7 +74,7 @@ Version 3.0.1 adds a compact folder builder and explicit access recovery for sav
 
 Click a thumbnail in the manager to open the viewer. From the popup, it opens over the active tab; from a page notice, it opens over the source page. The viewer runs in an isolated extension frame. On restricted browser pages, it opens in the manager. Small previews appear on hover.
 
-Preview originals are stored locally: 64 MiB per file, 128 MiB total, 16 entries, 24 hours. If a file is too large or no longer cached, choose it from disk. This does not change the saved file. Codec support depends on the browser.
+In published 3.0.1, preview originals are stored locally: 64 MiB per file, 128 MiB total, 16 entries, 24 hours. If a file is too large or no longer cached, choose it from disk. This does not change the saved file. Codec support depends on the browser.
 
 ### Folders and filenames
 
@@ -77,6 +89,8 @@ Downloads/
 Choose folder levels in order: site, account, media type, extension, date, year–month or year. Custom templates are available; levels with unavailable metadata are skipped. Account folders are enabled separately for supported services. Matched Danbooru/Moebooru posts can use a verified uploader; artist tags do not become account identity.
 
 Date and time fields in filenames use verified X post timestamps or matching Danbooru/Moebooru metadata, in UTC. These filename fields are omitted when publication time is unknown. Folder Date, Year–month and Year levels use publication time or, when unavailable, operation start time in UTC. Settings apply to new saves; existing files are not renamed.
+
+Type folder names `pic`, `video` and `gif` are currently fixed. A custom template such as `{site}/{author}/Images` uses Images for every type; separate Images/Videos/Animations settings are not implemented. See [roadmap](docs/ROADMAP.md).
 
 If the browser requests access to a saved folder again, use Restore folder access in settings. The selected destination stays saved. File-manager reveal actions and a system companion are not used.
 
@@ -115,7 +129,7 @@ DRM, live streams, universal HLS/DASH, arbitrary gallery selection and YouTube d
 
 ## 🖼️ Interface
 
-These screenshots show the 3.0.0 interface with demonstration data. Compatibility with real sites depends on their layout and access to the media.
+Manager, statistics, popup and viewer screenshots show 3.0.0 with demonstration data; the separate Saving capture shows 3.0.1. Compatibility with real sites depends on their layout and access to the media.
 
 <details open><summary>Download manager</summary>
 

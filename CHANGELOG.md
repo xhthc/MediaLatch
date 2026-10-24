@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased — Local data and backups
+
+Reviewed in local development on 2026-10-24. These changes are not in the published 3.0.1 package; the manifest and bundled release notes remain 3.0.1 until the next release is assigned.
+
+### Русский
+
+- Добавлены отдельные JSON-копии статистики и завершённой истории загрузок. Восстановление статистики заменяет счётчики с подтверждением, сохраняет настройку записи и исключает повторный учёт старых запросов; при активных загрузках оно запрещено.
+- Импорт истории добавляет отсутствующие записи без запуска загрузок, изменения статистики или доступа к файлам. Копия не содержит медиа, превью, URL источников, прав на папки и нативных ID загрузок. Лимиты: 32 МиБ UTF-8 и до 50 000 записей истории.
+- Кэш увеличен до 2 048 миниатюр и 256 оригиналов: до 128 МиБ на оригинал, 512 МиБ суммарно и 30 дней доступности. Это кэш, а не резервная копия сохранённых файлов.
+- Длинная история отображается порциями с сохранением целых постов, активных записей, фокуса и порядка от фонового процесса. Поиск и массовые действия охватывают весь сохранённый список.
+- Новых разрешений и зависимостей нет. При сбое записи прежние данные сохраняются. Ручная приёмка Reload, реальных папок и физического дефицита места остаётся открытой.
+
+### English
+
+- Add separate JSON copies for aggregate statistics and terminal download history. Confirmed statistics restore replaces counters, preserves recording preference and fences old replays; active work refuses restore.
+- History import adds missing metadata-only records without downloads, statistics updates or filesystem authority. Copies exclude media, previews, source URLs, folder grants and native download IDs. Limits: 32 MiB UTF-8 and up to 50,000 history records.
+- Increase disposable caches to 2,048 thumbnails and 256 originals: 128 MiB per original, 512 MiB total and 30-day availability. Saved files are not backed up by this cache.
+- Window long history while keeping whole posts, active/focused records and producer order. Search and bulk actions retain full-list scope.
+- No new permissions/dependencies. Failed writes preserve prior data. Actual Reload, external-folder and physical low-space acceptance remain open.
+
+
+
 ## 3.0.1 — Folder layouts and download recovery
 
 ### Русский
