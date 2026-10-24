@@ -5,7 +5,7 @@
 ![Chrome Web Store — coming soon](https://img.shields.io/badge/Chrome_Web_Store-Coming_soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
-[![Release 3.0.0](https://img.shields.io/badge/release-3.0.0-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)
+[![Release 3.0.1](https://img.shields.io/badge/release-3.0.1-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
 [![Email](https://img.shields.io/badge/Email-Contact-64748B?style=for-the-badge)](mailto:always1337@vk.com)
@@ -19,7 +19,7 @@
 <p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.0](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0)** includes a minified CRX, checksum and build file inventory.
+> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.1](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1)** includes a minified CRX, checksum and build file inventory.
 
 ## ⚡ About
 
@@ -33,7 +33,7 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 <p align="center"><img src="assets/readme/install-en.svg?v=violet-loop-2" width="1120" alt="Packaged CRX: Releases, SHA-256 and browser installation policies"></p>
 
-Download [MediaLatch 3.0.0.crx](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx), its [SHA-256 checksum](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.crx.sha256) and [build details and file inventory](https://github.com/xhthc/MediaLatch/releases/download/v3.0.0/MediaLatch-3.0.0.provenance.json). Earlier releases are listed in [Releases](https://github.com/xhthc/MediaLatch/releases).
+Download [MediaLatch 3.0.1.crx](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx), its [SHA-256 checksum](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx.sha256) and [build details and file inventory](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.provenance.json). Earlier releases are listed in [Releases](https://github.com/xhthc/MediaLatch/releases).
 
 Chrome on Windows and macOS normally installs extensions through the Chrome Web Store. Browser and enterprise policies restrict self-signed CRX installation. The store link will be added after the listing is updated.
 
@@ -42,9 +42,9 @@ If your browser permits manual CRX installation, download the package and checks
 > [!TIP]
 > Keep the checksum with the CRX. Switching installation channels can change the extension ID and local data. The private `.pem` signing key is not part of the package and is not needed by users.
 
-This CRX has ID `iahebdomfekhiofmdocjmdjpjlclnngd`. It differs from the earlier manually signed build with ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: this package will not update that installation or automatically transfer its settings and history. Export needed data through the extension's available actions before switching installations.
+Version 3.0.1 keeps the signing key and ID of the manual 3.0.0 build: `iahebdomfekhiofmdocjmdjpjlclnngd`. It differs from the earlier manually signed build with ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: this package will not update that installation or automatically transfer its settings and history. Export needed data through the extension's available actions before switching installations.
 
-Version 3.0.0 moves GIF encoding to a dedicated Worker so animation preparation does not block the hidden document's thread. Large GIFs still take time and resources. JavaScript is minified without source maps and remains inspectable in DevTools. See the [Changelog](CHANGELOG.md) for the full list of changes.
+Version 3.0.1 adds a compact folder builder and explicit access recovery for saved folders. It fixes metadata-based filenames, RedGIFs image handling and interface details. GIF encoding continues to use a dedicated Worker. Large GIFs still take time and resources. JavaScript is minified without source maps and remains inspectable in DevTools. See the [Changelog](CHANGELOG.md) for the full list of changes.
 
 ## 🧩 Features
 
@@ -52,8 +52,8 @@ Version 3.0.0 moves GIF encoding to a dedicated Worker so animation preparation 
 | --- | --- |
 | Save selected media | Original-image discovery, progressive MP4/WebM and supported GIFs. Exact signed URLs stay intact. |
 | Save a post | Multiple files from posts on X, Reddit, Pixiv, Pawchive and supported VK pages. See each file's result and cancel the remaining downloads. |
-| Choose a destination | Browser Downloads or an explicitly selected folder. Flat, site and media-type layouts. |
-| Name new files | Original basename, optional site/account and UTC publication date/time. Unknown dates are omitted. |
+| Choose a destination | Browser Downloads or an explicitly selected folder. Ordered levels, custom templates and one shared folder-name setting for Booru sites. |
+| Name new files | Original basename or selected site/account and UTC publication date/time fields. Metadata-based names omit the CDN basename; unknown fields are skipped. |
 | Preview saved media | Images, animated GIFs and MP4 with playback controls; fit/100%, zoom, pan, carousel buttons, arrow keys and swipe. |
 | Track results | Popup, manager, page notices, optional statistics, retry and cancellation. Filters for images/GIFs and videos. |
 | Copy preview links | Configurable X, Instagram, TikTok, YouTube video and Shorts links. This does not add YouTube downloading. |
@@ -69,18 +69,22 @@ Preview originals are stored locally: 64 MiB per file, 128 MiB total, 16 entries
 ```text
 Downloads/
 └── SavedImages/
-    ├── x/posting_account/pic/2026-10-22_18-35-12_original-name.jpg
-    ├── reddit/video/clip.mp4
-    └── pixiv/pic/artwork.png
+    ├── x/posting_account/pic/photo.jpg
+    ├── reddit/posting_account/video/clip.mp4
+    └── danbooru/uploader/pic/artwork.jpg
 ```
 
-The layout is configurable. Account folders use the posting account, which may differ from the artist. Publication dates currently come from verified X post data. If the date is unknown, it is omitted; the download time and filename are not used instead. Naming settings apply to new saves. Existing files are not renamed.
+Choose folder levels in order: site, account, media type, extension, date, year–month or year. Custom templates are available; levels with unavailable metadata are skipped. Account folders are enabled separately for supported services. Matched Danbooru/Moebooru posts can use a verified uploader; artist tags do not become account identity.
+
+Date and time fields in filenames use verified X post timestamps or matching Danbooru/Moebooru metadata, in UTC. These filename fields are omitted when publication time is unknown. Folder Date, Year–month and Year levels use publication time or, when unavailable, operation start time in UTC. Settings apply to new saves; existing files are not renamed.
+
+If the browser requests access to a saved folder again, use Restore folder access in settings. The selected destination stays saved. File-manager reveal actions and a system companion are not used.
 
 When names match, the extension adds a suffix, even after history and statistics are cleared. Existing files are not overwritten. Long filenames may be shortened to fit path limits. The browser or filesystem may still reject an excessively long Windows path.
 
 <details>
   <summary>Saving settings</summary>
-  <img src="assets/screenshots/saving-en.jpg" alt="Folder and filename settings" width="1280">
+  <img src="assets/screenshots/saving-en.jpg?v=3.0.1" alt="Folder and filename settings" width="1280">
 </details>
 
 <p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
@@ -100,7 +104,7 @@ Support depends on the selected media, page layout and your access to the source
 | X / Twitter | Images and video, conversion of supported MP4 animations to GIF, and multiple files from a post. |
 | Reddit | Images, native GIFs, declared progressive video and bounded unencrypted H.264/AAC HLS VOD. |
 | Pixiv | The original of the selected artwork page or its verified page list; account folders. |
-| RedGIFs | Selected player media, including supported separate-audio recovery. |
+| RedGIFs | Selected images and player media, including supported separate-audio recovery. |
 | VK / VK Video | Photos, supported carousels, collages and feed videos, preview cards, opened players and native clip downloads. Experimental; other layouts and audio need further testing. |
 | TikTok / Instagram | Supported selected-video/Reel controls and posting usernames; separate-track-only feed sources can be unavailable. |
 | Pawchive / Sankaku | Originals linked to the selected post. Incomplete archive imports are marked. |

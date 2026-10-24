@@ -1,5 +1,26 @@
 # Changelog
 
+## 3.0.1 — Folder layouts and download recovery
+
+### Русский
+
+- Компактный конструктор подпапок позволяет сочетать уровни в выбранном порядке и редактировать свой шаблон. Предпросмотр пути использует те же правила, что и сохранение. Семейство Booru объединено в одну настройку имени папки; аккаунт загрузившего добавляется только из проверенных метаданных поддерживаемого поста.
+- Сохранённая папка различает запрос разрешения, отказ и недоступный дескриптор. Доступ восстанавливается явной кнопкой; отмена смены папки повторно проверяет сохранённую папку и игнорирует устаревшие ответы.
+- Составное имя нового файла содержит выбранные доступные поля и расширение без исходного CDN-хвоста. Исходное имя и безопасная нумерация совпадений сохраняются. Для поддерживаемых Danbooru/Moebooru дата и загрузивший аккаунт проверяются по выбранному файлу и посту; неизвестные данные пропускаются.
+- Изображения RedGIFs больше не отправляются в видеорезолвер. Поздние ответы закрытой вкладки обрабатываются без необработанной ошибки сообщения; недоступное уведомление не меняет результат загрузки.
+- Исправлены скругления popup и ширина русских меток журнала отладки. Красная полоса непрочитанной ошибки удалена; текст, значок и статус ошибки сохранены.
+- Действия открытия папок, обходной системный диалог и companion удалены. Сохранение в выбранную папку, восстановление готовых файлов и локальное превью остаются доступны.
+
+### English
+
+- A compact folder builder combines levels in the selected order and supports custom templates. Path previews share the saving rules. Booru sites share one folder-name setting; uploader folders use only verified metadata from supported posts.
+- Saved folders distinguish a permission prompt, denial and an unavailable handle. Access restoration is explicit. Discarding a destination change rechecks the saved folder and rejects stale replies.
+- Metadata-based filenames contain selected available fields and the extension without the original CDN basename. Original names and safe collision numbering remain. Supported Danbooru/Moebooru dates and uploader accounts are verified against the selected file and post; unknown fields are skipped.
+- RedGIFs images no longer enter the video resolver. Late replies from a closed tab consume messaging errors; unavailable page notifications do not change the download result.
+- Correct popup corners and Russian debug-level column widths. Remove the unread-error red stripe while preserving error text, icons and status.
+- Remove file-manager reveal actions, the system-picker workaround and companion. Chosen-directory saving, retained-file recovery and local previews remain available.
+
+
 ## 3.0.0 — Stable release, GIF encoding and minified builds
 
 Released 2026-10-24: [v3.0.0](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0).

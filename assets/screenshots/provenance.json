@@ -1,102 +1,120 @@
 {
-  "version": "3.0.0 prepared candidate",
+  "version": "Per-image product_version; Saving updated to3.0.1",
   "scope": "Built UI with deterministic local fixtures; no native-extension or live-site acceptance.",
   "images": [
     {
       "file": "statistics-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "2260225f17eec2784b6e1dc8874e45499a3b1a9decb7532148c3742d2960ef80"
+      "sha256": "2260225f17eec2784b6e1dc8874e45499a3b1a9decb7532148c3742d2960ef80",
+      "product_version": "3.0.0"
     },
     {
       "file": "downloads-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "4a6795aa04ed6f7b87082e45bc27f1b66ee3d9bc7fe7bb3abfa129c3d5c96877"
+      "sha256": "4a6795aa04ed6f7b87082e45bc27f1b66ee3d9bc7fe7bb3abfa129c3d5c96877",
+      "product_version": "3.0.0"
     },
     {
       "file": "saving-en.jpg",
       "width": 1280,
-      "height": 800,
-      "sha256": "5afb30f32dd403d5d764b702801dbfd7d2fafe9ca25efcdac08561c8059e6a4d"
+      "height": 1254,
+      "sha256": "af9004d381affab4f99f9d830df7acb081122034e0485be9668632b7d451359d",
+      "product_version": "3.0.1",
+      "scope": "Actual minified3.0.1 UI with local demo settings and mocked Chrome APIs; no user data, native folder grant or live-site acceptance."
     },
     {
       "file": "notifications-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "a5c66b8a83bba1f2fd901dfe00bb2785e8a7fe8a33c2c00c5bf502026ea93a64"
+      "sha256": "a5c66b8a83bba1f2fd901dfe00bb2785e8a7fe8a33c2c00c5bf502026ea93a64",
+      "product_version": "3.0.0"
     },
     {
       "file": "links-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "bb0a33dcbc751a75fcb7e7ade245f512876a11ab50471acd6123b529fc300576"
+      "sha256": "bb0a33dcbc751a75fcb7e7ade245f512876a11ab50471acd6123b529fc300576",
+      "product_version": "3.0.0"
     },
     {
       "file": "viewer-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "efb2ccf6162039aeb197d88025c8269578c46fcdc310a7af50aae475f6a077af"
+      "sha256": "efb2ccf6162039aeb197d88025c8269578c46fcdc310a7af50aae475f6a077af",
+      "product_version": "3.0.0"
     },
     {
       "file": "popup-en.jpg",
       "width": 360,
       "height": 600,
-      "sha256": "594e8d1f6200aa78f56f0d4b4f86981dcaf0162287452fe11cad64710c93958c"
+      "sha256": "594e8d1f6200aa78f56f0d4b4f86981dcaf0162287452fe11cad64710c93958c",
+      "product_version": "3.0.0"
     },
     {
       "file": "statistics-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "e5e498a8b28342136047aa35462f9feb3c3c0865f7cfc80de979d37911f2bccb"
+      "sha256": "e5e498a8b28342136047aa35462f9feb3c3c0865f7cfc80de979d37911f2bccb",
+      "product_version": "3.0.0"
     },
     {
       "file": "downloads-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "13a466c0fb28f01bfc3c0a243fbf1b7abcd05969c45ee192565fd0dc1aa6a863"
+      "sha256": "13a466c0fb28f01bfc3c0a243fbf1b7abcd05969c45ee192565fd0dc1aa6a863",
+      "product_version": "3.0.0"
     },
     {
       "file": "saving-ru.jpg",
       "width": 1280,
-      "height": 800,
-      "sha256": "13190b05f6091ef57c61165ef1f543f6a5044f41875bf97f205512ab5073c9eb"
+      "height": 1290,
+      "sha256": "8bf180f269d2e138ad3c25ad53af7db4e5b6d8303a723b1177bc35779dca97ee",
+      "product_version": "3.0.1",
+      "scope": "Actual minified3.0.1 UI with local demo settings and mocked Chrome APIs; no user data, native folder grant or live-site acceptance."
     },
     {
       "file": "notifications-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "e0e6e55ea1e5867a84b4b3b31266c17320f374c52a15aef2acb3ee84b34c2e1f"
+      "sha256": "e0e6e55ea1e5867a84b4b3b31266c17320f374c52a15aef2acb3ee84b34c2e1f",
+      "product_version": "3.0.0"
     },
     {
       "file": "links-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "e59e347091d0bb000c999069b0de9e2660811f1b49749729292920238c136c3b"
+      "sha256": "e59e347091d0bb000c999069b0de9e2660811f1b49749729292920238c136c3b",
+      "product_version": "3.0.0"
     },
     {
       "file": "viewer-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "ffa4d4b342ecd06410e87a229894fe496260bbe464b77cff8bf9114b636f31aa"
+      "sha256": "ffa4d4b342ecd06410e87a229894fe496260bbe464b77cff8bf9114b636f31aa",
+      "product_version": "3.0.0"
     },
     {
       "file": "popup-ru.jpg",
       "width": 360,
       "height": 600,
-      "sha256": "50329b6260273e2f29a6848300e2a6cb2af821abe7b4196fe4ab8fb80eb5a273"
+      "sha256": "50329b6260273e2f29a6848300e2a6cb2af821abe7b4196fe4ab8fb80eb5a273",
+      "product_version": "3.0.0"
     },
     {
       "file": "promo-small.jpg",
       "width": 440,
       "height": 280,
-      "sha256": "ffb3f2c9dc9634167252323f75caf6d3efc2d11dc82d8ab44824b8a6d4c70e6c"
+      "sha256": "ffb3f2c9dc9634167252323f75caf6d3efc2d11dc82d8ab44824b8a6d4c70e6c",
+      "product_version": "3.0.0"
     },
     {
       "file": "promo-marquee.jpg",
       "width": 1400,
       "height": 560,
-      "sha256": "1ea96a39987ff7f3869afa41253cc86e52799242d9e2454427f48077cebc5f66"
+      "sha256": "1ea96a39987ff7f3869afa41253cc86e52799242d9e2454427f48077cebc5f66",
+      "product_version": "3.0.0"
     }
   ]
 }

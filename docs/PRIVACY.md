@@ -1,6 +1,6 @@
 # Privacy policy
 
-Effective date: 2026-10-23. Product: MediaLatch. Maintainer: [xhthc/MediaLatch](https://github.com/xhthc/MediaLatch). Questions and issues: [GitHub Issues](https://github.com/xhthc/MediaLatch/issues).
+Effective date: 2026-10-24. Product: MediaLatch. Maintainer: [xhthc/MediaLatch](https://github.com/xhthc/MediaLatch). Questions and issues: [GitHub Issues](https://github.com/xhthc/MediaLatch/issues).
 
 ## Purpose and access
 
@@ -10,7 +10,7 @@ The extension has no analytics, advertising, telemetry endpoint or developer-ope
 
 ## Network requests
 
-Resolving and downloading media contacts the source site, its declared CDN and, where supported, provider metadata APIs. Requests can include normal browser credentials where the existing provider path requires them. For an admitted Pixiv save, artwork metadata can supply its author name and user ID for the author label and optional folder name. Other account labels are read locally from the selected post itself (see "Posting-account metadata" below); they cause no extra request. The receiving service can observe the request address, IP and normal network metadata under its own policies.
+Resolving and downloading media contacts the source site, its declared CDN and, where supported, provider metadata APIs. Requests can include normal browser credentials where the existing provider path requires them. For an admitted Pixiv save, artwork metadata can supply its author name and user ID for the author label and optional folder name. Matched Danbooru/Moebooru post metadata can supply uploader naming and publication time for filenames and opted-in folder templates; artist tags do not become account identity. Other account labels are read locally from the selected post itself (see "Posting-account metadata" below); they cause no extra request. The receiving service can observe the request address, IP and normal network metadata under its own policies.
 
 An admitted VK Video menu save can request first-party video metadata from the selected vkvideo.ru document at /al_video.php, using that document’s same-origin session. The metadata must match the selected video; the declared progressive file is fetched from its admitted CDN. For a VK clip, the extension asks the page's own client for the clip's download address in the same document (the page's session; only the address or an error code comes back). Hovering a video card makes no network request. The optional diagnostic journal records only numbers for the phases of a save (API wait, wait for headers and first byte, body, validation, export); no credentials or signed source addresses are added to shared diagnostics.
 
@@ -54,7 +54,7 @@ Debug events can be filtered, copied or exported only by user action. Exports co
 | Permission | Use |
 |---|---|
 | `contextMenus` | Native save action and supported link actions |
-| `downloads` | Start and monitor extension-owned downloads, show actual saved filenames, eligible native resume, and "Show in folder" for a finished extension-owned download (`chrome.downloads.show`; it reveals that file and never opens it) |
+| `downloads` | Start and monitor extension-owned downloads, show actual saved filenames, eligible native resume |
 | `storage` | Preferences, statistics, legacy metadata, release cache and session lifecycle records |
 | `scripting` | Selected-frame provider discovery/recovery and content-script injection. On TikTok and Instagram, after a user save action, a document-pinned read in that tab's page script world returns the selected player's item identity, declared video address and bounded posting username. The account may be retained locally for labels/folders; raw page/React data is not retained or sent to the developer |
 | `declarativeNetRequest` | Four header rules for the extension's own acquisition requests only (initiator: this extension): a Referer for `pximg.net`, `gelbooru.com` and `tiktok.com` (TikTok's video CDN refuses requests without it), and a Referer plus the fixed cookie `kira=1` for `oimages.anime-pictures.net`. Normal browsing, other extensions and lookalike domains are not modified |
@@ -74,11 +74,10 @@ Full image, animated GIF and MP4 previews use exact staged media bytes in a disp
 
 Popup and on-page toast thumbnails open the same themed viewer over the active/owning website, in a closed Shadow DOM containing an extension-origin frame. A bounded session in extension-private chrome.storage.session survives worker restarts and binds its token to the tab, origin and frame document; original bytes and disk paths never cross into website JavaScript. Popup closes after viewer readiness. Restricted pages or blocked frames fall back to Download Manager with that viewer already open. The viewer supports fit/100%, wheel zoom, pan, previous/next retained media, Escape/backdrop close, focus restoration and reduced motion. A direct close message from the owned frame also removes the overlay after a worker restart. No browser window is created.
 
-Optional publication-date filename tokens use proven posting metadata, currently X post timestamps, in UTC. Unknown publication dates are omitted; download time is never substituted. The original basename remains. These preferences name new exports and do not rename existing disk files. Clearing statistics or manager records does not authorize overwriting a colliding disk file.
-
+Optional publication-date filename tokens use proven X post timestamps or matching Danbooru/Moebooru post metadata, in UTC. Unknown publication dates are omitted; download time is never substituted. Original-name mode retains the basename; metadata-based naming uses only the selected known fields and omits the CDN basename. These preferences name new exports and do not rename existing disk files. Clearing statistics or manager records does not authorize overwriting a colliding disk file.
 
 ## Contact / Контакты
 
-For privacy questions, email [always1337@vk.com](mailto:always1337@vk.com) or contact [@fs0x1337 on Telegram](https://t.me/fs0x1337). Review and redact any diagnostics before sending them.
+Report privacy questions, bugs or vulnerabilities by [email](mailto:always1337@vk.com) or [Issues](https://github.com/xhthc/MediaLatch/issues). Send sensitive vulnerability details by email. Review and redact diagnostics before sharing.
 
-По вопросам приватности: [always1337@vk.com](mailto:always1337@vk.com) или [Telegram @fs0x1337](https://t.me/fs0x1337). Перед отправкой проверьте отчёт и удалите приватные данные.
+По вопросам приватности, багам и уязвимостям: [почта](mailto:always1337@vk.com) или [Issues](https://github.com/xhthc/MediaLatch/issues). Чувствительные подробности отправляйте на почту; перед отправкой проверьте отчёт.
