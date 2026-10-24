@@ -5,7 +5,7 @@
 ![Chrome Web Store — скоро](https://img.shields.io/badge/Chrome_Web_Store-%D0%A1%D0%BA%D0%BE%D1%80%D0%BE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
-[![Release 3.0.1](https://img.shields.io/badge/release-3.0.1-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1)
+[![Release 3.0.2](https://img.shields.io/badge/release-3.0.2-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.2)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
 [![Email](https://img.shields.io/badge/Email-%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-64748B?style=for-the-badge)](mailto:always1337@vk.com)
@@ -19,10 +19,10 @@
 <p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> Здесь находятся документация и готовые сборки MediaLatch. Исходники разработки закрыты. **[Стабильная версия 3.0.1](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1)** содержит минифицированные CRX и ZIP, отдельные контрольные суммы и сведения о составе сборки.
+> Здесь находятся документация и готовые сборки MediaLatch. Исходники разработки закрыты. **[Стабильная версия 3.0.2](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.2)** содержит минифицированные CRX и ZIP, отдельные контрольные суммы и сведения о составе сборки.
 
 > [!NOTE]
-> **В разработке, не входит в 3.0.1:** JSON-копии статистики и истории, увеличенный кэш и порционная история. [Состояние проекта](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
+> **В 3.0.2:** JSON-копии статистики и истории, увеличенный кэш превью, порционная история и более строгая привязка кнопок к выбранному посту. [Состояние проекта](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
 
 ## ⚡ О проекте
 
@@ -36,7 +36,7 @@
 
 <p align="center"><img src="assets/readme/install-ru.svg?v=violet-loop-zip-3" width="1120" alt="ZIP и CRX: Releases, SHA-256 и правила установки браузера"></p>
 
-Скачайте **[ZIP 3.0.1](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.zip)** для загрузки распакованного расширения или [CRX 3.0.1](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx) для разрешённых браузером способов установки. Для каждого формата есть своя сумма: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.crx.sha256). [Состав сборки](https://github.com/xhthc/MediaLatch/releases/download/v3.0.1/MediaLatch-3.0.1.provenance.json) описывает одинаковые 98 файлов обоих пакетов. [Все выпуски](https://github.com/xhthc/MediaLatch/releases).
+Скачайте **[ZIP 3.0.2](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.zip)** для загрузки распакованного расширения или [CRX 3.0.2](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.crx) для разрешённых браузером способов установки. Для каждого формата есть своя сумма: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.crx.sha256). [Состав сборки](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.provenance.json) описывает одинаковые 98 файлов обоих пакетов. [Все выпуски](https://github.com/xhthc/MediaLatch/releases).
 
 В Chrome на Windows и macOS расширение обычно устанавливают через Chrome Web Store. Установку самостоятельно подписанного CRX ограничивают правила браузера и корпоративные политики. Ссылка на версию в магазине появится после обновления публикации.
 
@@ -54,9 +54,9 @@
 > [!TIP]
 > Сохраняйте контрольную сумму рядом с CRX. При ручной смене канала установки могут отличаться ID расширения и локальные данные. Закрытый ключ `.pem` не входит в пакет и не нужен пользователям.
 
-В 3.0.1 сохранены ключ подписи и ID ручной сборки 3.0.0 — `iahebdomfekhiofmdocjmdjpjlclnngd`. Он отличается от прежней ручной сборки с ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: такой пакет не обновит её, а настройки и история автоматически не перенесутся. Перед сменой установки экспортируйте нужные данные через доступные действия расширения.
+В 3.0.2 сохранены ключ подписи и ID ручной сборки 3.0.0 — `iahebdomfekhiofmdocjmdjpjlclnngd`. Он отличается от прежней ручной сборки с ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: такой пакет не обновит её, а настройки и история автоматически не перенесутся. Перед сменой установки экспортируйте нужные данные через доступные действия расширения.
 
-В 3.0.1 добавлены компактный конструктор подпапок и восстановление доступа к сохранённой папке. Исправлены составные имена файлов, обработка изображений RedGIFs и интерфейс. Кодирование GIF по-прежнему выполняется в отдельном Worker. Большие GIF всё ещё требуют времени и ресурсов. JavaScript минифицирован без sourcemaps; его можно изучить в DevTools. Полный список изменений — в [Changelog](CHANGELOG.md).
+В 3.0.2 добавлены экспорт и восстановление статистики/истории в JSON, увеличены лимиты локального превью и улучшена работа с длинной историей. Исправлены привязка inline-кнопок, Copy для фото Instagram, метаданные аккаунтов VK/RedGIFs и порядок составных имён в альбомах. Некорректные ID при импорте истории отклоняются. Кодирование GIF остаётся в отдельном Worker; большие GIF требуют времени и ресурсов. JavaScript минифицирован без sourcemaps и доступен для изучения в DevTools. Полный список — в [Changelog](CHANGELOG.md).
 
 ## 🧩 Возможности
 
@@ -74,7 +74,11 @@
 
 Нажмите на миниатюру в менеджере, чтобы открыть просмотрщик. Из popup он открывается поверх активной вкладки, из уведомления — поверх исходной страницы. Просмотрщик работает в изолированном фрейме расширения. На системных страницах он открывается в менеджере. При наведении доступно маленькое превью.
 
-В опубликованной 3.0.1 оригиналы для превью хранятся локально: до 64 МиБ на файл, 128 МиБ суммарно, 16 записей, 24 часа. Если файл не поместился в кэш или уже удалён из него, выберите его с диска. Скачанный файл при этом не меняется. Поддержка кодеков зависит от браузера.
+В 3.0.2 локальный кэш содержит до 2 048 миниатюр и 256 оригиналов для превью: до 128 МиБ на оригинал, 512 МиБ суммарно и 30 дней доступности. Если файл не поместился или удалён из кэша, выберите его с диска. Кэш не заменяет резервную копию; скачанные файлы не меняются. Поддержка кодеков зависит от браузера.
+
+### История и статистика
+
+В разделе «Обзор → Локальные данные и резервные копии» можно отдельно сохранить статистику и историю в JSON. Восстановление статистики заменяет счётчики с подтверждением; импорт истории добавляет отсутствующие записи и не запускает скачивания. Ограничения: 32 МиБ UTF-8 на файл, до 50 000 записей в копии истории. Медиа, URL источников и права на папки в копию не входят. История показывается порциями, а поиск охватывает весь сохранённый список. [Подробнее](docs/LOCAL_DATA.md).
 
 ### Папки и имена
 

@@ -6,7 +6,7 @@
 
 ### Поддерживаемые версии
 
-Исправления ориентированы на последний стабильный выпуск — 3.0.1. Отдельное сопровождение старых веток не обещается.
+Исправления ориентированы на последний стабильный выпуск — 3.0.2. Отдельное сопровождение старых веток не обещается.
 
 ### Сообщить об уязвимости
 
@@ -33,7 +33,7 @@
 
 ### Supported versions
 
-Fixes target the latest stable release, 3.0.1. Separate maintenance of older branches is not promised.
+Fixes target the latest stable release, 3.0.2. Separate maintenance of older branches is not promised.
 
 ### Report a vulnerability
 

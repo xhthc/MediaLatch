@@ -1,11 +1,20 @@
 # Changelog
 
-## Unreleased — Local data and backups
+## 3.0.2 — 2026-10-24
 
-Reviewed in local development on 2026-10-24. These changes are not in the published 3.0.1 package; the manifest and bundled release notes remain 3.0.1 until the next release is assigned.
+Prepared locally on 2026-10-24. These changes are not in the published 3.0.1 package. Local packaging, owner CRX signing, GitHub publication and store review are separate steps.
 
 ### Русский
 
+- Импорт истории отклоняет нестроковые идентификаторы; повреждённый JSON больше не создаёт дубликаты и неудаляемые записи.
+
+- Исправлена кнопка Copy на страницах Instagram с фотографиями и вертикальной раскладкой без `<article>`. X и обычная кнопка Instagram получили видимый клавиатурный фокус.
+- Имя автора VK больше не включает текст вложенной кнопки «Подписаться». RedGIFs ищет аккаунт в своей карточке с одним видео, а не только во внутренней обёртке плеера.
+- Inline-сохранение показывает обработку запроса, отказ связи и необходимость перезагрузить страницу после обновления расширения. Ответ фонового процесса не обозначает успешное сохранение файла; итог остаётся в менеджере загрузок.
+- При составных именах файлы одного подтверждённого альбома получают индекс `_001`, `_002` и далее в порядке поста. Режим исходного имени и защита от перезаписи сохранены.
+- Убрано автоматическое распознавание Scatbooru как рабочего Booru-домена после обнаруженного перенаправления. Исторические записи и счётчики этого сайта сохраняются.
+- Кнопка копирования на X привязывается к панели штатных действий поста, а не к первой группе элементов: опросы и вложенные цитаты исключены. При неоднозначной панели кнопка скрывается до восстановления привязки.
+- Inline-кнопки X, Instagram, TikTok и YouTube проверяют своё происхождение и текущее место крепления; лишние и клонированные элементы удаляются. Общий обработчик сохранения X, Reddit, Pixiv, VK и e-shuushuu отклоняет нажатия после переноса или удаления контейнера кнопки.
 - Добавлены отдельные JSON-копии статистики и завершённой истории загрузок. Восстановление статистики заменяет счётчики с подтверждением, сохраняет настройку записи и исключает повторный учёт старых запросов; при активных загрузках оно запрещено.
 - Импорт истории добавляет отсутствующие записи без запуска загрузок, изменения статистики или доступа к файлам. Копия не содержит медиа, превью, URL источников, прав на папки и нативных ID загрузок. Лимиты: 32 МиБ UTF-8 и до 50 000 записей истории.
 - Кэш увеличен до 2 048 миниатюр и 256 оригиналов: до 128 МиБ на оригинал, 512 МиБ суммарно и 30 дней доступности. Это кэш, а не резервная копия сохранённых файлов.
@@ -14,12 +23,20 @@ Reviewed in local development on 2026-10-24. These changes are not in the publis
 
 ### English
 
+- Reject non-string history identifiers; malformed JSON can no longer create duplicate or unremovable archive records.
+
+- Fix Copy on Instagram photo permalinks with column layouts and no `<article>`. Add visible keyboard focus to X and standard Instagram Copy controls.
+- Exclude nested Subscribe controls from VK author names. Resolve RedGIFs account metadata from its own single-video card instead of only the inner player wrapper.
+- Show inline request processing, transport failure and page-reload recovery after extension updates. A worker reply does not claim a completed file; Downloads remains the outcome authority.
+- Preserve proven album order with `_001`, `_002` and subsequent indexes in metadata-based filenames. Original-name mode and collision protection remain unchanged.
+- Retire automatic Scatbooru domain recognition after observed redirection, retaining its historical records and counters.
+- Bind the X copy control to the post's native action bar rather than its first group, excluding polls and nested quotes. An ambiguous action bar hides the control until its binding can be established again.
+- X, Instagram, TikTok and YouTube inline controls validate their private identity and current anchor; remove surplus and cloned elements. The shared X, Reddit, Pixiv, VK and e-shuushuu Save handler refuses activation after its control host is moved or detached.
 - Add separate JSON copies for aggregate statistics and terminal download history. Confirmed statistics restore replaces counters, preserves recording preference and fences old replays; active work refuses restore.
 - History import adds missing metadata-only records without downloads, statistics updates or filesystem authority. Copies exclude media, previews, source URLs, folder grants and native download IDs. Limits: 32 MiB UTF-8 and up to 50,000 history records.
 - Increase disposable caches to 2,048 thumbnails and 256 originals: 128 MiB per original, 512 MiB total and 30-day availability. Saved files are not backed up by this cache.
 - Window long history while keeping whole posts, active/focused records and producer order. Search and bulk actions retain full-list scope.
 - No new permissions/dependencies. Failed writes preserve prior data. Actual Reload, external-folder and physical low-space acceptance remain open.
-
 
 
 ## 3.0.1 — Folder layouts and download recovery
@@ -42,29 +59,22 @@ Reviewed in local development on 2026-10-24. These changes are not in the publis
 - Correct popup corners and Russian debug-level column widths. Remove the unread-error red stripe while preserving error text, icons and status.
 - Remove file-manager reveal actions, the system-picker workaround and companion. Chosen-directory saving, retained-file recovery and local previews remain available.
 
-
-## 3.0.0 — Stable release, GIF encoding and minified builds
-
-Released 2026-10-24: [v3.0.0](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.0).
+## 3.0.0 — License and distribution
 
 ### Русский
 
 - Собственный код и графика с версии 3.0.0 распространяются по закрытой лицензии. Ранее полученные GPL-версии сохраняют прежние права; лицензии сторонних компонентов не меняются.
-- Опубликован подписанный минифицированный CRX с SHA-256 и сведениями о сборке: состав файлов, их размеры и хеши, инструмент минификации и результаты проверок. Подпись CRX3 проверена, все 98 файлов совпадают с принятой сборкой. Закрытый ключ не публикуется.
-- JavaScript минифицирован Vite 8.3.5 / Oxc без sourcemaps. Общие глобальные имена и имена свойств сохранены; код остаётся доступным для изучения. CRX не гарантирует установку вне магазина в Chrome для Windows/macOS.
-- Кодирование GIF выполняется в отдельном Worker с отменой, тайм-аутом и освобождением ресурсов. Подготовка больше не блокирует поток скрытого документа на кодировании; большие GIF всё ещё требуют времени и ресурсов. На проверенных стендах результат совпадает по байтам.
-- ID нового CRX — `iahebdomfekhiofmdocjmdjpjlclnngd`; он отличается от прежней ручной сборки `kmebfblhgfacdonaomlggpkndcjjpkgd`. Установки с другим ID не обновятся этим пакетом; настройки и история автоматически не переносятся.
-- Сохранены возможности 2.6.5, включая превью изображений/GIF/MP4, карусель, имена файлов, фильтры типов и офлайн-историю изменений. Новых разрешений, зависимостей или изменений формата локальных данных нет.
+- Чистая сборка подготовлена для ручной упаковки в CRX. Закрытый ключ подписи хранится у владельца и не публикуется. CRX не скрывает JavaScript и не гарантирует установку вне магазина в Chrome для Windows/macOS.
+- Сохранены возможности 2.6.5, включая превью изображений/GIF/MP4, карусель, имена файлов, фильтры типов и офлайн-историю изменений. Новых разрешений, зависимостей или изменений формата локальных данных нет. UI собирается текущим Vite с минификацией и без sourcemaps.
+- Кодирование GIF перенесено в отдельный Worker: тяжёлая обработка кадров больше не блокирует основной поток скрытого документа. Сохранены результат кодирования, ограничения, отмена и очистка ресурсов.
 - Публикация в Chrome Web Store выполняется отдельно. При включённых Verified CRX Uploads магазин принимает CRX, подписанный зарегистрированным ключом; обычный режим использует ZIP.
 
 ### English
 
 - Project-owned code and artwork use a proprietary license starting with 3.0.0. Earlier GPL recipients retain their existing rights; third-party licenses are unchanged.
-- Publish a signed minified CRX with SHA-256 and build details: file inventory, sizes and hashes, minifier and validation results. Its CRX3 signature is verified and all 98 files match the accepted build. The private signing key is not published.
-- Minify JavaScript with Vite 8.3.5 / Oxc without source maps. Shared globals and property names are preserved; code remains inspectable. A CRX does not guarantee installation outside the store in Chrome for Windows/macOS.
-- Move GIF encoding to a dedicated Worker with cancellation, timeout and resource cleanup. Encoding no longer blocks the hidden document's thread; large GIFs still take time and resources. Output is byte-identical on tested fixtures.
-- The new CRX ID is `iahebdomfekhiofmdocjmdjpjlclnngd`, different from the earlier manually signed `kmebfblhgfacdonaomlggpkndcjjpkgd` build. It cannot update installations with another ID or automatically transfer their settings and history.
-- Retain 2.6.5 behavior, including image/GIF/MP4 previews, carousel, filename settings, file-type filters and offline release history. No new permissions, dependencies or local-data format changes.
+- A clean runtime is prepared for manual CRX packaging. The owner keeps the private signing key outside published artifacts. A CRX does not conceal JavaScript or guarantee installation outside the store in Chrome for Windows/macOS.
+- Retains 2.6.5 behavior, including image/GIF/MP4 previews, carousel, filename settings, file-type filters and offline release history. No new permissions, dependencies or local-data format changes. The UI uses the current Vite build with minification and no sourcemaps.
+- GIF encoding runs in a dedicated Worker, keeping heavy frame processing off the hidden document's main thread. Encoding output, limits, cancellation and resource cleanup are preserved.
 - Chrome Web Store publication is separate. Verified CRX Uploads accept a CRX signed with the registered key; the ordinary upload path uses ZIP.
 
 ## 2.6.5 — Viewer, naming and lifecycle fixes
@@ -218,7 +228,7 @@ On 2026-10-20 the user confirmed preview downloads and reported clips downloadin
 
 - Harden disk-backed staging cancellation during validation/commit, same-job replacement file identity and full-versus-unknown quota handling; failed transfers release their source.
 - User checks confirm TikTok/Reels controls, saved audio, embed links and username folders. Broader feed/layout, separate-track streams and crash/full-disk coverage remain limited.
-- Update EN/RU documentation and privacy disclosures, and separate implemented extraction/MV3 safeguards from future universal-media work in [the architecture roadmap (private maintainer reference)](https://github.com/xhthc/MediaLatch-Release/blob/main/docs/ROADMAP.md). No new permission, dependency or storage schema.
+- Update EN/RU documentation and privacy disclosures, and separate implemented extraction/MV3 safeguards from future universal-media work in [the architecture roadmap](docs/ROADMAP.md). No new permission, dependency or storage schema.
 
 ## 2.5.8 — tested inline scope and experimental social videos
 

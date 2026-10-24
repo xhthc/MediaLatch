@@ -1,6 +1,6 @@
 # Local data and backups
 
-As of 2026-10-24, JSON statistics/history backups and the larger preview cache are reviewed **local, unreleased changes**. The published 3.0.1 CRX uses the earlier cache limits and has no statistics/history JSON restore. Portable settings export is a separate existing feature.
+Version 3.0.2 includes JSON statistics/history copies, history windowing and the larger preview cache. Portable settings export remains separate. These local features do not create an automatic external database or cloud backup.
 
 ## What persists
 
@@ -10,7 +10,7 @@ Deleting a manager record does not delete the exported media file. Clearing stat
 
 ## Cache limits
 
-| Disposable cache | Published 3.0.1 | Unreleased local source |
+| Disposable cache | Previous 3.0.1 | Current 3.0.2 |
 | --- | --- | --- |
 | Static WebP thumbnails | 128 | 2,048 |
 | Original previews | 16 | 256 |
@@ -20,7 +20,7 @@ Deleting a manager record does not delete the exported media file. Clearing stat
 
 These limits apply to optional previews, not the maximum download size. Eviction, expiry or a cache write failure leaves the exported file and export receipt intact. Expired entries become unavailable; pruning runs during cache writes/startup, not as a promise of deletion while the browser is closed. There is no extra source request to refill an evicted original. Supported files can instead be chosen explicitly from disk. No external config file, helper or new storage permission is introduced. Browser quota/eviction still applies; a cache is not a backup. [Chrome storage behavior](https://developer.chrome.com/docs/extensions/develop/concepts/storage-and-cookies).
 
-## Export and restore in the unreleased interface
+## Export and restore in 3.0.2
 
 Open **Overview → Local data and backups** (Russian: **Обзор → Локальные данные и резервные копии**). Export statistics and history as two separate JSON files. Keep the history copy private: it contains names and account labels. Each file must fit 32 MiB in UTF-8; a history copy supports up to 50,000 records.
 
@@ -29,7 +29,7 @@ Open **Overview → Local data and backups** (Russian: **Обзор → Лока
 | Statistics | Aggregate outcomes, output types and measured-byte counters by site | Explicit confirmation replaces every counter; it does not add to existing totals or enable recording. Finish/cancel active work first. Requests started before restoration are excluded from later counting |
 | History | Terminal record IDs, basenames, site/account metadata, timestamps, outcomes and byte totals | Explicit confirmation adds only missing IDs. Existing rows remain. Repeating the same import creates no duplicates or statistics contributions |
 
-The worker validates file format/version, counters and record limits before committing the selected store. Invalid input or a failed transaction keeps prior data. A failed restore keeps the selected copy available for retry; success returns focus to the file chooser.
+The worker validates file format/version, counters and record limits before committing the selected store. Invalid input, including non-string history IDs, or a failed transaction keeps prior data. A failed restore keeps the selected copy available for retry; success returns focus to the file chooser.
 
 Copies exclude media and thumbnails, source/post URLs, signed queries, request headers, native download IDs, directory handles/receipts and active downloads. They cannot restore a folder grant or unfinished transfer. Restored history rows are marked as records from a copy; they cannot retry a download or establish that the file still exists. To preview such a file, select the original file from disk when the viewer supports it.
 
@@ -39,4 +39,4 @@ The interface initially selects up to 100 finished rows. Active/focused records 
 
 ## Verification limits
 
-Validation, duplicate imports, transaction aborts, replay boundaries, recording opt-out and archive-only restart have regressions. Isolated installed-Chromium checks cover JSON downloads/file input, 320 retained records, browser restart and both interface languages/themes. Real extension-manager Reload, external OS-folder grants and physical low-disk/eviction remain manual acceptance. Release and store publication are separate from local source readiness.
+Validation, duplicate imports, transaction aborts, replay boundaries, recording opt-out and archive-only restart have regressions. Isolated installed-Chromium checks cover JSON downloads/file input, 320 retained records, browser restart and both interface languages/themes. Real extension-manager Reload, external OS-folder grants and physical low-disk/eviction remain manual acceptance. GitHub release and Chrome Web Store review/approval remain separate.

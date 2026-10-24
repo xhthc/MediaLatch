@@ -1,6 +1,6 @@
 # Roadmap
 
-Updated 2026-10-24. Published build: 3.0.1. Local development is tracked separately in [Status](STATUS.md); this roadmap promises neither dates nor universal site coverage.
+Updated 2026-10-25. Release build: 3.0.2. Acceptance limits are tracked separately in [Status](STATUS.md); this roadmap promises neither dates nor universal site coverage.
 
 ## Русский
 
@@ -13,7 +13,7 @@ Updated 2026-10-24. Published build: 3.0.1. Local development is tracked separat
 | P3 | Измерить стоимость SPA-наблюдателей и затем улучшать прокрутку, повторную инициализацию и переработанные карточки |
 | Отдельная задача | Добавлять потоковые форматы только для названного сервиса с проверенными плеером, кодеками, звуком и ограничениями |
 
-JSON-копии статистики/истории, увеличенный кэш и порционная история проверены в локальной разработке, но не входят в 3.0.1. Свои отдельные названия для pic/video/gif пока не реализованы. Скачивание YouTube, DRM, эфиры, универсальные HLS/DASH и системный помощник не заявляются.
+JSON-копии статистики/истории, увеличенный кэш и порционная история входят в 3.0.2; ручные проверки выше остаются открытыми. Свои отдельные названия для pic/video/gif пока не реализованы. Скачивание YouTube, DRM, эфиры, универсальные HLS/DASH и системный помощник не заявляются.
 
 ## English
 
@@ -26,4 +26,4 @@ JSON-копии статистики/истории, увеличенный кэ
 | P3 | Measure SPA observer cost before changing scroll/reinjection/recycled-card handling |
 | Separate capability | Add streams only for a named provider with proven player/codec/audio and resource bounds |
 
-JSON statistics/history backups, a larger cache and history windowing are reviewed locally but not in 3.0.1. Per-type pic/video/gif naming is not implemented. YouTube downloading, DRM, live streams, universal HLS/DASH and a system companion are not promised.
+JSON statistics/history copies, a larger cache and history windowing are included in 3.0.2; the manual acceptance tasks above remain open. Per-type pic/video/gif naming is not implemented. YouTube downloading, DRM, live streams, universal HLS/DASH and a system companion are not promised.
