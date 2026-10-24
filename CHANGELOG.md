@@ -2,10 +2,11 @@
 
 ## 3.0.2 — 2026-10-24
 
-Prepared locally on 2026-10-24. These changes are not in the published 3.0.1 package. Local packaging, owner CRX signing, GitHub publication and store review are separate steps.
+Stable release, rebuilt on 2026-10-25 with the update-check fix below. The version remains 3.0.2; an installed 3.0.2 does not discover this rebuild as a newer version. GitHub publication and Chrome Web Store review remain separate.
 
 ### Русский
 
+- Пересборка 2026-10-25: исправлена проверка обновлений. Подтверждённая пауза GitHub сохраняется между вкладками и перезагрузками; ручная проверка и смена канала не обходят её. Параллельные ответы сохраняют самое долгое ожидание. HTTP 403 без подтверждения лимита больше не выдаётся за ограничение запросов; интерфейс показывает время повторной проверки.
 - Импорт истории отклоняет нестроковые идентификаторы; повреждённый JSON больше не создаёт дубликаты и неудаляемые записи.
 
 - Исправлена кнопка Copy на страницах Instagram с фотографиями и вертикальной раскладкой без `<article>`. X и обычная кнопка Instagram получили видимый клавиатурный фокус.
@@ -23,6 +24,7 @@ Prepared locally on 2026-10-24. These changes are not in the published 3.0.1 pac
 
 ### English
 
+- Rebuild 2026-10-25: fix update checks. Confirmed GitHub cooldowns persist across tabs and reloads; manual checks and channel changes respect them. Concurrent responses retain the longest wait. HTTP 403 without rate-limit evidence is no longer reported as a quota limit; the interface shows when another check is available.
 - Reject non-string history identifiers; malformed JSON can no longer create duplicate or unremovable archive records.
 
 - Fix Copy on Instagram photo permalinks with column layouts and no `<article>`. Add visible keyboard focus to X and standard Instagram Copy controls.

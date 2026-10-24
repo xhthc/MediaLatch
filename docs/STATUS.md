@@ -22,6 +22,7 @@ The [3.0.1 release](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1) ide
 
 ## Release 3.0.2
 
+- Rebuild 2026-10-25 fixes confirmed GitHub rate-limit waits across tabs/reloads, concurrent cooldown writes, ordinary HTTP 403 classification and localized retry-time controls. Manual checks and channel changes respect the server wait. The version stays 3.0.2; existing 3.0.2 installations do not detect this rebuild as newer.
 - Manual JSON export/restore for statistics and terminal download history under Overview → Local data and backups.
 - Statistics restore replaces counters, preserves the recording preference and excludes pre-restore replays. Active work prevents restore. History restore adds missing metadata-only records without fetch/retry/filesystem authority or statistics updates.
 - Up to 2,048 thumbnails; 256 original previews, 128 MiB per file / 512 MiB total / 30-day availability. Cache failure or eviction does not change saved files.
@@ -35,7 +36,9 @@ The [3.0.2 release](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.2) inc
 
 ## Evidence and remaining acceptance
 
-The combined 3.0.2 source gate passed 107/107 checks. The minified runtime passed 54 syntax checks, 13 semantic suites and the history-import regression. The extracted ZIP passed 14/14 native HTTP cases, GIF byte parity/cancellation/timeout/Worker cleanup, and actual English/Russian popup/manager rendering. Independent source and exact-package reviews approved the candidate. These are isolated fixture results, not live-site acceptance.
+The original 3.0.2 package passed 107/107 source checks and 14/14 extracted-ZIP native HTTP cases, plus GIF Worker and English/Russian popup/manager fixtures. These are retained results for that earlier package.
+
+For the 2026-10-25 updater fix, the source-code baseline passed 106/106 core/UI checks before the release-note-only delta. The final release notes/build passed 32/32 focused updater checks, typecheck, build and generated-output parity. The exact new minified package passed 54 syntax checks, 13 semantic suites, the minifier contract and the real minified history-import handler regression. Its extracted ZIP passed actual Chromium updater checks in English/Russian at 1280/390px: concurrent WebLocks writes retain the longest wait, reload preserves it, expiry sends no automatic request, and a manual check recovers successfully. Independent source and exact-package reviews approved the rebuild; all 98 owner-CRX/ZIP files match and the registered signature verifies. These controlled updater fixtures do not repeat full live-site/media acquisition acceptance. Narrow 390px FullApp header usability remains open.
 
 The local storage candidate received independent review, 1,580/1,580 UI assertions, 474/474 controller/UX checks, build parity and isolated installed-Chromium JSON/restart checks. Controlled fixtures retained 320 history records and original previews across browser restart. These counts describe that candidate, not every browser or website.
 

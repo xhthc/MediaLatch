@@ -24,6 +24,8 @@
 > [!NOTE]
 > **In 3.0.2:** JSON statistics/history copies, a larger preview cache, history windowing and stricter controls bound to the selected post. [Project status](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
 
+The **3.0.2 rebuild dated 2026-10-25** fixes update checks: GitHub cooldowns persist across tabs and reloads, and the interface shows when another check is available. The version is unchanged, so an installed 3.0.2 will not discover this rebuild as newer. For an unpacked installation, finish active downloads, replace the files in its existing folder with the new ZIP contents, then click Reload for MediaLatch on the extensions page. Keep the extension installed.
+
 ## ⚡ About
 
 **MediaLatch** saves the images, videos and GIFs you select on a page. Use the browser menu or controls on supported sites, follow each file in the download manager, and open saved media in the built-in viewer.
