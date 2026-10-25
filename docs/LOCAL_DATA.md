@@ -1,12 +1,18 @@
 # Local data and backups
 
-Version 3.0.2 includes JSON statistics/history copies, history windowing and the larger preview cache. Portable settings export remains separate. These local features do not create an automatic external database or cloud backup.
+Version 3.0.3 retains the 3.0.2 JSON statistics/history copies, history windowing and the larger preview cache. Portable settings export remains separate. These local features do not create an automatic external database or cloud backup.
 
 ## What persists
 
 Download jobs and all-time statistics live in private extension IndexedDB in the browser profile. Neither has an automatic count/age expiry; available storage still limits them. Settings use extension local storage. Recent feedback is a separate session list targeting 20 terminal operations and 24 hours, with active and pending-statistics protections. Its small size does not cap the durable download history or totals.
 
 Deleting a manager record does not delete the exported media file. Clearing statistics does not clear history or saved files. Uninstalling/removing extension storage can remove extension-local data. A copied browser profile, changed extension ID or store installation is not a promised migration mechanism.
+
+## Recovery in 3.0.3
+
+Failed statistics writes can retain up to 200 compact private pending contributions for replay after a full browser restart. Entries contain operation/time, finite site category, outcome, output evidence/size and failure category, not URLs, filenames, paths or browser download IDs. Replay deduplicates by operation; recording opt-out and clear/restore boundaries remain authoritative. If both stores reject writes or the queue bound is reached, recovery is not guaranteed.
+
+For an uncertain export, Check saved file validates the exact owned native result or chosen-directory bytes. It does not fetch or overwrite; confirmation corrects the same operation in history/statistics. Missing/changed/unconfirmed results stay uncertain. Browser-owned completion can offer Show file in folder after ID/ownership/existence checks; direct chosen-directory exports instead explain the file-manager API limitation. Imported metadata has no native ID, directory handle or filesystem authority.
 
 ## Cache limits
 
@@ -40,3 +46,4 @@ The interface initially selects up to 100 finished rows. Active/focused records 
 ## Verification limits
 
 Validation, duplicate imports, transaction aborts, replay boundaries, recording opt-out and archive-only restart have regressions. Isolated installed-Chromium checks cover JSON downloads/file input, 320 retained records, browser restart and both interface languages/themes. Real extension-manager Reload, external OS-folder grants and physical low-disk/eviction remain manual acceptance. GitHub release and Chrome Web Store review/approval remain separate.
+

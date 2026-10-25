@@ -2,10 +2,10 @@
 
 <p align="center"><img src="assets/readme/hero-en.svg?v=violet-loop-2" width="1120" alt="MediaLatch — save media, preview and organize"></p>
 
-![Chrome Web Store — coming soon](https://img.shields.io/badge/Chrome_Web_Store-Coming_soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+[![Chrome Web Store — Install](https://img.shields.io/badge/Chrome_Web_Store-Install-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh)
 
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
-[![Release 3.0.2](https://img.shields.io/badge/release-3.0.2-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.2)
+[![Release 3.0.3](https://img.shields.io/badge/release-3.0.3-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.3)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
 [![Email](https://img.shields.io/badge/Email-Contact-64748B?style=for-the-badge)](mailto:always1337@vk.com)
@@ -19,12 +19,12 @@
 <p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.2](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.2)** includes minified CRX and ZIP packages, separate checksums and a build file inventory.
+> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.3](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.3)** includes minified CRX and ZIP packages, separate checksums and a build file inventory.
 
 > [!NOTE]
-> **In 3.0.2:** JSON statistics/history copies, a larger preview cache, history windowing and stricter controls bound to the selected post. [Project status](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
+> **In 3.0.3:** simple/advanced folder settings, custom `Image / Videos / GIF` labels, compact popup, notice controls, saved-file checks and statistics recovery. JSON history/statistics copies and the larger cache are retained. [Project status](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
 
-The **3.0.2 rebuild dated 2026-10-25** fixes update checks: GitHub cooldowns persist across tabs and reloads, and the interface shows when another check is available. The version is unchanged, so an installed 3.0.2 will not discover this rebuild as newer. For an unpacked installation, finish active downloads, replace the files in its existing folder with the new ZIP contents, then click Reload for MediaLatch on the extensions page. Keep the extension installed.
+To update an unpacked installation, finish downloads, replace files in its existing folder with ZIP 3.0.3 and click Reload for MediaLatch on the extensions page. Keep the extension installed. A GitHub release does not establish Chrome Web Store publication.
 
 ## ⚡ About
 
@@ -38,9 +38,9 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 <p align="center"><img src="assets/readme/install-en.svg?v=violet-loop-zip-3" width="1120" alt="Packaged ZIP and CRX: Releases, SHA-256 and browser installation policies"></p>
 
-Download **[ZIP 3.0.2](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.zip)** for loading the unpacked extension, or [CRX 3.0.2](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.crx) where browser policies permit. Each format has its own checksum: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.crx.sha256). [Build provenance](https://github.com/xhthc/MediaLatch/releases/download/v3.0.2/MediaLatch-3.0.2.provenance.json) describes the same 98 files in both packages. [All releases](https://github.com/xhthc/MediaLatch/releases).
+Download **[ZIP 3.0.3](https://github.com/xhthc/MediaLatch/releases/download/v3.0.3/MediaLatch-3.0.3.zip)** for loading the unpacked extension, or [CRX 3.0.3](https://github.com/xhthc/MediaLatch/releases/download/v3.0.3/MediaLatch-3.0.3.crx) where browser policies permit. Each format has its own checksum: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.3/MediaLatch-3.0.3.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.3/MediaLatch-3.0.3.crx.sha256). [Build provenance](https://github.com/xhthc/MediaLatch/releases/download/v3.0.3/MediaLatch-3.0.3.provenance.json) describes the same 98 files in both packages. [All releases](https://github.com/xhthc/MediaLatch/releases).
 
-Chrome on Windows and macOS normally installs extensions through the Chrome Web Store. Browser and enterprise policies restrict self-signed CRX installation. The store link will be added after the listing is updated.
+For Chrome, use the [MediaLatch Chrome Web Store listing](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh). Browser and enterprise policies restrict self-signed CRX installation. The store version is updated separately from GitHub.
 
 If your browser permits manual CRX installation, download the package and checksum from the same release. Compare the file's SHA-256 with the published checksum before installing.
 
@@ -56,9 +56,9 @@ If your browser permits manual CRX installation, download the package and checks
 > [!TIP]
 > Keep the checksum with the CRX. Switching installation channels can change the extension ID and local data. The private `.pem` signing key is not part of the package and is not needed by users.
 
-Version 3.0.2 keeps the signing key and ID of the manual 3.0.0 build: `iahebdomfekhiofmdocjmdjpjlclnngd`. It differs from the earlier manually signed build with ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: this package will not update that installation or automatically transfer its settings and history. Export needed data through the extension's available actions before switching installations.
+Version 3.0.3 keeps the signing key and ID of the manual 3.0.0 build: `iahebdomfekhiofmdocjmdjpjlclnngd`. It differs from the earlier manually signed build with ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: this package will not update that installation or automatically transfer its settings and history. Export needed data through the extension's available actions before switching installations.
 
-Version 3.0.2 adds JSON export/restore for statistics and history, expands local preview limits and improves long-history rendering. It fixes inline-control binding, Copy on Instagram photos, VK/RedGIFs account metadata and composed album filename order. Invalid history IDs are rejected during import. GIF encoding remains in a dedicated Worker; large GIFs still take time and resources. JavaScript is minified without source maps and remains inspectable in DevTools. See the [Changelog](CHANGELOG.md).
+Version 3.0.3 retains the 3.0.2 JSON statistics/history copies, larger preview cache, long-history search and earlier inline-control fixes. GIF encoding remains in a dedicated Worker; large GIFs still take time and resources. JavaScript is minified without source maps and remains inspectable in DevTools. See the [changelog](CHANGELOG.md) and [local-data behavior](docs/LOCAL_DATA.md).
 
 ## 🧩 Features
 
@@ -76,7 +76,7 @@ Version 3.0.2 adds JSON export/restore for statistics and history, expands local
 
 Click a thumbnail in the manager to open the viewer. From the popup, it opens over the active tab; from a page notice, it opens over the source page. The viewer runs in an isolated extension frame. On restricted browser pages, it opens in the manager. Small previews appear on hover.
 
-In 3.0.2 the local cache holds up to 2,048 thumbnails and 256 preview originals: 128 MiB per original, 512 MiB total and 30-day availability. If a file is too large or no longer cached, choose it from disk. The cache does not replace a backup or change saved files. Codec support depends on the browser.
+In 3.0.3 the local cache holds up to 2,048 thumbnails and 256 preview originals: 128 MiB per original, 512 MiB total and 30-day availability. If a file is too large or no longer cached, choose it from disk. The cache does not replace a backup or change saved files. Codec support depends on the browser.
 
 ### History and statistics
 
@@ -87,18 +87,18 @@ Open Overview → Local data and backups to export statistics and history as sep
 ```text
 Downloads/
 └── SavedImages/
-    ├── x/posting_account/pic/photo.jpg
-    ├── reddit/posting_account/video/clip.mp4
-    └── danbooru/uploader/pic/artwork.jpg
+    ├── x/posting_account/Image/photo.jpg
+    ├── reddit/posting_account/Videos/clip.mp4
+    └── danbooru/uploader/Image/artwork.jpg
 ```
 
 Choose folder levels in order: site, account, media type, extension, date, year–month or year. Custom templates are available; levels with unavailable metadata are skipped. Account folders are enabled separately for supported services. Matched Danbooru/Moebooru posts can use a verified uploader; artist tags do not become account identity.
 
 Date and time fields in filenames use verified X post timestamps or matching Danbooru/Moebooru metadata, in UTC. These filename fields are omitted when publication time is unknown. Folder Date, Year–month and Year levels use publication time or, when unavailable, operation start time in UTC. Settings apply to new saves; existing files are not renamed.
 
-Type folder names `pic`, `video` and `gif` are currently fixed. A custom template such as `{site}/{author}/Images` uses Images for every type; separate Images/Videos/Animations settings are not implemented. See [roadmap](docs/ROADMAP.md).
+Customize image, video and GIF folder labels independently for the `{type}` level. Defaults are `Image`, `Videos` and `GIF`; an empty field restores its default. Only the type level for new saves changes: custom labels, admitted job paths and existing files are preserved. Literal `Images` in a template remains one shared folder, not a media-type switch.
 
-If the browser requests access to a saved folder again, use Restore folder access in settings. The selected destination stays saved. File-manager reveal actions and a system companion are not used.
+If the browser requests access to a saved folder again, use Restore folder access in settings. The selected destination stays saved. Completed browser downloads can show their file in its folder after verification. Direct chosen-directory exports explain the file-manager API limitation; no system companion is required.
 
 When names match, the extension adds a suffix, even after history and statistics are cleared. Existing files are not overwritten. Long filenames may be shortened to fit path limits. The browser or filesystem may still reject an excessively long Windows path.
 
@@ -171,3 +171,4 @@ Starting with 3.0.0, project-owned code and artwork use the [proprietary license
 Development source and its Git history are kept separately. The JavaScript inside a CRX can still be inspected after minification.
 
 [Changelog](CHANGELOG.md) · [Privacy](docs/PRIVACY.md) · [Security Policy](SECURITY.md) · [Boosty](https://boosty.to/fs0x1337)
+

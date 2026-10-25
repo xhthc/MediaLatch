@@ -1,5 +1,45 @@
 # Changelog
 
+## 3.0.3 — 2026-10-25
+
+Stable GitHub release with verified matching minified CRX/ZIP and the registered signing identity. Chrome Web Store upload, review and publication remain separate owner actions.
+
+### Русский
+
+- Конструктор папок сочетает простой выбор и расширенный интерактивный путь с общей панелью имён/шаблона. Popup возвращён к компактной строке поиска и фильтров. В журнале расширен поиск; в истории версий стрелки стоят рядом, выбор версии отделён, добавлены категории «Все / Новое / Исправления». Карточки сервисов превью больше не растягиваются до соседней; краткая справка сохранена.
+- Уведомления получили длительность 2/4/8 секунд или до закрытия и живой локальный тест без загрузок/статистики. Значок папки различает проверенную загрузку браузера и прямую запись в выбранную папку; во втором случае поясняет ограничение API. Companion не возвращается.
+
+- Настройки показывают уровни папок по порядку с перестановкой мышью и клавиатурой, примерами пути и имени рядом с выбором, счётчиком сервисов авторов и плавающей панелью «Сохранить / Отменить». Превью ссылок объединяет независимые настройки YouTube и показывает локальный пример. Улучшены поиск popup, фильтры журнала, пример уведомления и раздел обновлений. Домены, значения по умолчанию и сохранённый выбор остаются прежними.
+
+- Имена папок по умолчанию для новых сохранений: `Image`, `Videos`, `GIF`. Настройки и примеры используют те же значения; собственные имена, уже сохранённые файлы и пути принятых заданий не меняются.
+- Для неопределённого результата сохранения появилась команда «Проверить сохранённый файл». Она сверяет уже записанный файл и исправляет результат в истории и статистике только при подтверждении; повторного скачивания или перезаписи нет.
+- Reddit: явная метка GIF у выбранного плеера учитывается и кнопкой Save, и ПКМ, даже когда источник имеет формат MP4. Обычные видео не конвертируются; действуют прежние ограничения длительности и размера.
+- Instagram: сокращены повторные обходы уже найденных панелей действий. На синтетической ленте из 200 карточек медиана обхода снизилась примерно с 284 до 27 мс; это не замер живого сайта.
+- Незавершённые записи статистики переживают перезапуск браузера через компактную приватную очередь; повторная доставка не удваивает счётчики. Отключение записи и границы очистки/восстановления сохраняются.
+- Копирование ссылок различает успех, отказ и неподтверждённый результат. Повторное внедрение X, TikTok и YouTube больше не добавляет наблюдатели и глобальные обработчики.
+
+- Узкая вкладка (320–390 px): переключатели темы и языка получили отдельную строку и больше не перекрывают название MediaLatch. Раскладка шире 640 px не менялась; проверка измеряет реальные прямоугольники для RU/EN и всех тем.
+
+- Настройки → Сохранение: для типов изображений (`pic`), видео (`video`) и анимаций (`gif`) можно задать отдельные имена папок. Они заменяют только уровень `{type}`; пустое поле использует Image, Videos или GIF, а неизвестный или не медийный результат по-прежнему идёт в `unknown-type`. Допускается одно имя не длиннее 50 символов без `/`, `\`, `..` и зарезервированных имён; ошибка показана рядом с полем, сохранение требует кнопки «Сохранить», сохранённые файлы не переименовываются. Имена входят в перенос настроек и применяются к обычному пути, выбранной папке и обоим результатам конвертации анимации.
+
+### English
+
+- Folder settings combine Simple and an Advanced interactive path with one names/template panel. Restore compact popup search/types, widen Debug search, separate version selection from adjacent arrows and add All/New/Fixes release categories. Preview service cards keep their own height and concise help.
+- Notifications gain 2/4/8-second or until-dismissed duration and a real local test without downloads/statistics. Folder icons distinguish verified native browser downloads from chosen-directory writes; the latter explain the API limitation. No companion is restored.
+
+- Settings now show folder levels in their actual order with drag/keyboard movement, nearby path and filename examples, author selection counts and a sticky explicit Save/Discard bar. Link previews group the independent YouTube choices and show a local example. Popup search, debug filters, notification preview and Updates layouts are more readable. Existing domains, defaults and stored choices remain.
+
+- Default folders for new saves are `Image`, `Videos` and `GIF`. Settings and previews use the same values; explicit custom names, existing files and admitted job paths stay unchanged.
+- An uncertain export now offers Check saved file. It checks the already owned result and corrects history/statistics only after confirmation, without another download or overwrite.
+- Reddit: an explicit GIF marker on the selected player reaches conversion through Save and the context menu even when the source is MP4. Ordinary videos stay video; existing duration and size limits still apply.
+- Instagram: repeated traversal of already reconciled action rails is reduced. A synthetic 200-card feed's median scan fell from about 284 to 27 ms; this is not a live-site measurement.
+- Failed statistics writes survive a browser restart through compact private pending records; replay does not double counters. Recording opt-out and clear/restore boundaries remain intact.
+- Link copying distinguishes success, refusal and an unconfirmed write. Reinjecting X, TikTok and YouTube no longer adds observers and global listeners.
+
+- Narrow tab (320–390 px): the theme and language controls now take their own row and no longer cover the MediaLatch name. The layout from 640 px up is unchanged; the check measures real rectangles for RU/EN and every theme.
+
+- Settings → Saving: the picture (`pic`), video (`video`) and animation (`gif`) folder labels can be renamed independently. They replace only the `{type}` level; an empty field keeps the standard name, and an unknown or non-media result still uses `unknown-type`. One name only: no `/`, `\`, `..`, reserved names or more than 50 characters. The error appears beside the field, saving needs the explicit Save button, and already saved files are not renamed. The labels are part of portable settings and apply to the normal browser path, a selected folder and both animation conversion outputs.
+
 ## 3.0.2 — 2026-10-24
 
 Stable release, rebuilt on 2026-10-25 with the update-check fix below. The version remains 3.0.2; an installed 3.0.2 does not discover this rebuild as a newer version. GitHub publication and Chrome Web Store review remain separate.
@@ -439,3 +479,4 @@ The first public preview below retains its original Image Saver name and asset n
 - One eligible browser-native resume attempt on NETWORK_FAILED.
 
 Kemono integration, a general download manager, universal selection, ZIP batches, arbitrary drive paths and Firefox support remain planned. Native acceptance of this preview's hardening changes and Chrome Web Store submission remain separate steps.
+
