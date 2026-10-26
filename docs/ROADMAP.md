@@ -1,8 +1,10 @@
 # Roadmap
 
-Updated 2026-10-25 for release 3.0.3. Acceptance limits are separate from implementation in [Status](STATUS.md); no dates or universal site coverage are promised.
+Updated 2026-10-26 for release 3.0.4. Acceptance limits are separate from implementation in [Status](STATUS.md); no dates or universal site coverage are promised.
 
 ## Русский
+
+В 3.0.4 реализованы красная тема и анимации для всех тем, компактные настройки 12 превью, Copy на новых площадках, синхронный показ парных кнопок, защита полноэкранного режима и исправления привязки/клавиатуры. Владелец сообщает успешные проверки сервисов; доступность внешних зеркал и меняющаяся вёрстка сайтов остаются отдельной приёмкой.
 
 В 3.0.3 реализованы свои названия Image/Videos/GIF, простой/расширенный конструктор, восстановление ожидающей статистики, проверка неопределённого сохранения, Reddit GIF и улучшения интерфейса/SPA. JSON-копии истории/статистики, увеличенный кэш и поиск по сохранённой истории сохранены из 3.0.2. Эти пункты не нужно реализовывать повторно.
 
@@ -19,7 +21,9 @@ Updated 2026-10-25 for release 3.0.3. Acceptance limits are separate from implem
 
 ## English
 
-Release3.0.3 implements custom Image/Videos/GIF labels, simple/advanced folder controls, pending-statistics recovery, uncertain saved-result checks, Reddit GIF classification and UI/SPA improvements. JSON copies, larger caches and retained-history search remain from3.0.2; do not queue duplicate implementation.
+Release 3.0.4 implements the Red theme and motion across themes,12 compact preview settings, Copy on additional sites, paired reveal synchronization, fullscreen suppression and ownership/keyboard fixes. The owner reports working service checks; external mirror availability and changing site layouts remain separate acceptance.
+
+Release 3.0.3 implements custom Image/Videos/GIF labels, simple/advanced folder controls, pending-statistics recovery, uncertain saved-result checks, Reddit GIF classification and UI/SPA improvements. JSON copies, larger caches and retained-history search remain from 3.0.2; do not queue duplicate implementation.
 
 | Priority | Work |
 | --- | --- |

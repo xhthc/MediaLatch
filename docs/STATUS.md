@@ -1,15 +1,28 @@
 # Project status
 
-Updated for the verified owner-signed release package on 2026-10-25. A version number alone does not identify a build.
+Updated for the verified 3.0.4 release package on 2026-10-26. A version number alone does not identify a build.
 
 | Snapshot | State |
 | --- | --- |
-| Public GitHub release | Stable 3.0.3; matching minified owner-signed CRX and ZIP, separate SHA-256 and per-file provenance |
-| Local checkout | Accepted 3.0.3 source and minified runtime; owner CRX signer and all 98 payload files verified |
+| Public GitHub release | Stable 3.0.4; matching minified owner-signed CRX/ZIP, separate SHA-256 files and per-file provenance |
+| Local checkout | Accepted 3.0.4 source and minified runtime; registered CRX signer and all 103 payload files verified |
 | Private GitHub `main` source | Not synchronized by this public release update; public tags identify documentation/release entries, not private source history |
-| Chrome Web Store | [Listing supplied by owner](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh). Owner handles upload; the listed version and 3.0.3 review/publication have not been independently verified |
+| Chrome Web Store | [Listing](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh). Owner reports uploading 3.0.4; dashboard review, approval and publication have not been independently verified |
 
-## Release 3.0.3
+## Release 3.0.4
+
+- Add the Red theme, with theme-colored card highlights, section transitions and a background ribbon across themes. Reduced motion and hidden tabs are respected.
+- Compact Link previews: 12 settings in two equal groups, source domains and local conversion of a pasted link without requesting its page.
+- Copy post links on Reddit, Pixiv, Bluesky, Threads, Twitch, Tumblr and Bilibili using the selected preview domain. Bluesky, Threads and the main Tumblr feed use their own post action bars; Pixiv Copy sits beside Download.
+- Synchronize paired inline controls through one reveal lifecycle. Preserve persistent post actions, keyboard navigation, text-only Reddit Copy and exact selected-media ownership.
+- Hide inline controls in fullscreen while existing downloads continue. Recognize localized Bilibili URLs and keep Pixiv controls bound to the correct artwork during scrolling.
+- Keep VK controls clear of the gallery counter. Compact download errors/details and remove redundant permanent Save settings buttons.
+- Make selected toggles visible, prevent transient extra checkmarks and improve disclosure headers, theme menus and panel alignment.
+- No new permissions or dependencies. New Copy controls do not add download adapters; embed playback depends on the external service and messenger.
+
+The [3.0.4 release](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.4) contains matching 103-file minified CRX/ZIP packages. The existing registered signing identity, licences and earlier GPL rights are preserved.
+
+## Previous release 3.0.3
 
 - Simple folder controls and the advanced interactive path share a draft, reorderable levels and a common names/template editor. Type-folder defaults are Image/Videos/GIF; custom names and existing files are preserved.
 - Compact popup search/filter row; wider debug search; separate release-version selection and New/Fixes panels. Saving and link-preview edits use sticky Save/Discard actions. Existing allowed preview domains are retained.
@@ -48,6 +61,10 @@ The [3.0.1 release](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.1) ide
 The [3.0.2 release](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.2) includes these changes. The owner-signed CRX retains the registered signing identity and matches every file in the verified runtime ZIP. GitHub publication and Chrome Web Store review/approval remain separate. See [local-data behavior](LOCAL_DATA.md) and [release changes](../CHANGELOG.md).
 
 ## Evidence and remaining acceptance
+
+For 3.0.4, the final combined core gate passed108/108; later narrow review corrections passed affected Copy 69 and native Pixiv8/Reddit4 cases. UI assertions passed 1,872/1,872 separately after a wrapper timeout. The final extracted minified ZIP passed 56 syntax checks,13semantic suites, Copy69/Pixiv44/Reddit187/Embed 210 checks,24 native pair cases and14installed-extension HTTP cases. Independent source/package reviews approved the candidate, and all 362 source pins and 103 CRX/ZIP/runtime files were verified.
+
+Native provider-shaped fixtures are separate from live signed-in site acceptance. The owner reports working service checks. Retained GIF Worker/UI/header evidence applies to byte-identical files; a cold-run video-sampling mismatch and a passing unchanged rerun remain recorded, so deterministic video sampling is not established. Store upload is owner-reported, not proof of store approval.
 
 For 3.0.3, the frozen source received independent APPROVE and 108/108 resolved code/UI gates (raw105/108 with three environment-only reruns), plus 1,683/1,683 UI assertions, 40 native source motion/layout cases and four resize/draft cases. The minified runtime retains 54 syntax checks, 13 semantic suites, 14 native HTTP cases, GIF Worker byte/cleanup checks and separate native UI/resize fixtures. Fresh release verification confirms the registered CRX signature, all 352 source pins and all 98 CRX/ZIP/runtime files. These controlled results do not establish every live site or physical device.
 

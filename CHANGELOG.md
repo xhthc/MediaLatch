@@ -1,5 +1,31 @@
 # Changelog
 
+## 3.0.4
+
+Stable GitHub release with matching verified minified CRX/ZIP and the registered signing identity. The owner reports submitting 3.0.4 to Chrome Web Store; review and publication have not been independently verified.
+
+### Русский
+
+- Красная тема; подсветка карточек, переходы между разделами и фоновая лента под цвет каждой темы. Уменьшение анимации и скрытая вкладка учитываются.
+- Компактные «Превью ссылок»: 12 настроек в двух равных группах, исходные домены и преобразование вставленной ссылки без запроса страницы.
+- Копирование ссылок на Reddit, Pixiv, Bluesky, Threads, Twitch, Tumblr и Bilibili через выбранное зеркало. В Bluesky, Threads и основной ленте Tumblr кнопка находится в панели своего поста; в Pixiv — рядом со скачиванием.
+- Синхронное появление парных inline-кнопок через общий цикл показа. Сохранены постоянно видимые действия, управление клавиатурой, копирование текстовых Reddit-постов и привязка к выбранному медиа.
+- Inline-кнопки скрываются в полноэкранном режиме; уже запущенная загрузка продолжается. Bilibili распознаёт локализованные URL, а Pixiv сохраняет правильную привязку кнопок при прокрутке.
+- Кнопки VK не перекрывают счётчик галереи. Ошибки и подробности загрузок стали компактнее; лишние постоянные кнопки Save settings убраны.
+- Выбранные переключатели заметнее; устранено мигание лишних галочек. Улучшены раскрывающиеся пояснения, меню тем и выравнивание панелей.
+- Новых разрешений и зависимостей нет. Новые кнопки Copy не добавляют загрузчики этих сайтов; воспроизведение Embed зависит от внешнего сервиса и мессенджера.
+
+### English
+
+- Add the Red theme, with theme-colored card highlights, section transitions and a background ribbon across themes. Reduced motion and hidden tabs are respected.
+- Compact Link previews: 12 settings in two equal groups, source domains and local conversion of a pasted link without requesting its page.
+- Copy post links on Reddit, Pixiv, Bluesky, Threads, Twitch, Tumblr and Bilibili using the selected preview domain. Bluesky, Threads and the main Tumblr feed use their own post action bars; Pixiv Copy sits beside Download.
+- Synchronize paired inline controls through one reveal lifecycle. Preserve persistent post actions, keyboard navigation, text-only Reddit Copy and exact selected-media ownership.
+- Hide inline controls in fullscreen while existing downloads continue. Recognize localized Bilibili URLs and keep Pixiv controls bound to the correct artwork during scrolling.
+- Keep VK controls clear of the gallery counter. Compact download errors/details and remove redundant permanent Save settings buttons.
+- Make selected toggles visible, prevent transient extra checkmarks and improve disclosure headers, theme menus and panel alignment.
+- No new permissions or dependencies. New Copy controls do not add download adapters; embed playback depends on the external service and messenger.
+
 ## 3.0.3 — 2026-10-25
 
 Stable GitHub release with verified matching minified CRX/ZIP and the registered signing identity. Chrome Web Store upload, review and publication remain separate owner actions.

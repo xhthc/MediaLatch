@@ -1,6 +1,6 @@
 # Local data and backups
 
-Version 3.0.3 retains the 3.0.2 JSON statistics/history copies, history windowing and the larger preview cache. Portable settings export remains separate. These local features do not create an automatic external database or cloud backup.
+Version 3.0.4 retains the 3.0.2/3.0.3 JSON statistics/history copies, history windowing, larger preview cache and bounded recovery. Red theme and preview-domain choices remain local preferences. These features do not create an automatic external database or cloud backup.
 
 ## What persists
 
@@ -8,7 +8,7 @@ Download jobs and all-time statistics live in private extension IndexedDB in the
 
 Deleting a manager record does not delete the exported media file. Clearing statistics does not clear history or saved files. Uninstalling/removing extension storage can remove extension-local data. A copied browser profile, changed extension ID or store installation is not a promised migration mechanism.
 
-## Recovery in 3.0.3
+## Recovery retained from 3.0.3
 
 Failed statistics writes can retain up to 200 compact private pending contributions for replay after a full browser restart. Entries contain operation/time, finite site category, outcome, output evidence/size and failure category, not URLs, filenames, paths or browser download IDs. Replay deduplicates by operation; recording opt-out and clear/restore boundaries remain authoritative. If both stores reject writes or the queue bound is reached, recovery is not guaranteed.
 
@@ -16,7 +16,7 @@ For an uncertain export, Check saved file validates the exact owned native resul
 
 ## Cache limits
 
-| Disposable cache | Previous 3.0.1 | Current 3.0.2 |
+| Disposable cache | Previous 3.0.1 | Current 3.0.2–3.0.4 |
 | --- | --- | --- |
 | Static WebP thumbnails | 128 | 2,048 |
 | Original previews | 16 | 256 |
