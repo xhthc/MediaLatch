@@ -4,9 +4,9 @@ Effective date: 2026-10-25. Product: MediaLatch. Maintainer: [xhthc/MediaLatch](
 
 ## Build scope
 
-This policy describes the 3.0.2 package and shows the previous 3.0.1 data/cache limits for comparison. Store declarations must match the actual uploaded package. GitHub publication does not establish Chrome Web Store review or approval.
+This policy describes the 3.0.5 package as of 2026-10-27 and shows the previous 3.0.1 data/cache limits for comparison. The expanded limits introduced in 3.0.2 remain in 3.0.5. Store declarations must match the actual uploaded package. GitHub publication does not establish Chrome Web Store review or approval.
 
-| Preview/data behavior | Previous 3.0.1 | Current 3.0.2 |
+| Preview/data behavior | Previous 3.0.1 | Current 3.0.5 (expanded since 3.0.2) |
 | --- | --- | --- |
 | Static thumbnail entries | 128 | 2,048 |
 | Cached originals | 16; 64 MiB/file; 128 MiB total; 24-hour availability | 256; 128 MiB/file; 512 MiB total; 30-day availability |
@@ -30,7 +30,7 @@ The RedGIFs path can request a temporary guest token from the provider for an ad
 
 Opening Updates can contact GitHub's public releases API at most daily; an explicit check bypasses the daily cache. The request omits credentials and referrer. It checks versions and links to a fixed repository; it does not execute remote code or install an update. The latest release notes are bundled with the extension in English/Russian and need no request to read offline.
 
-Copy-link settings may produce links to third-party preview services. Copying such a link does not itself request that service. Opening or sharing it is a separate user action.
+Copy-link settings may produce links to third-party preview services. Copying such a link does not itself request that service. Opening or sharing it is a separate user action. Site-bound Copy controls also cover YouTube videos/Shorts, Bluesky, Threads, Tumblr, Twitch clips and Bilibili, alongside X, Instagram, TikTok, Reddit and Pixiv. They read the owning post/video address locally; a Copy-only integration does not add a media-download adapter.
 
 ## Local storage
 

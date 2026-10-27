@@ -1,120 +1,376 @@
 {
-  "version": "Per-image product_version; Saving updated to3.0.1",
+  "version": "3.0.5",
   "scope": "Built UI with deterministic local fixtures; no native-extension or live-site acceptance.",
   "images": [
     {
       "file": "statistics-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "2260225f17eec2784b6e1dc8874e45499a3b1a9decb7532148c3742d2960ef80",
-      "product_version": "3.0.0"
+      "sha256": "068f8cb2385ecb29cc34a79cffacf84bbc84da96bf50d624387e006ee4b6aaad"
     },
     {
       "file": "downloads-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "4a6795aa04ed6f7b87082e45bc27f1b66ee3d9bc7fe7bb3abfa129c3d5c96877",
-      "product_version": "3.0.0"
+      "sha256": "c52cf55a793e35750804b0f85d6588c2524a684c8f9f2fe81c9cfdae6f63de8b"
     },
     {
       "file": "saving-en.jpg",
       "width": 1280,
-      "height": 1254,
-      "sha256": "af9004d381affab4f99f9d830df7acb081122034e0485be9668632b7d451359d",
-      "product_version": "3.0.1",
-      "scope": "Actual minified3.0.1 UI with local demo settings and mocked Chrome APIs; no user data, native folder grant or live-site acceptance."
+      "height": 800,
+      "sha256": "f59747dd7e3e82962445adb74eb8bf5913db246419cfe7a8f9393257ea87dc97"
     },
     {
       "file": "notifications-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "a5c66b8a83bba1f2fd901dfe00bb2785e8a7fe8a33c2c00c5bf502026ea93a64",
-      "product_version": "3.0.0"
+      "sha256": "d7533d9be313852bf3a5e7c939689579fe4b219fae57c62d0452dd5f039301f5"
     },
     {
       "file": "links-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "bb0a33dcbc751a75fcb7e7ade245f512876a11ab50471acd6123b529fc300576",
-      "product_version": "3.0.0"
+      "sha256": "a1282805330074382bdf97a8a58d9be8b47ea8c6577ac956ad382882bc496408"
     },
     {
       "file": "viewer-en.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "efb2ccf6162039aeb197d88025c8269578c46fcdc310a7af50aae475f6a077af",
-      "product_version": "3.0.0"
+      "sha256": "e8aaa7d382ea5e72866b4f75353e8bf01d0bc027b43dd34478696f5d0fd85112"
     },
     {
       "file": "popup-en.jpg",
       "width": 360,
       "height": 600,
-      "sha256": "594e8d1f6200aa78f56f0d4b4f86981dcaf0162287452fe11cad64710c93958c",
-      "product_version": "3.0.0"
+      "sha256": "9c351f3d7ffea2054844fad075c0c9c4b487373c4cb174a3c170bab74cda4878"
     },
     {
       "file": "statistics-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "e5e498a8b28342136047aa35462f9feb3c3c0865f7cfc80de979d37911f2bccb",
-      "product_version": "3.0.0"
+      "sha256": "ccbf07aa1b18d49def9daa0a401699fd4a11df0cd0b8267450b512edf90ae63c"
     },
     {
       "file": "downloads-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "13a466c0fb28f01bfc3c0a243fbf1b7abcd05969c45ee192565fd0dc1aa6a863",
-      "product_version": "3.0.0"
+      "sha256": "e83f51e8d2a5e27173fcd117e1eb8cc440c915d87db95c996069d8529cf46c74"
     },
     {
       "file": "saving-ru.jpg",
       "width": 1280,
-      "height": 1290,
-      "sha256": "8bf180f269d2e138ad3c25ad53af7db4e5b6d8303a723b1177bc35779dca97ee",
-      "product_version": "3.0.1",
-      "scope": "Actual minified3.0.1 UI with local demo settings and mocked Chrome APIs; no user data, native folder grant or live-site acceptance."
+      "height": 800,
+      "sha256": "ce65681f7b32854341e50ae3cb2a66e61ced18cdd14d9878880647bdfc90372a"
     },
     {
       "file": "notifications-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "e0e6e55ea1e5867a84b4b3b31266c17320f374c52a15aef2acb3ee84b34c2e1f",
-      "product_version": "3.0.0"
+      "sha256": "f8b0cd45672a5e615d77c1e518ce68cf97d760dce005196cc459a695a7962b88"
     },
     {
       "file": "links-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "e59e347091d0bb000c999069b0de9e2660811f1b49749729292920238c136c3b",
-      "product_version": "3.0.0"
+      "sha256": "80af6c9f16ec278988d83e5b28dc196bc0cc3eb839ba54233b8289356c4f613c"
     },
     {
       "file": "viewer-ru.jpg",
       "width": 1280,
       "height": 800,
-      "sha256": "ffa4d4b342ecd06410e87a229894fe496260bbe464b77cff8bf9114b636f31aa",
-      "product_version": "3.0.0"
+      "sha256": "105b883cf087bf21ac167103a61f0b39c2f87b64237db2f3262116bc02c7b1c3"
     },
     {
       "file": "popup-ru.jpg",
       "width": 360,
       "height": 600,
-      "sha256": "50329b6260273e2f29a6848300e2a6cb2af821abe7b4196fe4ab8fb80eb5a273",
-      "product_version": "3.0.0"
+      "sha256": "9a498159a21ee01787674e8cb9a1791ed4353339617e36b1359c1c81e10f7bda"
     },
     {
       "file": "promo-small.jpg",
       "width": 440,
       "height": 280,
-      "sha256": "ffb3f2c9dc9634167252323f75caf6d3efc2d11dc82d8ab44824b8a6d4c70e6c",
-      "product_version": "3.0.0"
+      "sha256": "ffb3f2c9dc9634167252323f75caf6d3efc2d11dc82d8ab44824b8a6d4c70e6c"
     },
     {
       "file": "promo-marquee.jpg",
       "width": 1400,
       "height": 560,
-      "sha256": "1ea96a39987ff7f3869afa41253cc86e52799242d9e2454427f48077cebc5f66",
-      "product_version": "3.0.0"
+      "sha256": "1ea96a39987ff7f3869afa41253cc86e52799242d9e2454427f48077cebc5f66"
     }
-  ]
+  ],
+  "badge_checks": [
+    {
+      "lang": "en",
+      "theme": "violet",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(244, 239, 252)",
+      "background": "oklab(0.115464 0.00941416 -0.0151283 / 0.4)",
+      "contrast": 18.01266789101185,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "violet",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(244, 239, 252)",
+      "background": "oklab(0.115464 0.00941416 -0.0151283 / 0.4)",
+      "contrast": 18.01266789101185,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "red",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(245, 245, 245)",
+      "background": "oklab(0.144787 0.00000661612 0.00000289828 / 0.4)",
+      "contrast": 18.193594263963377,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "red",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(245, 245, 245)",
+      "background": "oklab(0.144787 0.00000661612 0.00000289828 / 0.4)",
+      "contrast": 18.159588039824865,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "blue",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(238, 243, 251)",
+      "background": "oklab(0.134154 -0.00234405 -0.0170766 / 0.4)",
+      "contrast": 17.983931122929107,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "blue",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(238, 243, 251)",
+      "background": "oklab(0.134154 -0.00234405 -0.0170766 / 0.4)",
+      "contrast": 17.950991410148987,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "dark",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(243, 243, 245)",
+      "background": "oklab(0.135448 0.0012712 -0.00447935 / 0.4)",
+      "contrast": 18.056937284302,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "dark",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(243, 243, 245)",
+      "background": "oklab(0.135448 0.0012712 -0.00447935 / 0.4)",
+      "contrast": 18.056937284302,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "light",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(21, 18, 31)",
+      "background": "oklab(0.963618 0.00329846 -0.00732154 / 0.4)",
+      "contrast": 16.545299186929004,
+      "text": "6"
+    },
+    {
+      "lang": "en",
+      "theme": "light",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(21, 18, 31)",
+      "background": "oklab(0.963618 0.00329846 -0.00732154 / 0.4)",
+      "contrast": 16.545299186929004,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "violet",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(244, 239, 252)",
+      "background": "oklab(0.115464 0.00941416 -0.0151283 / 0.4)",
+      "contrast": 17.978110509123187,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "violet",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(244, 239, 252)",
+      "background": "oklab(0.115464 0.00941416 -0.0151283 / 0.4)",
+      "contrast": 17.990181618298717,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "red",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(245, 245, 245)",
+      "background": "oklab(0.144787 0.00000661612 0.00000289828 / 0.4)",
+      "contrast": 18.159588039824865,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "red",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(245, 245, 245)",
+      "background": "oklab(0.144787 0.00000661612 0.00000289828 / 0.4)",
+      "contrast": 18.17113671989448,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "blue",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(238, 243, 251)",
+      "background": "oklab(0.134154 -0.00234405 -0.0170766 / 0.4)",
+      "contrast": 17.983931122929107,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "blue",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(238, 243, 251)",
+      "background": "oklab(0.134154 -0.00234405 -0.0170766 / 0.4)",
+      "contrast": 17.973912683299066,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "dark",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(243, 243, 245)",
+      "background": "oklab(0.135448 0.0012712 -0.00447935 / 0.4)",
+      "contrast": 18.09093826792262,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "dark",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(243, 243, 245)",
+      "background": "oklab(0.135448 0.0012712 -0.00447935 / 0.4)",
+      "contrast": 18.056937284302,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "light",
+      "viewport": 1280,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(21, 18, 31)",
+      "background": "oklab(0.963618 0.00329846 -0.00732154 / 0.4)",
+      "contrast": 16.534420452524937,
+      "text": "6"
+    },
+    {
+      "lang": "ru",
+      "theme": "light",
+      "viewport": 390,
+      "font": 11,
+      "width": 24.109375,
+      "height": 18,
+      "color": "rgb(21, 18, 31)",
+      "background": "oklab(0.963618 0.00329846 -0.00732154 / 0.4)",
+      "contrast": 16.534420452524937,
+      "text": "6"
+    }
+  ],
+  "changelog_checks": [
+    {
+      "lang": "en",
+      "latest": "3.0.5",
+      "older": "3.0.4",
+      "returned": "3.0.5"
+    },
+    {
+      "lang": "ru",
+      "latest": "3.0.5",
+      "older": "3.0.4",
+      "returned": "3.0.5"
+    }
+  ],
+  "source_files": {
+    "popup/popup.html": "a9383d1f30e225dc82d2832e6a8185473c07037b0c3531eaa7192dfb8cf7a0a1",
+    "ui/preview/mock-chrome.js": "04ed904367a2cf4ab49b1946abab761fa255f4a33b8b2ad5fa33cc0885b5bec0",
+    "popup/assets/theme-init.js": "0bec7cf5487f8fd2ea9ac5204d236562b6a7a91145c9514142fec09739a136cb",
+    "popup/assets/popup-ZzeBYBDZ.js": "bc17c7a4ddbcc092a7bb1320b18ec5aa5c7f63b22de61597836f160654f762d8",
+    "popup/assets/use-theme-BWxEXQDO.js": "6aa998c01aaae462b6b22fbe85c2929a0b6b9cb249fd34ba4497b58dc8d2b017",
+    "popup/assets/use-downloads-BcjwJrIP.js": "68d4f85ceae6f9aadae249989086b1a2569b1122df343abd980b08b85a089f97",
+    "popup/assets/style-n-AFauU2.css": "736d19248e9e955d2657c16740d4b1a8604c60eea62487ac963cc17f3d467bc7",
+    "lib/folder_path.js": "8c2753a7b05051ebeca11846653f9254b4dfd29229b104975473e7482942d21e",
+    "lib/export_directory.js": "3b53ea99c84fd5c55c797ede7a28c4846307af0fda9685a895a3df1806124b46",
+    "lib/feedback.js": "59fed352cca2198f46fda369862b4c2cb576d7d74751c3d4a682b4986a1e5df8",
+    "popup/quick.html": "008ed497c3bda5c4d274f65fdad504c8ce42c35a8508b511ad602a41d0134588",
+    "popup/assets/quick-B5HE0e_6.js": "988a345e561ef9493e50ea72addb9e9623a24ae687a72a044b0594e82ef4094f"
+  },
+  "captured_at": "2026-10-27",
+  "runtime_source_commit": "33187426e8ecad76ee3bcc80c10cd1e172ee26aa",
+  "runtime_build": "MediaLatch-3.0.5-548841ff9469-minified",
+  "note": "Illustrative neutral UI fixtures. Served built UI bytes match the accepted source; no live account or source-site download acceptance is implied."
 }

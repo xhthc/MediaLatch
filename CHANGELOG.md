@@ -1,5 +1,33 @@
 # Changelog
 
+## 3.0.5
+
+Stable GitHub release with a verified owner-signed CRX and matching minified ZIP. Chrome Web Store submission and approval remain separate owner actions.
+
+### Русский
+
+- Добавлены выразительные переходы кнопок, вкладок, меню и popup: световой акцент основных действий, плавный индикатор раздела и появление панелей. Переключатели плавно раскрывают галочку при наведении; уменьшение движения учитывается.
+- Сохранение получило единый пример полного пути, раздельный выбор папки и подпапки, прямоугольные уровни с номерами, компактную сетку платформ и прямые действия переноса настроек. Левая навигация и объём сохранённого под меню сохранены.
+- Copy первого Shorts не считает ссылку из карусели рекомендаций ссылкой выбранного ролика; конфликт адреса страницы и собственного ID по-прежнему блокирует копирование.
+- При прямом открытии Shorts копирование работает и до появления меток активности/начала воспроизведения, если выбранный ролик — единственный преимущественно видимый. Соседние ролики и конфликтующие ID не получают ссылку страницы.
+- TikTok и Instagram не запускают полное сканирование разметки из-за смены собственных иконок; TikTok пропускает посторонние мутации. Сохранены восстановление кнопок и очистка переиспользованных карточек; подписка ResizeObserver учитывает раннее сканирование.
+- Copy в Instagram требует подтверждённую панель действий поста и не добавляется к одинокому сердцу комментария.
+- Имена видео TikTok используют подтверждённый ID выбранного ролика и проверенное расширение файла. Inline и контекстное меню сохраняют прежний точный URL; настройки составных имён продолжают применяться.
+- Разбор исходного файла Gelbooru-семейства учитывает ссылку с текстом `Original`, сохраняя проверки домена, пути и хеша.
+- Обновлена только dev-зависимость undici в существующем диапазоне jsdom; она не входит в расширение. Актуализированы документация и правила аудита.
+
+### English
+
+- Add expressive button, tab, menu and popup transitions: primary-action light sweep, gliding section indicator and panel arrivals. Choices smoothly reveal a check on hover; reduced motion is respected.
+- Give Saving one full-path example, split destination/subfolder controls, indexed rectangular tokens, a compact platform grid and direct settings-transfer actions. Keep left navigation and saved volume below the menu.
+- Exclude related-video carousel links from the owning Short's ID; keep owner/page conflicts fail closed when copying the first Short.
+- Resolve a directly opened paused Short before native active markers when its renderer is uniquely mostly visible; keep neighboring/hidden/ambiguous owners and conflicting IDs fail closed.
+- Port held TikTok/Instagram mutation filters onto current ownership, paired visibility and fullscreen guards; initialize fresh resize subscriptions after early scans.
+- Reject lone comment-heart rails for Instagram post Copy.
+- Name TikTok video exports by the verified selected-item ID through both entry points, without rewriting the transfer URL or bypassing filename settings.
+- Recognize plain `Original` links in the Gelbooru-family parser while preserving domain/path/hash checks.
+- Update the development-only undici lock entry and current documentation/audit guidance. Release 3.0.5 validation and exact package identity are recorded in the release provenance.
+
 ## 3.0.4
 
 Stable GitHub release with matching verified minified CRX/ZIP and the registered signing identity. The owner reports submitting 3.0.4 to Chrome Web Store; review and publication have not been independently verified.

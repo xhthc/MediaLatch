@@ -1,7 +1,7 @@
 # Документация / Documentation
 
-[Состояние / Status](STATUS.md) · [Roadmap](ROADMAP.md) · [Локальные данные / Local data](LOCAL_DATA.md) · [Приватность / Privacy](PRIVACY.md) · [История изменений / Changelog](../CHANGELOG.md) · [Security Policy](../SECURITY.md)
+[Состояние / Status](STATUS.md) · [Roadmap](ROADMAP.md) · [Папки и имена / Folders and names](FOLDER_TEMPLATES.md) · [Локальные данные / Local data](LOCAL_DATA.md) · [Приватность / Privacy](PRIVACY.md) · [Изменения / Changelog](../CHANGELOG.md) · [Security Policy](../SECURITY.md)
 
-Стабильный пакет — 3.0.2: JSON-копии статистики/истории, увеличенный кэш превью и исправления inline-кнопок. Ограничения ручной приёмки перечислены в Status. Этот репозиторий содержит документацию и готовые runtime-пакеты; автоматический Source code ZIP содержит документацию. Для расширения используйте MediaLatch-3.0.2.zip из Assets релиза.
+Стабильный выпуск — **3.0.5**: новый интерфейс сохранения, анимации и исправления сайтов; функции истории, статистики и превью сохранены. Скачивайте [MediaLatch-3.0.5.zip](https://github.com/xhthc/MediaLatch/releases/download/v3.0.5/MediaLatch-3.0.5.zip) из Assets релиза. Автоматический Source code ZIP содержит документацию, а не расширение. GitHub и Chrome Web Store публикуются отдельно.
 
-The stable package is 3.0.2: JSON statistics/history copies, larger preview caches and inline-control fixes. Status lists remaining manual acceptance. This repository holds documentation and packaged runtimes; the automatic Source code ZIP contains documentation. Use MediaLatch-3.0.2.zip from release Assets for the extension.
+Stable release: **3.0.5**, with the new Saving interface, motion and site fixes; history, statistics and previews remain available. Download [MediaLatch-3.0.5.zip](https://github.com/xhthc/MediaLatch/releases/download/v3.0.5/MediaLatch-3.0.5.zip) from release Assets. The automatic Source code ZIP contains documentation, not the extension. GitHub and Chrome Web Store publication are separate.

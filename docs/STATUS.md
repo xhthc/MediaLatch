@@ -1,15 +1,27 @@
 # Project status
 
-Updated for the verified 3.0.4 release package on 2026-10-26. A version number alone does not identify a build.
+Updated for the verified 3.0.5 release package on 2026-10-27. A version number alone does not identify a build.
 
 | Snapshot | State |
 | --- | --- |
-| Public GitHub release | Stable 3.0.4; matching minified owner-signed CRX/ZIP, separate SHA-256 files and per-file provenance |
-| Local checkout | Accepted 3.0.4 source and minified runtime; registered CRX signer and all 103 payload files verified |
-| Private GitHub `main` source | Not synchronized by this public release update; public tags identify documentation/release entries, not private source history |
+| Public GitHub release | Stable 3.0.5; matching minified owner-signed CRX/ZIP, separate SHA-256 files and per-file provenance |
+| Accepted package | 3.0.5 minified runtime; registered CRX signer and all 104 payload files verified |
+| Private GitHub `main` source | Synchronized to the complete 3.0.5 development source; public tags identify this documentation/release repository, not private source history |
 | Chrome Web Store | [Listing](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh). Owner reports uploading 3.0.4; dashboard review, approval and publication have not been independently verified |
 
-## Release 3.0.4
+## Release 3.0.5
+
+- Saving uses one resolved output example, split destination/subfolder controls, rectangular ordered tokens, a recessed author-platform grid, compact naming facts and direct JSON transfer actions. Save/Discard, folder permissions and explicit import Apply retain their contracts.
+- Inactive choices reveal a translucent check on hover/focus with no idle icon gutter; selected order tokens retain their numbers. Desktop navigation has a theme-colored leading accent and an independent keyboard focus outline.
+- Button, section, menu and popup motion respects reduced motion. Keyboard section changes suppress entry animations without reviving their first frame after focus leaves.
+- First directly opened YouTube Shorts exclude related-video links from the owning ID and preserve fail-closed ambiguity checks. Instagram/TikTok discovery avoids redundant scans, Instagram rejects comment-only rails, TikTok naming uses the selected-item ID, and Gelbooru recognizes plain Original links without weakening source checks.
+- No new runtime permissions or dependencies. Development-only undici maintenance is excluded from the package.
+
+The source gate completed 115/116 checks; the UI suite passed 1,892/1,897 with five stale label/markup assertions. Those five were corrected and passed in a focused rerun; final types, UX and generated-output checks passed. This is not an uninterrupted 116/116 result. The exact extracted minified ZIP passed 57 syntax checks, 13 semantic suites, GIF lifecycle, 81 motion cases, 41 Saving/choice/JSON cases, 10 navigation cases, keyboard departure and 14 installed-extension HTTP cases. These fixtures do not establish every live site, an external OS folder grant or assistive-technology acceptance.
+
+The [3.0.5 release](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.5) includes matching signed CRX and ZIP packages, separate checksums and per-file provenance. [Folder controls](FOLDER_TEMPLATES.md) describe the updated interface.
+
+## Previous release 3.0.4
 
 - Add the Red theme, with theme-colored card highlights, section transitions and a background ribbon across themes. Reduced motion and hidden tabs are respected.
 - Compact Link previews: 12 settings in two equal groups, source domains and local conversion of a pasted link without requesting its page.
@@ -82,5 +94,5 @@ Current Reddit/RedGIFs feed layouts, first-click behavior and actual audio/forma
 
 Finish real-folder and wider live-site acceptance, then take selected DOM/metadata/provider problems with reproducible evidence. Stream adapters and physical storage tests remain separate tasks. [Roadmap](ROADMAP.md) records scope; it does not assign implementation automatically.
 
-Exact local candidates, owners, raw checks and handoffs remain in the ignored coordination records. Older changelog entries and screenshot captures retain their historical meaning. The current [LICENSE](../LICENSE) and third-party notices are unchanged; earlier GPL recipients retain their existing rights.
+Exact local candidates, owners, raw checks and handoffs remain in the ignored coordination records. Older changelog entries and screenshot captures retain their historical meaning. The current [LICENSE](../LICENSE) is unchanged, and the combined third-party notices reflect the shipped components without changing their licences. Earlier GPL recipients retain their existing rights.
 

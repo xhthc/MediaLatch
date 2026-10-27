@@ -5,7 +5,7 @@
 [![Chrome Web Store — Установить](https://img.shields.io/badge/Chrome_Web_Store-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh)
 
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
-[![Release 3.0.4](https://img.shields.io/badge/release-3.0.4-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.4)
+[![Release 3.0.5](https://img.shields.io/badge/release-3.0.5-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.5)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
 [![Email](https://img.shields.io/badge/Email-%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-64748B?style=for-the-badge)](mailto:always1337@vk.com)
@@ -19,12 +19,12 @@
 <p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> Здесь находятся документация и готовые сборки MediaLatch. Исходники разработки закрыты. **[Стабильная версия 3.0.4](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.4)** содержит минифицированные CRX и ZIP, отдельные контрольные суммы и сведения о составе сборки.
+> Здесь находятся документация и готовые сборки MediaLatch. Исходники разработки закрыты. **[Стабильная версия 3.0.5](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.5)** содержит минифицированные CRX и ZIP, отдельные контрольные суммы и сведения о составе сборки.
 
 > [!NOTE]
-> **В 3.0.4:** красная тема и анимации под цвет оформления, компактные превью ссылок для новых площадок, кнопки копирования в стиле сайтов и синхронный показ парных кнопок. Исправлены полноэкранный режим, привязка Pixiv/Bilibili, переключатели и панели настроек. [Состояние проекта](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
+> **В 3.0.5:** единый итоговый путь, компактная настройка папок и имён, галочки при наведении и плавные переходы. Исправлены первое копирование Shorts, панели Instagram, имена TikTok и оригиналы Gelbooru. [Состояние проекта](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
 
-Для обновления распакованной установки завершите загрузки, замените файлы в её прежней папке новым ZIP 3.0.4 и нажмите «Обновить» у MediaLatch на странице расширений. Удалять расширение не нужно. Выпуск на GitHub не подтверждает публикацию в Chrome Web Store.
+Для обновления распакованной установки завершите загрузки, замените файлы в её прежней папке новым ZIP 3.0.5 и нажмите «Обновить» у MediaLatch на странице расширений. Удалять расширение не нужно. Выпуск на GitHub не подтверждает публикацию в Chrome Web Store.
 
 ## ⚡ О проекте
 
@@ -38,7 +38,7 @@
 
 <p align="center"><img src="assets/readme/install-ru.svg?v=violet-loop-zip-3" width="1120" alt="ZIP и CRX: Releases, SHA-256 и правила установки браузера"></p>
 
-Скачайте **[ZIP 3.0.4](https://github.com/xhthc/MediaLatch/releases/download/v3.0.4/MediaLatch-3.0.4.zip)** для загрузки распакованного расширения или [CRX 3.0.4](https://github.com/xhthc/MediaLatch/releases/download/v3.0.4/MediaLatch-3.0.4.crx) для разрешённых браузером способов установки. Для каждого формата есть своя сумма: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.4/MediaLatch-3.0.4.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.4/MediaLatch-3.0.4.crx.sha256). [Состав сборки](https://github.com/xhthc/MediaLatch/releases/download/v3.0.4/MediaLatch-3.0.4.provenance.json) описывает одинаковые 103 файла обоих пакетов. [Все выпуски](https://github.com/xhthc/MediaLatch/releases).
+Скачайте **[ZIP 3.0.5](https://github.com/xhthc/MediaLatch/releases/download/v3.0.5/MediaLatch-3.0.5.zip)** для загрузки распакованного расширения или [CRX 3.0.5](https://github.com/xhthc/MediaLatch/releases/download/v3.0.5/MediaLatch-3.0.5.crx) для разрешённых браузером способов установки. Для каждого формата есть своя сумма: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.5/MediaLatch-3.0.5.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.5/MediaLatch-3.0.5.crx.sha256). [Состав сборки](https://github.com/xhthc/MediaLatch/releases/download/v3.0.5/MediaLatch-3.0.5.provenance.json) описывает одинаковые 104 файла обоих пакетов. [Все выпуски](https://github.com/xhthc/MediaLatch/releases).
 
 Для Chrome используйте [страницу MediaLatch в Chrome Web Store](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh). Установку самостоятельно подписанного CRX ограничивают правила браузера и корпоративные политики. Версия в магазине обновляется отдельно от GitHub.
 
@@ -56,9 +56,9 @@
 > [!TIP]
 > Сохраняйте контрольную сумму рядом с CRX. При ручной смене канала установки могут отличаться ID расширения и локальные данные. Закрытый ключ `.pem` не входит в пакет и не нужен пользователям.
 
-В 3.0.4 сохранены ключ подписи и ID ручной сборки 3.0.0 — `iahebdomfekhiofmdocjmdjpjlclnngd`. Он отличается от прежней ручной сборки с ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: такой пакет не обновит её, а настройки и история автоматически не перенесутся. Перед сменой установки экспортируйте нужные данные через доступные действия расширения.
+В 3.0.5 сохранены ключ подписи и ID ручной сборки 3.0.0 — `iahebdomfekhiofmdocjmdjpjlclnngd`. Он отличается от прежней ручной сборки с ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: такой пакет не обновит её, а настройки и история автоматически не перенесутся. Перед сменой установки экспортируйте нужные данные через доступные действия расширения.
 
-Версия 3.0.4 сохраняет возможности 3.0.2: JSON-копии статистики и истории, увеличенный кэш превью, поиск по длинной истории и прежние исправления inline-кнопок. Кодирование GIF остаётся в отдельном Worker; большие GIF требуют времени и ресурсов. Минифицированный JavaScript без source map остаётся доступен в DevTools. См. [изменения](CHANGELOG.md) и [локальные данные](docs/LOCAL_DATA.md).
+Версия 3.0.5 сохраняет возможности 3.0.2: JSON-копии статистики и истории, увеличенный кэш превью, поиск по длинной истории и прежние исправления inline-кнопок. Кодирование GIF остаётся в отдельном Worker; большие GIF требуют времени и ресурсов. Минифицированный JavaScript без source map остаётся доступен в DevTools. См. [изменения](CHANGELOG.md) и [локальные данные](docs/LOCAL_DATA.md).
 
 ## 🧩 Возможности
 
@@ -76,7 +76,7 @@
 
 Нажмите на миниатюру в менеджере, чтобы открыть просмотрщик. Из popup он открывается поверх активной вкладки, из уведомления — поверх исходной страницы. Просмотрщик работает в изолированном фрейме расширения. На системных страницах он открывается в менеджере. При наведении доступно маленькое превью.
 
-В 3.0.4 локальный кэш содержит до 2 048 миниатюр и 256 оригиналов для превью: до 128 МиБ на оригинал, 512 МиБ суммарно и 30 дней доступности. Если файл не поместился или удалён из кэша, выберите его с диска. Кэш не заменяет резервную копию; скачанные файлы не меняются. Поддержка кодеков зависит от браузера.
+В 3.0.5 локальный кэш содержит до 2 048 миниатюр и 256 оригиналов для превью: до 128 МиБ на оригинал, 512 МиБ суммарно и 30 дней доступности. Если файл не поместился или удалён из кэша, выберите его с диска. Кэш не заменяет резервную копию; скачанные файлы не меняются. Поддержка кодеков зависит от браузера.
 
 ### История и статистика
 
@@ -137,7 +137,7 @@ DRM, эфиры, универсальная загрузка HLS/DASH, прои�
 
 ## 🖼️ Интерфейс
 
-Снимки менеджера, статистики, popup и просмотрщика показывают 3.0.0 с демонстрационными данными; отдельный снимок настроек сохранения — 3.0.1. Работа реальных сайтов зависит от их вёрстки и доступа к медиа.
+Снимки показывают интерфейс 3.0.5 с нейтральными локальными демонстрационными данными. Они иллюстрируют интерфейс, а не результаты скачивания с реальных сайтов. [Структура папок и имена](docs/FOLDER_TEMPLATES.md) · [Версия снимков](assets/screenshots/provenance.json).
 
 <details open><summary>Менеджер загрузок</summary>
 

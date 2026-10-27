@@ -1,8 +1,10 @@
 # Roadmap
 
-Updated 2026-10-26 for release 3.0.4. Acceptance limits are separate from implementation in [Status](STATUS.md); no dates or universal site coverage are promised.
+Updated 2026-10-27 for release 3.0.5. Acceptance limits are separate from implementation in [Status](STATUS.md); no dates or universal site coverage are promised.
 
 ## Русский
+
+В 3.0.5 завершены новый раздел сохранения с единым итоговым путём, порядковые уровни, галочки при наведении, сетка авторов, прямой перенос JSON и переходы интерфейса. Исправлены Shorts при первом открытии, панели Instagram, имена TikTok и разбор оригиналов Gelbooru. Эти функции не нужно реализовывать повторно; ручная приёмка ниже остаётся отдельной.
 
 В 3.0.4 реализованы красная тема и анимации для всех тем, компактные настройки 12 превью, Copy на новых площадках, синхронный показ парных кнопок, защита полноэкранного режима и исправления привязки/клавиатуры. Владелец сообщает успешные проверки сервисов; доступность внешних зеркал и меняющаяся вёрстка сайтов остаются отдельной приёмкой.
 
@@ -20,6 +22,8 @@ Updated 2026-10-26 for release 3.0.4. Acceptance limits are separate from implem
 Изолированные проверки Reload, полного перезапуска экспорта, неопределённой записи и ожидающей статистики выполнены; они не заменяют реальные разрешения Windows и все сайты. Скачивание YouTube, DRM, эфиры, универсальные HLS/DASH и системный помощник не заявлены. Firefox, архивы авторов и автоматизация магазина остаются отдельными задачами.
 
 ## English
+
+Release 3.0.5 implements unified Saving output, ordered controls, hover checks, the author grid, direct JSON transfer and interface motion. First-Short Copy, Instagram action rails, TikTok names and Gelbooru originals are fixed. Do not queue these implementations again; manual acceptance below remains separate.
 
 Release 3.0.4 implements the Red theme and motion across themes,12 compact preview settings, Copy on additional sites, paired reveal synchronization, fullscreen suppression and ownership/keyboard fixes. The owner reports working service checks; external mirror availability and changing site layouts remain separate acceptance.
 

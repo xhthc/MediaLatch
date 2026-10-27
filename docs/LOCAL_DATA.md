@@ -1,6 +1,6 @@
 # Local data and backups
 
-Version 3.0.4 retains the 3.0.2/3.0.3 JSON statistics/history copies, history windowing, larger preview cache and bounded recovery. Red theme and preview-domain choices remain local preferences. These features do not create an automatic external database or cloud backup.
+Version 3.0.5 retains the 3.0.2/3.0.3 JSON statistics/history copies, history windowing, larger preview cache and bounded recovery. Red theme and preview-domain choices remain local preferences. These features do not create an automatic external database or cloud backup.
 
 ## What persists
 
@@ -16,7 +16,7 @@ For an uncertain export, Check saved file validates the exact owned native resul
 
 ## Cache limits
 
-| Disposable cache | Previous 3.0.1 | Current 3.0.2–3.0.4 |
+| Disposable cache | Previous 3.0.1 | Current 3.0.2–3.0.5 |
 | --- | --- | --- |
 | Static WebP thumbnails | 128 | 2,048 |
 | Original previews | 16 | 256 |
@@ -45,5 +45,5 @@ The interface initially selects up to 100 finished rows. Active/focused records 
 
 ## Verification limits
 
-Validation, duplicate imports, transaction aborts, replay boundaries, recording opt-out and archive-only restart have regressions. Isolated installed-Chromium checks cover JSON downloads/file input, 320 retained records, browser restart and both interface languages/themes. Real extension-manager Reload, external OS-folder grants and physical low-disk/eviction remain manual acceptance. GitHub release and Chrome Web Store review/approval remain separate.
+Validation, duplicate imports, transaction aborts, replay boundaries, recording opt-out and archive-only restart have regressions. Isolated installed-Chromium checks cover JSON downloads/file input, 320 retained records, browser restart and both interface languages/themes. An isolated extension-manager Reload preserves a registered OPFS handle and permits another save; it does not establish an external Windows picker grant. External OS-folder permissions and physical low-disk/eviction remain manual acceptance. GitHub release and Chrome Web Store review/approval remain separate.
 
