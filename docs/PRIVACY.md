@@ -4,9 +4,9 @@ Effective date: 2026-10-25. Product: MediaLatch. Maintainer: [xhthc/MediaLatch](
 
 ## Build scope
 
-This policy describes the 3.0.5 package as of 2026-10-27 and shows the previous 3.0.1 data/cache limits for comparison. The expanded limits introduced in 3.0.2 remain in 3.0.5. Store declarations must match the actual uploaded package. GitHub publication does not establish Chrome Web Store review or approval.
+This policy describes the 3.0.6 package as of 2026-10-29 and shows the previous 3.0.1 data/cache limits for comparison. The expanded limits introduced in 3.0.2 remain in 3.0.6. Store declarations must match the actual uploaded package. GitHub publication does not establish Chrome Web Store review or approval.
 
-| Preview/data behavior | Previous 3.0.1 | Current 3.0.5 (expanded since 3.0.2) |
+| Preview/data behavior | Previous 3.0.1 | Current 3.0.6 (expanded since 3.0.2) |
 | --- | --- | --- |
 | Static thumbnail entries | 128 | 2,048 |
 | Cached originals | 16; 64 MiB/file; 128 MiB total; 24-hour availability | 256; 128 MiB/file; 512 MiB total; 30-day availability |

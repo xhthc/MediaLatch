@@ -1,5 +1,31 @@
 # Changelog
 
+## 3.0.6
+
+Stable GitHub release with a verified owner-signed minified CRX and matching runtime ZIP. The registered signature and all 104 payload files match the corrected build. Chrome Web Store submission, review and approval remain separate owner actions.
+
+### Русский
+
+- Recent Downloads растёт по числу видимых файлов до нижнего края левой колонки статистики, затем прокручивается внутри. При сворачивании групп высота уменьшается без пустого хвоста. Устранён цикл пересчёта размеров при изменении списка.
+- Исправлены панели Instagram Reels, Copy/Save в модальном плеере профиля TikTok, кнопка Tumblr и её привязка к исходному посту, а также наведение на Copy в Twitch clips.
+- e-shuushuu распознаёт вариант /large/ и восстанавливает поиск оригинала при недоступном API. Для фото VK сохраняется подтверждённая ссылка исходного поста.
+- Отклонённый inline-запрос теперь явно сообщает об отказе без ложного перехода в загрузки. Проверки выбранного поста, кадра и источника сохранены.
+- Повтор неопределённого результата сохранения проверяет уже записанный файл через тот же барьер подтверждения, не обходя отказ и не перезаписывая файл.
+- Обычная лента Instagram пропускает ненужный поиск панели Reels; скрытые загрузки останавливают таймер устаревшей скорости, а добавление превью не переписывает неизменившиеся записи.
+- Узкая навигация показывает выбранный раздел; панель сохранения настроек не закрывает редактируемое поле. Уточнены уменьшение движения и читаемость журнала.
+- Новых разрешений и runtime-зависимостей нет. Воспроизведение Embed зависит от внешних сервисов; автоматические проверки не заменяют проверку всех живых сайтов и системных папок.
+
+### English
+
+- Recent Downloads grows with visible files up to the bottom of the left statistics column, then scrolls internally. Collapsing groups shrinks the panel without a blank tail. Prevent resize-observer loops when the list changes.
+- Fix Instagram Reels action rails, the TikTok profile-modal Copy/Save pair, Tumblr share controls and source-post ownership, and hover access to Twitch clips Copy.
+- Recognize e-shuushuu /large/ renditions and recover original lookup when its API is unavailable. Preserve the proven source-post link for VK photos.
+- Explicitly acknowledge refused inline requests without a false Downloads admission. Selected post, frame and source checks remain authoritative.
+- Retrying an uncertain save checks the existing file through the same confirmation barrier without bypassing a refusal or overwriting the file.
+- Skip irrelevant Reel-rail searches in the ordinary Instagram feed, stop stale-speed timers for hidden downloads, and avoid rewriting unchanged preview rows on insertion.
+- Reveal the selected section in narrow navigation and keep the settings save bar clear of the edited field. Refine reduced motion and journal readability.
+- No new permissions or runtime dependencies. Embed playback depends on external services; automated checks do not establish every live site or external folder grant.
+
 ## 3.0.5
 
 Stable GitHub release with a verified owner-signed CRX and matching minified ZIP. Chrome Web Store submission and approval remain separate owner actions.
@@ -30,33 +56,50 @@ Stable GitHub release with a verified owner-signed CRX and matching minified ZIP
 
 ## 3.0.4
 
-Stable GitHub release with matching verified minified CRX/ZIP and the registered signing identity. The owner reports submitting 3.0.4 to Chrome Web Store; review and publication have not been independently verified.
+Stable 3.0.4 was published on GitHub. Store upload was owner-reported; Store approval is not established by this changelog.
 
 ### Русский
 
-- Красная тема; подсветка карточек, переходы между разделами и фоновая лента под цвет каждой темы. Уменьшение анимации и скрытая вкладка учитываются.
-- Компактные «Превью ссылок»: 12 настроек в двух равных группах, исходные домены и преобразование вставленной ссылки без запроса страницы.
-- Копирование ссылок на Reddit, Pixiv, Bluesky, Threads, Twitch, Tumblr и Bilibili через выбранное зеркало. В Bluesky, Threads и основной ленте Tumblr кнопка находится в панели своего поста; в Pixiv — рядом со скачиванием.
-- Синхронное появление парных inline-кнопок через общий цикл показа. Сохранены постоянно видимые действия, управление клавиатурой, копирование текстовых Reddit-постов и привязка к выбранному медиа.
-- Inline-кнопки скрываются в полноэкранном режиме; уже запущенная загрузка продолжается. Bilibili распознаёт локализованные URL, а Pixiv сохраняет правильную привязку кнопок при прокрутке.
-- Кнопки VK не перекрывают счётчик галереи. Ошибки и подробности загрузок стали компактнее; лишние постоянные кнопки Save settings убраны.
-- Выбранные переключатели заметнее; устранено мигание лишних галочек. Улучшены раскрывающиеся пояснения, меню тем и выравнивание панелей.
-- Новых разрешений и зависимостей нет. Новые кнопки Copy не добавляют загрузчики этих сайтов; воспроизведение Embed зависит от внешнего сервиса и мессенджера.
+- Добавлена красная тема. Все темы получили подсветку карточек, короткие переходы и фоновую ленту; уменьшение анимации и скрытая вкладка учитываются.
+- Превью ссылок: Reddit, Pixiv, Bluesky, Threads, Twitch, Tumblr и Bilibili собраны в компактных группах. Вставленную ссылку можно преобразовать и скопировать без запроса страницы.
+- Кнопки копирования на этих площадках используют выбранный сервис превью. В Bluesky, Threads и ленте Tumblr они находятся в панели своего поста, в Pixiv — рядом со скачиванием.
+- Исправлены привязка к посту и работа клавиатуры. Bilibili распознаёт локализованные адреса и отличает текущий ролик от рекомендаций; Pixiv сохраняет положение кнопок при прокрутке.
+- Inline-кнопки копирования и скачивания скрываются в полноэкранном режиме. Уже запущенная загрузка продолжается.
+- Выбранные переключатели стали заметнее; исчезло мигание лишних галочек при смене раздела. Раскрывающиеся пояснения, меню тем и панели настроек выровнены.
+- Кнопки VK не перекрывают счётчик галереи. Ошибки и подробности загрузок стали компактнее; лишние постоянные кнопки сохранения настроек убраны.
+- Новых разрешений и зависимостей нет. Воспроизведение Embed зависит от внешнего сервиса и мессенджера; стабильная работа каждого зеркала не гарантируется.
+
+- Парные inline-кнопки используют синхронный показ: общий цикл наведения и временная шкала проявления; сохранены управление клавиатурой и постоянно видимые действия в панелях постов.
 
 ### English
 
-- Add the Red theme, with theme-colored card highlights, section transitions and a background ribbon across themes. Reduced motion and hidden tabs are respected.
-- Compact Link previews: 12 settings in two equal groups, source domains and local conversion of a pasted link without requesting its page.
-- Copy post links on Reddit, Pixiv, Bluesky, Threads, Twitch, Tumblr and Bilibili using the selected preview domain. Bluesky, Threads and the main Tumblr feed use their own post action bars; Pixiv Copy sits beside Download.
-- Synchronize paired inline controls through one reveal lifecycle. Preserve persistent post actions, keyboard navigation, text-only Reddit Copy and exact selected-media ownership.
-- Hide inline controls in fullscreen while existing downloads continue. Recognize localized Bilibili URLs and keep Pixiv controls bound to the correct artwork during scrolling.
-- Keep VK controls clear of the gallery counter. Compact download errors/details and remove redundant permanent Save settings buttons.
-- Make selected toggles visible, prevent transient extra checkmarks and improve disclosure headers, theme menus and panel alignment.
-- No new permissions or dependencies. New Copy controls do not add download adapters; embed playback depends on the external service and messenger.
+- Add owner-bound on-site Copy post link controls for Reddit, Pixiv, Bluesky, Threads, Twitch clips/VODs, Tumblr and Bilibili, using saved Link previews. Existing X/Instagram/TikTok/YouTube controls remain. Stale/ambiguous targets fail closed; clipboard denial and unconfirmed fallback remain distinguishable. No new download adapter, clipboard-read permission or background fetch.
+
+- Make selected toggle buttons explicit with a theme-colored double edge and checkmarks for notification duration/folder modes; keep selection distinct from keyboard focus. Empty statistics help no longer grows into an empty outer card.
+
+- Unify explanatory disclosure headers across statistics, routing, local data, settings transfer and debug groups. Update instructions expand from the version-card footer into that card; native keyboard behavior, focus, drafts and existing compact download headers are retained.
+- Add a separate Red theme with matching toolbar icons, page notices, early-paint cache and portable settings. Existing saved themes and the Violet default remain valid. All themes share surface hover highlights and a short section-entry transition. The theme picker opens beneath its trigger without clipping its first options at the top of the page.
+- Add a theme-colored moving mesh ribbon behind all seven sections of the full page, including Overview and Downloads. Hidden documents pause it; reduced motion keeps it still and forced colors hide it. The background does not intercept input or change download behavior.
+
+- Link previews balances the twelve providers into two groups of six, with TikTok under Media platforms. A compact source/result pair embeds Copy in the result; Reset moves to the page header and rows show their original domains. Clearing the pasted link returns to the local example without changing settings.
+
+- Missing Bluesky, Threads, Tumblr, Twitch and Bilibili marks use bundled vector logos. The Booru family uses a shared local imageboard-grid icon, including the author-folder chip.
+
+- Link previews adds Reddit, Pixiv, Bluesky, Threads, Twitch clips, Tumblr and Bilibili with compact grouped provider rows and a local paste/copy converter. Saved source-copy preferences and portable settings include all seven; VK and existing provider choices are preserved. Twitch VODs remain original links; external playback is not guaranteed. The title help icon is optically centered.
+
+- Saving and Link previews show Save/Discard only for an unsaved draft or an active save. The obsolete idle Save settings footer is removed; explicit persistence, error recovery and keyboard focus are retained.
+- VK inline actions move to the upper-right corner of their own media and leave room for native gallery counters/corner buttons. Selected-photo and whole-post proofs remain unchanged.
+- Compact download errors and expanded details remove the thumbnail-width left gutter, keep the raw code beside the title and retain the explanation/recovery action. These changes are included in the published 3.0.4 baseline.
+
+- Keep native Threads/Tumblr post actions persistent; bind Pixiv Copy to its proven Download rail with keyboard traversal, and recognize localized Bilibili player routes without borrowing recommendation links.
+- Hide inline controls universally during fullscreen and prevent unchecked checkmark flashes during section transitions.
+- External Embed playback remains dependent on mirror availability and messenger support.
+
+- Paired inline controls share their hover lifecycle and entry-opacity timeline, preserving keyboard traversal, reduced motion and persistent native post actions.
 
 ## 3.0.3 — 2026-10-25
 
-Stable GitHub release with verified matching minified CRX/ZIP and the registered signing identity. Chrome Web Store upload, review and publication remain separate owner actions.
+Prepared locally from the accepted roadmap changes. CRX signing and Chrome Web Store upload/review are performed separately by the owner; GitHub publication is not part of local preparation.
 
 ### Русский
 
@@ -96,11 +139,12 @@ Stable GitHub release with verified matching minified CRX/ZIP and the registered
 
 ## 3.0.2 — 2026-10-24
 
-Stable release, rebuilt on 2026-10-25 with the update-check fix below. The version remains 3.0.2; an installed 3.0.2 does not discover this rebuild as a newer version. GitHub publication and Chrome Web Store review remain separate.
+Prepared locally on 2026-10-24. These changes are not in the published 3.0.1 package. Local packaging, owner CRX signing, GitHub publication and store review are separate steps.
 
 ### Русский
 
-- Пересборка 2026-10-25: исправлена проверка обновлений. Подтверждённая пауза GitHub сохраняется между вкладками и перезагрузками; ручная проверка и смена канала не обходят её. Параллельные ответы сохраняют самое долгое ожидание. HTTP 403 без подтверждения лимита больше не выдаётся за ограничение запросов; интерфейс показывает время повторной проверки.
+- Пересборка 3.0.2 от 2026-10-25. Проверка обновлений различает обычный HTTP 403 и подтверждённый лимит GitHub. Пауза сервера сохраняется между открытиями и каналами, блокирует частые ручные повторы и показывает время следующей попытки. Ошибки больше не подавляют автоматическую проверку на сутки; последний успешный результат сохраняется.
+
 - Импорт истории отклоняет нестроковые идентификаторы; повреждённый JSON больше не создаёт дубликаты и неудаляемые записи.
 
 - Исправлена кнопка Copy на страницах Instagram с фотографиями и вертикальной раскладкой без `<article>`. X и обычная кнопка Instagram получили видимый клавиатурный фокус.
@@ -118,7 +162,8 @@ Stable release, rebuilt on 2026-10-25 with the update-check fix below. The versi
 
 ### English
 
-- Rebuild 2026-10-25: fix update checks. Confirmed GitHub cooldowns persist across tabs and reloads; manual checks and channel changes respect them. Concurrent responses retain the longest wait. HTTP 403 without rate-limit evidence is no longer reported as a quota limit; the interface shows when another check is available.
+- Rebuilt 3.0.2 on 2026-10-25. Update checks distinguish ordinary HTTP 403 from confirmed GitHub rate limits. A persisted server cooldown survives page/channel changes, blocks rapid manual retries and shows the next permitted check time. Failures no longer suppress automatic checks for a day; the previous successful result is retained.
+
 - Reject non-string history identifiers; malformed JSON can no longer create duplicate or unremovable archive records.
 
 - Fix Copy on Instagram photo permalinks with column layouts and no `<article>`. Add visible keyboard focus to X and standard Instagram Copy controls.
@@ -533,4 +578,3 @@ The first public preview below retains its original Image Saver name and asset n
 - One eligible browser-native resume attempt on NETWORK_FAILED.
 
 Kemono integration, a general download manager, universal selection, ZIP batches, arbitrary drive paths and Firefox support remain planned. Native acceptance of this preview's hardening changes and Chrome Web Store submission remain separate steps.
-

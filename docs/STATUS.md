@@ -1,15 +1,37 @@
 # Project status
 
-Updated for the verified 3.0.5 release package on 2026-10-27. A version number alone does not identify a build.
+Latest stable GitHub distribution: **3.0.6**, with verified owner-signed minified CRX and matching runtime ZIP. Chrome Web Store submission, review and approval remain separate owner actions; GitHub publication does not establish Store status.
+
+Updated 2026-10-29. Runtime uses private source commit `cf4ee9158378c32b811482ded104de14b05c0370`, build `534f345512e8`. Later documentation-only commits do not change that runtime identity. The release provenance records the exact source map, all 104 shipped files and separate CRX/ZIP hashes.
 
 | Snapshot | State |
 | --- | --- |
-| Public GitHub release | Stable 3.0.5; matching minified owner-signed CRX/ZIP, separate SHA-256 files and per-file provenance |
-| Accepted package | 3.0.5 minified runtime; registered CRX signer and all 104 payload files verified |
-| Private GitHub `main` source | Synchronized to the complete 3.0.5 development source; public tags identify this documentation/release repository, not private source history |
-| Chrome Web Store | [Listing](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh). Owner reports uploading 3.0.4; dashboard review, approval and publication have not been independently verified |
+| Public GitHub release | Stable 3.0.6, verified registered RSA signer and 104/104 payload files |
+| Development source | Readable 3.0.6 source; runtime minified only in the separate build project |
+| Private GitHub `main` source | Full source/history synchronized for 3.0.6; public GitHub contains documentation and packaged runtimes only |
+| Chrome Web Store | Public listing is linked in README. Owner handles submission; 3.0.6 dashboard review/approval/publication are not verified here |
 
-## Release 3.0.5
+## Published 3.0.6
+
+Recent Downloads grows with visible media up to the bottom of the left statistics column, then scrolls internally. Collapsed groups shrink the panel; short lists allow page scrolling. Cleared or unavailable statistics retain usable bounded history. Observer-driven cap updates are coalesced into the next frame, identical writes are skipped and pending work is cancelled on hide/unmount. Native error-event collection reproduced five ResizeObserver warnings before this fix and none afterward.
+
+Inline fixes cover Instagram Reels action rails, the TikTok profile-modal Copy/Save pair, Tumblr's current share glyph and source-post binding, Twitch clips hover ownership, and e-shuushuu /large/ renditions plus API-failure recovery. VK photo feedback retains the proven source-post link. Refused inline requests now explicitly report refusal without fake Downloads admission. Selected-post/frame/source checks remain authoritative.
+
+Retry of a completed EXPORT_UNCERTAIN result uses the same saved-file confirmation barrier as Check saved file, without refetching, overwriting or bypassing a refusal. Byte-mismatch and queued-confirmation regressions cover this path. Eight Booru candidate cases were extracted at their original awaited position without changing behavior.
+
+Resource work skips irrelevant Reel-pair searches on ordinary Instagram feeds, stops stale-speed timers for hidden Downloads panels/documents and writes only new/replaced preview rows. Matching synthetic 200-post/600-replacement/30-navigation profiles reduced median Instagram scan time 29.6→8.1ms with stable controls/observers. Retained JS heap stayed near 2.1MB; this is not a demonstrated whole-browser RAM, battery or live-feed improvement. Preview ownership, transactional eviction/cancellation and recovery remain unchanged.
+
+Narrow navigation reveals the selected tab, the contextual Save bar reveals a covered edited field without changing focus/draft, reduced-motion progress has no width tween and Debug badges retain readable text. No new runtime permissions, dependencies, provider capabilities or filename/date semantics were added.
+
+## 3.0.6 validation and limits
+
+The final corrected source core/UI gate passed 115/115 with 1934 UI assertions. An earlier broader 3.0.6 candidate passed 116/116 including native HTTP; the final UI-only fix did not change backend bytes. The interrupted attempt before the final gate is preserved and is not counted as a pass.
+
+The exact corrected minified ZIP passed 104 file hashes, 57 syntax checks, 13 semantic suites, native GIF decode/Worker cleanup/cancel/timeout, 81 motion cases, 41 Saving/JSON cases, 31 Recent Downloads cases with zero browser errors, 8 observer visibility cycles and 14 HTTP cases. Independent Claude Opus source/delta/artifact reviews passed; the artifact's pending-check conditions were closed by the final native evidence. The returned CRX has the registered RSA signature and matches every one of the 104 ZIP files.
+
+These are component/source and disposable installed-browser fixtures. They do not establish every authenticated live site, native menu GUI, external Windows folder grant, full disk, assistive technology, device power use or messenger playback. Folder-date fallback is intentional; one RedGIFs cold-placement observation remains unconfirmed. Third-party Embed services may be unavailable. Existing 3.0.5 and older packages/licences remain preserved.
+
+## Previous release 3.0.5
 
 - Saving uses one resolved output example, split destination/subfolder controls, rectangular ordered tokens, a recessed author-platform grid, compact naming facts and direct JSON transfer actions. Save/Discard, folder permissions and explicit import Apply retain their contracts.
 - Inactive choices reveal a translucent check on hover/focus with no idle icon gutter; selected order tokens retain their numbers. Desktop navigation has a theme-colored leading accent and an independent keyboard focus outline.
@@ -74,7 +96,7 @@ The [3.0.2 release](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.2) inc
 
 ## Evidence and remaining acceptance
 
-For 3.0.4, the final combined core gate passed108/108; later narrow review corrections passed affected Copy 69 and native Pixiv8/Reddit4 cases. UI assertions passed 1,872/1,872 separately after a wrapper timeout. The final extracted minified ZIP passed 56 syntax checks,13semantic suites, Copy69/Pixiv44/Reddit187/Embed 210 checks,24 native pair cases and14installed-extension HTTP cases. Independent source/package reviews approved the candidate, and all 362 source pins and 103 CRX/ZIP/runtime files were verified.
+For 3.0.4, the final combined core gate passed108/108; later narrow review corrections passed affected Copy 69 and native Pixiv8/Reddit4 cases. UI assertions passed 1,872/1,872 separately after a wrapper timeout. The final extracted minified ZIP passed 56 syntax checks, 13semantic suites, Copy69/Pixiv44/Reddit187/Embed 210 checks,24 native pair cases and14installed-extension HTTP cases. Independent source/package reviews approved the candidate, and all 362 source pins and 103 CRX/ZIP/runtime files were verified.
 
 Native provider-shaped fixtures are separate from live signed-in site acceptance. The owner reports working service checks. Retained GIF Worker/UI/header evidence applies to byte-identical files; a cold-run video-sampling mismatch and a passing unchanged rerun remain recorded, so deterministic video sampling is not established. Store upload is owner-reported, not proof of store approval.
 

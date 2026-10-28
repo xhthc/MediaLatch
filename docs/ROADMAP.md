@@ -1,8 +1,10 @@
 # Roadmap
 
-Updated 2026-10-27 for release 3.0.5. Acceptance limits are separate from implementation in [Status](STATUS.md); no dates or universal site coverage are promised.
+Updated 2026-10-29 for release 3.0.6. Acceptance limits are separate from implementation in [Status](STATUS.md); no dates or universal site coverage are promised.
 
 ## Русский
+
+В 3.0.6 завершены исправления панелей Instagram Reels, Copy/Save TikTok, Tumblr и Twitch, восстановление e-shuushuu и подтверждённая ссылка поста VK. Повтор неопределённого сохранения использует безопасную проверку готового файла. Recent Downloads растёт до края статистики и больше не вызывает цикл ResizeObserver. Сокращена измеренная лишняя работа ленты, таймеров и превью; уменьшение расхода памяти всего браузера не заявляется. Подпись и 104 файла CRX/ZIP проверены; ручные границы ниже сохраняются.
 
 В 3.0.5 завершены новый раздел сохранения с единым итоговым путём, порядковые уровни, галочки при наведении, сетка авторов, прямой перенос JSON и переходы интерфейса. Исправлены Shorts при первом открытии, панели Instagram, имена TikTok и разбор оригиналов Gelbooru. Эти функции не нужно реализовывать повторно; ручная приёмка ниже остаётся отдельной.
 
@@ -22,6 +24,8 @@ Updated 2026-10-27 for release 3.0.5. Acceptance limits are separate from implem
 Изолированные проверки Reload, полного перезапуска экспорта, неопределённой записи и ожидающей статистики выполнены; они не заменяют реальные разрешения Windows и все сайты. Скачивание YouTube, DRM, эфиры, универсальные HLS/DASH и системный помощник не заявлены. Firefox, архивы авторов и автоматизация магазина остаются отдельными задачами.
 
 ## English
+
+Release 3.0.6 fixes Instagram Reels rails, TikTok Copy/Save, Tumblr/Twitch controls, e-shuushuu recovery and proven VK source-post links. Uncertain-save Retry uses the existing saved-file confirmation barrier. Recent Downloads grows to the statistics bottom without ResizeObserver loops. Measured feed/timer/preview work is reduced; whole-browser memory savings are not claimed. The signer and all 104 CRX/ZIP files are verified; manual boundaries below remain open.
 
 Release 3.0.5 implements unified Saving output, ordered controls, hover checks, the author grid, direct JSON transfer and interface motion. First-Short Copy, Instagram action rails, TikTok names and Gelbooru originals are fixed. Do not queue these implementations again; manual acceptance below remains separate.
 
