@@ -1,45 +1,94 @@
-# Roadmap
+# Architecture roadmap
 
-Updated 2026-10-29 for release 3.0.6. Acceptance limits are separate from implementation in [Status](STATUS.md); no dates or universal site coverage are promised.
+Updated 2026-10-31 for released 3.0.7. See [status](STATUS.md) for runtime identity, measured results and acceptance limits. Publication does not assign the next task.
 
-## Русский
+## Implemented foundation
 
-В 3.0.6 завершены исправления панелей Instagram Reels, Copy/Save TikTok, Tumblr и Twitch, восстановление e-shuushuu и подтверждённая ссылка поста VK. Повтор неопределённого сохранения использует безопасную проверку готового файла. Recent Downloads растёт до края статистики и больше не вызывает цикл ResizeObserver. Сокращена измеренная лишняя работа ленты, таймеров и превью; уменьшение расхода памяти всего браузера не заявляется. Подпись и 104 файла CRX/ZIP проверены; ручные границы ниже сохраняются.
-
-В 3.0.5 завершены новый раздел сохранения с единым итоговым путём, порядковые уровни, галочки при наведении, сетка авторов, прямой перенос JSON и переходы интерфейса. Исправлены Shorts при первом открытии, панели Instagram, имена TikTok и разбор оригиналов Gelbooru. Эти функции не нужно реализовывать повторно; ручная приёмка ниже остаётся отдельной.
-
-В 3.0.4 реализованы красная тема и анимации для всех тем, компактные настройки 12 превью, Copy на новых площадках, синхронный показ парных кнопок, защита полноэкранного режима и исправления привязки/клавиатуры. Владелец сообщает успешные проверки сервисов; доступность внешних зеркал и меняющаяся вёрстка сайтов остаются отдельной приёмкой.
-
-В 3.0.3 реализованы свои названия Image/Videos/GIF, простой/расширенный конструктор, восстановление ожидающей статистики, проверка неопределённого сохранения, Reddit GIF и улучшения интерфейса/SPA. JSON-копии истории/статистики, увеличенный кэш и поиск по сохранённой истории сохранены из 3.0.2. Эти пункты не нужно реализовывать повторно.
-
-| Приоритет | Работа |
+| Area | Current behavior |
 | --- | --- |
-| P1, ручная приёмка | Реальная папка Windows: выбор, отмена, доступ после Reload/перезапуска и восстановление. Владелец сообщает успешную первую проверку; это не универсальная гарантия разрешений |
-| P1, отдельный стенд | Физический дефицит места и естественное вытеснение; искусственные API-сбои уже покрыты отдельно. Не заполнять рабочий диск пользователя |
-| P2 | Reddit GIF через кнопку и ПКМ, RedGIFs Trending/коллажи, авторизованные ленты, звук, выбранный пост/автор и буфер обмена |
-| P2, по воспроизведению | Пробелы выбора медиа/метаданных/источников: точная ссылка и принадлежность выбранному посту до расширения обработчика |
-| P3 | Измерения живых SPA-лент и производительности на устройстве; изолированные профили не доказывают FPS пользователя |
-| Отдельная задача | Потоковый адаптер для названного сервиса с проверенными плеером, кодеками, звуком и ресурсными границами |
+| Selected-media ownership | Gesture, post, frame/document and exact source proof; bounded srcset and open/closed-shadow handling; ambiguous selections refuse |
+| Acquisition and recovery | Disk-backed staging, private durable jobs, retryable prepared files, native download IDs versus chosen-directory receipts, restart reconciliation and cleanup intent |
+| Runtime lifetime | Owner-aware offscreen lifetime, dedicated GIF encoder Worker, cancellation/resource budgets; no global keep-alive promise |
+| Organization | Ordered folder templates, site/Booru labels, proven account metadata, composed filenames without CDN tails, explicit folder-access recovery |
+| History/statistics | Persistent history and opt-in all-time counters; startup retry, pending-statistics protection across worker restarts and measured transfer rate |
+| Local data (published 3.0.2) | JSON backups/restore of statistics and history, larger disposable preview cache, bounded rendering with complete posts; no new permission or dependency |
+| Update checks (published 3.0.2) | Persisted server cooldown, confirmed-rate-limit classification and a manual recovery path |
 
-Изолированные проверки Reload, полного перезапуска экспорта, неопределённой записи и ожидающей статистики выполнены; они не заменяют реальные разрешения Windows и все сайты. Скачивание YouTube, DRM, эфиры, универсальные HLS/DASH и системный помощник не заявлены. Firefox, архивы авторов и автоматизация магазина остаются отдельными задачами.
+Do not reimplement these mechanisms from older audits. Source checks, isolated-browser fixtures, user reports and general live-site acceptance are different evidence.
 
-## English
+## Published 3.0.7
 
-Release 3.0.6 fixes Instagram Reels rails, TikTok Copy/Save, Tumblr/Twitch controls, e-shuushuu recovery and proven VK source-post links. Uncertain-save Retry uses the existing saved-file confirmation barrier. Recent Downloads grows to the statistics bottom without ResizeObserver loops. Measured feed/timer/preview work is reduced; whole-browser memory savings are not claimed. The signer and all 104 CRX/ZIP files are verified; manual boundaries below remain open.
+- Direct Google Drive/Yandex Disk saves, separate destination policies, private account-bound receipts and optional OAuth/token connection.
+- Shared local/cloud inline dock, selected/all gallery actions and global-destination behavior in popup/context menu.
+- Persistent sidebar cloud capacity, optional Yandex capacity/email consent, universal setup across three profiles and service/date filename scope.
+- Captured destination/policy and narrower thumbnail ownership lookup; stationary popup toolbar drawings and refined reduced-motion behavior.
+- Verified signed minified 112-file CRX/ZIP; core/UI/native 133/133 and bounded artifact evidence in [status](STATUS.md).
 
-Release 3.0.5 implements unified Saving output, ordered controls, hover checks, the author grid, direct JSON transfer and interface motion. First-Short Copy, Instagram action rails, TikTok names and Gelbooru originals are fixed. Do not queue these implementations again; manual acceptance below remains separate.
+Next assigned work can address real Store OAuth/branding and cloud quota/revocation, large uploads and recovery on actual accounts. Do not rebuild the implemented cloud system from older proposals.
 
-Release 3.0.4 implements the Red theme and motion across themes,12 compact preview settings, Copy on additional sites, paired reveal synchronization, fullscreen suppression and ownership/keyboard fixes. The owner reports working service checks; external mirror availability and changing site layouts remain separate acceptance.
+## Published 3.0.3
 
-Release 3.0.3 implements custom Image/Videos/GIF labels, simple/advanced folder controls, pending-statistics recovery, uncertain saved-result checks, Reddit GIF classification and UI/SPA improvements. JSON copies, larger caches and retained-history search remain from 3.0.2; do not queue duplicate implementation.
+- Per-media-type folder names: `Image`, `Videos` and `GIF` defaults, preserving explicit custom names and internal type IDs (see [folder templates](FOLDER_TEMPLATES.md)).
+- Narrow-viewport FullApp header layout (320/390 px) with real-rectangle geometry acceptance.
+- Isolated-browser cases for a full browser restart during an admitted native export, an uncertain chosen-directory close and pending statistics through a full browser restart. The statistics case requires recovery without duplicate counting.
+- Actual extension-manager Reload with retained data and registered OPFS access, followed by another save; external OS picker permission remains separate.
+- Check saved file for `EXPORT_UNCERTAIN`: exact owned-result reconciliation, no refetch or overwrite, and correction of the same history/statistics operation after proof.
+- Explicit selected-player GIF declarations on Reddit reach the shared converter through inline and context-menu saving. Posters, foreign ownership and changed markers refuse; the existing conversion budgets remain.
 
-| Priority | Work |
-| --- | --- |
-| P1, manual | Real Windows folder selection/cancellation and grant recovery across Reload/restart. The owner reports the first manual item works; this is not a universal grant guarantee |
-| P1, separate test device | Physical low space/natural eviction; API faults are separate coverage. Do not fill the user's working disk |
-| P2 | Reddit GIF via inline/context menu, RedGIFs Trending/collages, signed-in feeds, audio, selected post/account and clipboard |
-| P2, reproduced targets | Exact selected-media/metadata/provider failures before broadening discovery |
-| P3 | Live-feed/device performance measurements; isolated profiles do not prove user hardware FPS |
-| Separate capability | A named stream provider with proven player/codec/audio and resource bounds |
+- **Statistics recovery.** Failed counter writes keep compact private pending contributions across full browser restarts, without URLs, file names or arbitrary browsing hosts. The ledger prevents duplicate counts; opt-out and clear/restore fences remain authoritative. Both-store failure or a full 200-item pending queue remains a bounded recovery limit.
+- **Clipboard feedback.** All inline copy controls and source-page notices distinguish a proven write, an unconfirmed fallback and a refusal. No clipboard-read permission is added.
+- **SPA reinjection.** X, TikTok and YouTube reuse their initialized script; Instagram already did. A synthetic browser profile of X (200 cards, 600 replacements, six reinjections) changed from 2→8 observers/158 scans to 2→2 observers/60 scans, with no idle scan loop; this is not a live-site timing claim.
 
-Isolated manager Reload, full export restart, uncertain directory-close and pending-statistics cases are covered separately from actual Windows permissions and all-site acceptance. YouTube downloading, DRM, live streams, universal HLS/DASH and a system companion are not promised. Firefox, author archives and Store automation remain separate assignments.
+## Published 3.0.4
+
+- Red theme and theme-aware motion; hidden tabs and reduced motion suppress unnecessary animation.
+- Compact Link previews and on-site Copy on seven added platforms using the saved preview preferences; no new download adapters or clipboard-read permission.
+- Persistent native post actions on Bluesky, Threads and the Tumblr feed, Pixiv Copy beside its proven Save rail, paired inline controls synchronized through one reveal lifecycle, fullscreen suppression of inline controls and VK gallery-counter clearance.
+
+## Published 3.0.5
+
+Unified Saving output and compact controls, indexed tokens and hover-check feedback, direct settings transfer and desktop navigation accents are implemented. Motion respects keyboard/reduced-motion controls. Shorts cold-open ownership, Instagram action rails, TikTok identity-based naming and Gelbooru Original parsing are repaired. Reuse the recorded tests; broader live-site acceptance remains open.
+
+## Published 3.0.6
+
+- Natural Recent Downloads height capped by the left statistics bottom, with shrink-on-collapse, real inner/page scrolling and a ResizeObserver delivery-loop fix.
+- Instagram/TikTok/Tumblr/Twitch/e-shuushuu inline recovery and explicit refusal acknowledgement; proven VK source-post feedback, narrow navigation and Save-bar clearance.
+- Uncertain-export Retry uses the existing confirmation barrier; byte/collision/concurrency boundaries stay intact. Booru test extraction preserves execution order.
+- Measured Instagram scan reduction, suspended hidden stale-speed timers and incremental preview inserts, with no new permissions/dependencies or whole-browser memory claim.
+- Corrected source 115/115 plus exact minified GIF/UI/HTTP acceptance and verified 104-file CRX/ZIP identity. Manual external-folder, broader live-site and device-performance rows remain open.
+
+## Unreleased after 3.0.7
+
+**Cloud destinations (implemented in source, not live-accepted).** A Storage section, a destination chooser (Storage, Saving, toolbar popup), Google Drive and Yandex Disk uploads with OAuth or an advanced access token, and the shared folder/name rules beneath an application-owned root. Owed: publisher OAuth registration (Google Chrome Extension client per Item ID, Yandex application and Redirect URI), then live acceptance of sign-in, a real upload in Chrome and Helium, quota/revocation paths and live-site local/Cloud controls. Isolated Storage locale/theme/width checks and provider HTTP fixtures passed; they are not real-cloud acceptance. Not planned for the first version: a cloud browser, shared drives, sync, several simultaneous destinations. See [CLOUD.md](CLOUD.md).
+
+The current source cycle consolidates folder/name preference projection, preserves the captured destination throughout preparation, and removes full-history allocation from per-thumbnail ownership checks (see [status](STATUS.md)). Production-path and identity/recovery regressions accompany the changes; source/browser acceptance is recorded separately. The accepted 3.0.7 package is unchanged. Wider publication-date extraction still needs a selected-item response contract; the manager's durable whole-record writes remain unchanged. Physical folder grants, live layouts and messenger playback still need manual acceptance.
+
+## Open sequence
+
+The verified inline/control and narrow-UI repairs above are released and reviewed. Retest exact site layouts when their DOM changes; blocked/native-menu/messenger rows remain separate acceptance. Folder dates retain the documented UTC publication-date/accepted-job fallback; the isolated RedGIFs cold-placement observation needs reproduction before a patch.
+
+The Claude Desktop sites audit is partial. Next acceptance must exercise real extension saves, context-menu paths and everyday manager/settings/history/statistics/Link previews workflows with a proven tool preflight. Site-original reachability is not a completed extension test. Confirmed local Instagram/TikTok/parser repairs are described in [status](STATUS.md); do not requeue their implementation after acceptance.
+
+| Priority | Outcome | Acceptance boundary |
+| --- | --- | --- |
+| P1, manual | Close the external-folder evidence gap | Actual manager Reload, native export/browser restart and uncertain directory-close cases exist in isolated profiles. Verify the owner's real external OS picker grant across Reload separately; the owner reports the first manual item works, which is not a universal grant guarantee |
+| P1 | Verify real destinations and storage pressure | Real external OS picker cancel/grant/recovery, retained-file retry and collisions. API quota injections are not physical full disk or natural eviction |
+| P2 | Fill selected DOM/metadata gaps | Reproduce an exact failing target/overlay/frame first; bounded discovery and no page-wide first-video or nearest-large-image substitution |
+| P2 | Extend original/protected providers | A named provider, exact host and selected-item proof; preserve signed URLs and scoped request rules. HEAD/MIME/size alone do not prove the original or ownership |
+| P2 | Finish live interaction acceptance | Signed-in author routes, provider layout/audio checks and the new unconfirmed-clipboard feedback on actual pages. Do not claim a write when a page intercepts the native event |
+| P2, broader samples | VOD on VK Video and RedGIFs | Owner confirms the supplied VK sample downloads with sound and other tested Reddit/RedGIFs cases work. Existing progressive-file support handles these reports; no new adapter is justified by them. Full-duration/audio acceptance of other items remains sample-specific |
+| P3, profiling | Measure resource cost before further changes | The released Instagram optimization removes measured irrelevant Reel-pair searches; repeated matching synthetic profiles show 29.6 to 8.1 ms median scans with stable controls/observers. This is part of released 3.0.6 and separate from older profiles. Next: actual-device feeds and large-history/preview or conversion workloads if those profiles identify a bottleneck; no meaningful whole-browser RAM reduction is established |
+| Separate capability | Add a scoped stream adapter | Named player/provider, playlist ownership, supported VOD/codecs/encryption/audio limits, cancellation, bounded storage and actual playback tests |
+
+The native diagnostic already covers bounded worker/offscreen stops, restart reconciliation, full browser restarts and injected storage failures. Reuse it for missing cases (`p1-*` selects the 2026-10-25 group); do not repeat completed cases or promise universal crash recovery. [release evidence](STATUS.md) describe its limits. [Chrome's lifecycle contract](https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle) requires durable state rather than reliance on globals or periodic messages.
+
+## Product questions not yet assigned
+
+- Broader posting-time extraction and physical renaming of previously exported files need separate designs; do not guess dates from unrelated metadata or introduce an Explorer companion. Existing files are never renamed by a folder or filename change.
+- Firefox, author archives and store automation remain separate work.
+
+## Deferred proposals
+
+Universal MAIN-world Blob/revoke hooks, a per-tab network sniffer and universal HLS/DASH are not implemented. A nearby request, thumbnail, `embedUrl`, `MediaSource` or successful URL rewrite does not grant authority to fetch an original. Any new network observer requires its own permission/privacy decision and selected-player proof. YouTube downloading, DRM and live streams remain unsupported.
+
+All future work preserves current provider priority, exact signed URLs, private credentials/state, native IDs versus directory receipts, cancellation, no-overwrite behavior and truthful errors. Each packet needs production-path regression checks, independent review and separately identified browser/file evidence. Packaging, source synchronization and publication require their own authorized task.

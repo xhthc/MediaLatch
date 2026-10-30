@@ -1,5 +1,42 @@
 # Changelog
 
+## 3.0.7
+
+Stable GitHub release with verified owner-signed minified CRX and matching runtime ZIP. Chrome Web Store rejected draft 3.0.7 on 2026-10-31 for excessive site keywords (Yellow Argon). Revised English and Russian descriptions remove the lists; resubmission and approval remain separate.
+
+### Русский
+
+- Настройки папок и имён файлов (структура папок, названия сайтов и типов, шаблон и область применения имён, источник даты, номер в серии, подтверждённые автор и дата публикации) теперь передаются во все пути сохранения через один явный список. GIF-конвертация, Reddit HLS, общий конвейер, аварийный запасной путь и универсальный сборщик ведут себя как раньше; тесты проверяют эти пути целиком, а не считают строки исходного кода.
+- Одно сохранение — одно место: выбранная папка (или обычные «Загрузки»), которую сохранение зафиксировало вместе с настройками папок и имён, остаётся за ним, даже если место сохранения изменили, пока файл ещё определялся или конвертировался. Раньше такое сохранение могло сочетать старую структуру папок с новой выбранной директорией. Сохранения, начатые позже, используют новую настройку; повтор уже поставленной в очередь загрузки сохраняет её место. Выбор папки никогда молча не превращается в сохранение в «Загрузки».
+- Проверка владельца миниатюры использует узкий запрос менеджера вместо создания полного публичного списка истории для каждой видимой строки. Проверки задания, операции и состояния, ожидание инициализации и записи сохранены; доступ к оригиналу и ограничения импортированной истории остаются отдельными.
+- Облачные хранилища (исходники, без живой приёмки): раздел **«Хранилища»** и выбор места сохранения в «Сохранении» и во всплывающем окне отправляют новые файлы на этот компьютер, в Google Drive или на Яндекс Диск с теми же структурой папок, названиями и правилами имён; недостающие папки создаются. Подключение — входом через OAuth или (в «Дополнительно») токеном доступа, который сначала проверяется у сервиса и только потом заменяет прежнее подключение (API-ключ отклоняется). Файлы грузятся прямо из браузера, имеют сохранённую приватную квитанцию, показывают реальный этап загрузки и считаются сохранёнными только после подтверждения сервисом; ненастроенное, отключённое или просроченное облако отклоняется и никогда не заменяется сохранением на компьютер. Добавлено разрешение `identity`, новых доступов к сайтам нет. Настройка, ограничения и ещё не выполненная живая проверка: docs/CLOUD.md.
+
+- У локального и каждого облачного хранилища отдельные профили папок и имён; универсальная настройка заполняет все три профиля, сохраняя их подпапки. Место в облаке показано под левой навигацией во всех разделах. Уточнены переходы и уменьшение движения; иконки настроек, паузы и корзины в popup неподвижны.
+
+- Имена файлов: выберите, к каким сервисам они применяются (все, часть, Booru одной группой или другие сайты), и источник даты — начало скачивания или публикация (если известна). «Универсальная настройка» одним нажатием заполняет форму: папки сайт / автор / тип, папки авторов, имена дата + время + сайт + автор для всех сервисов с датой начала скачивания. Сохранение остаётся явным; существующие файлы не переименовываются.
+- Ускорены поиск по имени, автору и сайту, подготовка и группировка больших списков загрузок. Порядок файлов, фильтры и счётчики сохранены.
+- Убраны повторные подключения общих библиотек на поддерживаемых сайтах; повторное внедрение сохраняет каталог переводов и уже показанные подписи.
+- Веб-страницам доступен только вход во встроенный просмотрщик. Его JavaScript/CSS остаются приватными; проверки токена, вкладки и документа сохранены.
+- Добавлено разрешение `identity` для облачного входа. Новых доступов к сайтам и зависимостей нет; история сохраняет прежние ограничения доступа, токены не экспортируются.
+- Ускорение подтверждено синтетическими замерами, а история из 5000 записей — отдельным профилем Chromium. Это не измерение общей RAM браузера и не проверка всех живых сайтов; работа Embed зависит от сторонних сервисов.
+
+### English
+
+- The folder and file-name preferences (folder layout, per-site and per-type labels, name template and service scope, date source, batch position, proven author and publication date) are now forwarded to every save path through one explicit projection. Converted GIFs, Reddit HLS, the shared pipeline, its emergency fallback and the generic builder behave exactly as before; regression tests now exercise these paths end to end instead of counting source text.
+- One save, one destination: the chosen folder (or browser Downloads) that a save captured together with its folder and name preferences now stays with it, even if the Saving destination changes while the file is still being resolved or converted. Before, such a save could combine the old folder layout with the newly chosen directory. Saves started afterwards use the new setting; retries of an already queued job keep that job's destination. A folder choice is never silently turned into a Downloads save.
+- Thumbnail ownership checks use a narrow manager query instead of constructing the complete public history for each visible row. Exact job/operation/state checks and initialization/write barriers remain unchanged; original file access and imported-history limits stay separate.
+- Cloud destinations (source, not live-accepted): a **Storage** section and a destination chooser in Saving and the toolbar popup send new saves to this PC, Google Drive or Yandex Disk, using the same folder layout, labels and file-name rules and creating missing folders. Connect by OAuth sign-in, or under *Advanced* with a pasted access token that is validated with the vendor before it replaces anything (an API key is refused). Uploads go straight from the browser to the provider, keep a durable private receipt, show a real upload stage and count as saved only after the provider confirms the stored file; an unconfigured, disconnected or expired cloud is refused and never turned into a PC save. Adds the `identity` permission and no host permissions. Setup, limits and the live-acceptance still owed: docs/CLOUD.md.
+- Inline Save always targets this PC; one compact Cloud segment offers a connected provider and selected/all gallery scope. Popup and ordinary context-menu saves retain their global destination. Cloud receipt recovery and cached Drive folder parent/name checks preserve the original account and configured path.
+- No new dependencies or data-format changes beyond the cloud receipts above.
+- Keep separate folder/name profiles for this PC and each cloud; Universal setup fills all three while retaining their subfolders. Show cloud capacity below the left navigation in every section. Refine transitions and reduced motion; popup Settings, Pause and Trash icons remain stationary.
+
+- File names: choose which services they apply to (all, some, Booru as one group, or other sites) and the date source: download start or publication (when known). “Universal setup” fills the form in one click: site / author / type folders, author folders, and date + time + site + author names for all services dated by download start. Saving stays explicit; existing files are not renamed.
+- Speed up filename, author and site searches, list preparation and grouping for large download histories. Preserve file order, filters and counters.
+- Remove repeated shared-library registrations on supported sites; reinjection preserves the translation catalogue and existing labels.
+- Expose only the embedded viewer entry to websites. Keep its JavaScript/CSS private and preserve token, tab and document checks.
+- Add the `identity` permission for cloud sign-in. No new host permissions or dependencies; history retains its access limits and tokens are never exported.
+- Speedups are supported by synthetic measurements and a 5000-row history by an isolated Chromium profile. This does not establish whole-browser RAM savings or every live site; Embed playback depends on third-party services.
+
 ## 3.0.6
 
 Stable GitHub release with a verified owner-signed minified CRX and matching runtime ZIP. The registered signature and all 104 payload files match the corrected build. Chrome Web Store submission, review and approval remain separate owner actions.

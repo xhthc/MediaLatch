@@ -5,7 +5,7 @@
 [![Chrome Web Store — Install](https://img.shields.io/badge/Chrome_Web_Store-Install-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh)
 
 [![Stars](https://img.shields.io/github/stars/xhthc/MediaLatch?style=for-the-badge&color=22D3EE)](https://github.com/xhthc/MediaLatch/stargazers)
-[![Release 3.0.6](https://img.shields.io/badge/release-3.0.6-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.6)
+[![Release 3.0.7](https://img.shields.io/badge/release-3.0.7-A78BFA?style=for-the-badge)](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.7)
 [![Chromium](https://img.shields.io/badge/Chromium-120%2B-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/xhthc/MediaLatch)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-10B981?style=for-the-badge)](docs/PRIVACY.md)
 [![Email](https://img.shields.io/badge/Email-Contact-64748B?style=for-the-badge)](mailto:always1337@vk.com)
@@ -19,12 +19,12 @@
 <p align="center"><img src="assets/readme/divider.svg?v=violet-loop-2" width="1120" alt=""></p>
 
 > [!IMPORTANT]
-> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.6](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.6)** includes minified CRX and ZIP packages, separate checksums and a build file inventory.
+> This repository contains MediaLatch documentation and packaged builds. Development source is private. **[Stable version 3.0.7](https://github.com/xhthc/MediaLatch/releases/tag/v3.0.7)** includes minified CRX and ZIP packages, separate checksums and a build file inventory.
 
 > [!NOTE]
-> **In 3.0.6:** fix Instagram, TikTok, Tumblr and Twitch inline controls; improve e-shuushuu recovery and uncertain-save Retry. Reduce feed/cache work. Recent Downloads grows with content up to the statistics bottom without ResizeObserver loops. [Project status](docs/STATUS.md) · [Roadmap](docs/ROADMAP.md).
+> **In 3.0.7:** Google Drive and Yandex Disk, separate saving profiles, sidebar cloud capacity, local/cloud inline actions, shared naming rules and popup/motion fixes. [Project status](docs/STATUS.md) · [Cloud setup](docs/CLOUD.md).
 
-To update an unpacked installation, finish downloads, replace files in its existing folder with ZIP 3.0.6 and click Reload for MediaLatch on the extensions page. Keep the extension installed. A GitHub release does not establish Chrome Web Store publication.
+To update an unpacked installation, finish downloads, replace files in its existing folder with ZIP 3.0.7 and click Reload for MediaLatch on the extensions page. Keep the extension installed. A GitHub release does not establish Chrome Web Store publication.
 
 ## ⚡ About
 
@@ -38,7 +38,7 @@ Configure folders, names for new files, notices and optional statistics. No comp
 
 <p align="center"><img src="assets/readme/install-en.svg?v=violet-loop-zip-3" width="1120" alt="Packaged ZIP and CRX: Releases, SHA-256 and browser installation policies"></p>
 
-Download **[ZIP 3.0.6](https://github.com/xhthc/MediaLatch/releases/download/v3.0.6/MediaLatch-3.0.6.zip)** for loading the unpacked extension, or [CRX 3.0.6](https://github.com/xhthc/MediaLatch/releases/download/v3.0.6/MediaLatch-3.0.6.crx) where browser policies permit. Each format has its own checksum: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.6/MediaLatch-3.0.6.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.6/MediaLatch-3.0.6.crx.sha256). [Build provenance](https://github.com/xhthc/MediaLatch/releases/download/v3.0.6/MediaLatch-3.0.6.provenance.json) describes the same 104 files in both packages. [All releases](https://github.com/xhthc/MediaLatch/releases).
+Download **[ZIP 3.0.7](https://github.com/xhthc/MediaLatch/releases/download/v3.0.7/MediaLatch-3.0.7.zip)** for loading the unpacked extension, or [CRX 3.0.7](https://github.com/xhthc/MediaLatch/releases/download/v3.0.7/MediaLatch-3.0.7.crx) where browser policies permit. Each format has its own checksum: [ZIP SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.7/MediaLatch-3.0.7.zip.sha256), [CRX SHA-256](https://github.com/xhthc/MediaLatch/releases/download/v3.0.7/MediaLatch-3.0.7.crx.sha256). [Build provenance](https://github.com/xhthc/MediaLatch/releases/download/v3.0.7/MediaLatch-3.0.7.provenance.json) describes the same 112 files in both packages. [All releases](https://github.com/xhthc/MediaLatch/releases).
 
 For Chrome, use the [MediaLatch Chrome Web Store listing](https://chromewebstore.google.com/detail/medialatch/cimghidldpjhhhngdhigddjfpcofhbmh). Browser and enterprise policies restrict self-signed CRX installation. The store version is updated separately from GitHub.
 
@@ -56,9 +56,9 @@ If your browser permits manual CRX installation, download the package and checks
 > [!TIP]
 > Keep the checksum with the CRX. Switching installation channels can change the extension ID and local data. The private `.pem` signing key is not part of the package and is not needed by users.
 
-Version 3.0.6 keeps the signing key and ID of the manual 3.0.0 build: `iahebdomfekhiofmdocjmdjpjlclnngd`. It differs from the earlier manually signed build with ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: this package will not update that installation or automatically transfer its settings and history. Export needed data through the extension's available actions before switching installations.
+Version 3.0.7 keeps the signing key and ID of the manual 3.0.0 build: `iahebdomfekhiofmdocjmdjpjlclnngd`. It differs from the earlier manually signed build with ID `kmebfblhgfacdonaomlggpkndcjjpkgd`: this package will not update that installation or automatically transfer its settings and history. Export needed data through the extension's available actions before switching installations.
 
-Version 3.0.6 retains the 3.0.2 JSON statistics/history copies, larger preview cache, long-history search and earlier inline-control fixes. GIF encoding remains in a dedicated Worker; large GIFs still take time and resources. JavaScript is minified without source maps and remains inspectable in DevTools. See the [changelog](CHANGELOG.md) and [local-data behavior](docs/LOCAL_DATA.md).
+Version 3.0.7 retains the 3.0.2 JSON statistics/history copies, larger preview cache, long-history search and earlier inline-control fixes. GIF encoding remains in a dedicated Worker; large GIFs still take time and resources. JavaScript is minified without source maps and remains inspectable in DevTools. See the [changelog](CHANGELOG.md) and [local-data behavior](docs/LOCAL_DATA.md).
 
 ## 🧩 Features
 
@@ -66,8 +66,8 @@ Version 3.0.6 retains the 3.0.2 JSON statistics/history copies, larger preview c
 | --- | --- |
 | Save selected media | Original-image discovery, progressive MP4/WebM and supported GIFs. Exact signed URLs stay intact. |
 | Save a post | Multiple files from posts on X, Reddit, Pixiv, Pawchive and supported VK pages. See each file's result and cancel the remaining downloads. |
-| Choose a destination | Browser Downloads or an explicitly selected folder. Ordered levels, custom templates and one shared folder-name setting for Booru sites. |
-| Name new files | Original basename or selected site/account and UTC publication date/time fields. Metadata-based names omit the CDN basename; unknown fields are skipped. |
+| Choose a destination | Browser Downloads, an explicitly selected folder, Google Drive or Yandex Disk. Separate profiles, ordered levels and custom templates. |
+| Name new files | Original basename or selected site/account and UTC download-start or known publication date/time fields. Metadata-based names omit the CDN basename; unknown fields are skipped. |
 | Preview saved media | Images, animated GIFs and MP4 with playback controls; fit/100%, zoom, pan, carousel buttons, arrow keys and swipe. |
 | Track results | Popup, manager, page notices, optional statistics, retry and cancellation. Filters for images/GIFs and videos. |
 | Copy preview links | 12 settings for X, Instagram, TikTok, YouTube videos/Shorts, Reddit, Pixiv, Bluesky, Threads, Twitch, Tumblr and Bilibili. Link conversion runs locally. |
@@ -76,11 +76,15 @@ Version 3.0.6 retains the 3.0.2 JSON statistics/history copies, larger preview c
 
 Click a thumbnail in the manager to open the viewer. From the popup, it opens over the active tab; from a page notice, it opens over the source page. The viewer runs in an isolated extension frame. On restricted browser pages, it opens in the manager. Small previews appear on hover.
 
-In 3.0.6 the local cache holds up to 2,048 thumbnails and 256 preview originals: 128 MiB per original, 512 MiB total and 30-day availability. If a file is too large or no longer cached, choose it from disk. The cache does not replace a backup or change saved files. Codec support depends on the browser.
+In 3.0.7 the local cache holds up to 2,048 thumbnails and 256 preview originals: 128 MiB per original, 512 MiB total and 30-day availability. If a file is too large or no longer cached, choose it from disk. The cache does not replace a backup or change saved files. Codec support depends on the browser.
 
 ### History and statistics
 
 Open Overview → Local data and backups to export statistics and history as separate JSON files. Confirmed statistics restore replaces counters; history import adds missing records without starting downloads. Limits: 32 MiB UTF-8 per file and up to 50,000 history records per copy. Copies exclude media, source URLs and folder grants. History renders in windows while search covers the full retained list. [Details](docs/LOCAL_DATA.md).
+
+### Cloud saving
+
+Choose this PC, Google Drive or Yandex Disk in Storage or the popup. Each destination keeps its own folder and naming profile. Ordinary inline Download stays local; selecting a cloud reveals adjacent selected/all gallery actions. Connect by OAuth or an access token; files go directly to the provider. [Setup and limits](docs/CLOUD.md).
 
 ### Folders and filenames
 
@@ -94,7 +98,7 @@ Downloads/
 
 Choose folder levels in order: site, account, media type, extension, date, year–month or year. Custom templates are available; levels with unavailable metadata are skipped. Account folders are enabled separately for supported services. Matched Danbooru/Moebooru posts can use a verified uploader; artist tags do not become account identity.
 
-Date and time fields in filenames use verified X post timestamps or matching Danbooru/Moebooru metadata, in UTC. These filename fields are omitted when publication time is unknown. Folder Date, Year–month and Year levels use publication time or, when unavailable, operation start time in UTC. Settings apply to new saves; existing files are not renamed.
+Choose download-start or known publication dates for filenames, and which services use the rule. Publication comes only from verified X or supported Booru metadata; unknown values are skipped. Folder date levels use publication or operation-start time in UTC. Universal setup fills all three profiles while retaining their subfolders and labels. Changes affect new files.
 
 Customize image, video and GIF folder labels independently for the `{type}` level. Defaults are `Image`, `Videos` and `GIF`; an empty field restores its default. Only the type level for new saves changes: custom labels, admitted job paths and existing files are preserved. Literal `Images` in a template remains one shared folder, not a media-type switch.
 
@@ -158,7 +162,7 @@ Screenshots show the 3.0.5 interface with neutral local demonstration data. They
 
 MediaLatch has no backend or telemetry. Downloads contact the selected site, service or CDN. Settings, the queue, optional statistics, diagnostics and preview caches stay in extension storage. A manual version check contacts GitHub and does not install code.
 
-Page notices show a short download result. Original file contents, folder access and local paths stay inside the extension. You can export reports and diagnostics manually; review the contents before sharing. HTTP/HTTPS permissions let the extension find selected media across sites. See the [privacy policy and permission explanations](docs/PRIVACY.md).
+Page notices show a short download result. Folder grants and local paths stay private. A cloud save sends the selected file, its name and folder layout directly to the chosen provider. You can export reports and diagnostics manually; review the contents before sharing. HTTP/HTTPS permissions let the extension find selected media across sites. See the [privacy policy and permission explanations](docs/PRIVACY.md).
 
 Report bugs, problems and vulnerabilities to [always1337@vk.com](mailto:always1337@vk.com) or [Issues](https://github.com/xhthc/MediaLatch/issues). Send vulnerability details and sensitive data by email. See the [Security Policy](SECURITY.md) for what to include and how to test.
 
@@ -174,3 +178,6 @@ Development source and its Git history are kept separately. The JavaScript insid
 
 [Changelog](CHANGELOG.md) · [Privacy](docs/PRIVACY.md) · [Security Policy](SECURITY.md) · [Boosty](https://boosty.to/fs0x1337)
 
+
+
+[Website](https://xhthc.github.io/) · [Privacy policy](https://xhthc.github.io/privacy.html)
